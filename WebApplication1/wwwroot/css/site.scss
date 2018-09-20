@@ -176,16 +176,16 @@ body, table, div, p {
     padding-right: 0;
 }
 
-.menu-item__mobile-search {
+.menu-item__xs-search, .menu-item__xs-menu {
     display: none;
-
-    @media (max-width: $screen-xs-max) {
-        display: block;
+    font-size: 22px;
+    button {
+        border-bottom: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background-color: transparent;
     }
-}
-
-.menu-item__mobile-menu {
-    display: none;
 
     @media (max-width: $screen-xs-max) {
         display: block;
@@ -242,8 +242,8 @@ body, table, div, p {
     /*border: solid 1px blue;*/
     @media (min-width: $screen-xs-min) { // 320px
         max-width: $screen-xs-max;
-        padding-left: 24px;
-        padding-right: 24px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     @media (min-width: $screen-sm-min) { // 768px
