@@ -1,0 +1,373 @@
+﻿// Prefixes
+// --------------------------------------------------
+@mixin rounded($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin roundedtop($radius) {
+    -webkit-border-top-left-radius: $radius;
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+@mixin roundedbottom($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-bottom-left-radius: $radius;
+    -moz-border-bottom-right-radius: $radius;
+    border-bottom-left-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+// Column
+// --------------------------------------------------
+@mixin row-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+
+    > div, > li {
+        @media (max-width: $screen-xs-max) {
+            -webkit-flex-basis: 100%;
+            -moz-flex-basis: 100%;
+            flex-basis: 100%;
+        }
+    }
+}
+
+// Default
+// --------------------------------------------------
+@mixin bg-theme-primary {
+    background-color: $ymm-bg-theme-primary;
+    color: $white;
+}
+
+@mixin list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include clearfix;
+}
+
+@mixin social-list-style {
+    @include list-unstyled;
+    float: right;
+
+    li {
+        float: left;
+        text-align: center;
+
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+
+        a {
+            display: inline-block;
+
+            .fa {
+                font-size: 36px;
+            }
+        }
+
+        &.facebook {
+            a {
+                color: $color-facebook;
+            }
+        }
+
+        &.twitter {
+            a {
+                color: $color-twitter;
+            }
+        }
+
+        &.google {
+            a {
+                color: $color-google;
+            }
+        }
+
+        &.linkedin {
+            a {
+                color: $color-linkedin;
+            }
+        }
+
+        &.email {
+            a {
+                background-color: lighten($gray-dovegray, 10%);
+                color: $white;
+                @include rounded(4px);
+                width: 30px;
+                height: 30px;
+                margin-top: 3px;
+                text-align: center;
+
+                .fa {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    &.social-links-sm {
+        @media (min-width: $screen-md-min) {
+            li {
+                &:not(:first-child) {
+                    margin-left: 5px;
+                }
+
+                a {
+                    .fa {
+                        font-size: 26px;
+                    }
+                }
+
+                &.email {
+                    a {
+                        vertical-align: top;
+                        width: 24px;
+                        height: 24px;
+                        padding-top: 1px;
+                        margin-top: 1px;
+                        font-size: 13px;
+                        line-height: 20px;
+
+                        .fa {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin global-search-style {
+    @include clearfix;
+
+    input[type=text] {
+        border-bottom: 1px solid $black;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        float: left;
+        padding: 6px 12px 6px 0;
+        font-size: 18px;
+        line-height: 23px;
+        min-width: 202px;
+        height: 36px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .btn {
+        @include rounded(0);
+        border-bottom: 1px solid $black;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        float: left;
+        height: 36px;
+        background-color: transparent;
+        color: $black;
+
+        .fa {
+            font-size: 22px;
+        }
+    }
+}
+
+// fonts
+// --------------------------------------------------
+@mixin font-primary-regular {
+    font-family: $ymm-font-primary;
+    font-weight: 400;
+}
+
+@mixin font-primary-bold {
+    font-family: $ymm-font-primary;
+    font-weight: 700;
+}
+
+@mixin font-secondary-regular {
+    font-family: $ymm-font-secondary;
+    font-weight: 400;
+}
+
+@mixin font-secondary-bold {
+    font-family: $ymm-font-secondary;
+    font-weight: 700;
+}
+
+@mixin font-secondary-extrabold {
+    font-family: $ymm-font-secondary;
+    font-weight: 800;
+}
+
+// animation
+// --------------------------------------------------
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    animation: #{$str};
+}
+
+@include keyframes(slideInUp) {
+    from {
+        -webkit-transform: translate3d(0, 5%, 0);
+        transform: translate3d(0, 5%, 0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@include keyframes(slideInDownYMM) {
+    from {
+        -webkit-transform: translate3d(0, -5%, 0);
+        transform: translate3d(0, -5%, 0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@include keyframes(slideInRight) {
+    from {
+        -webkit-transform: translate3d(5%, 0, 0);
+        transform: translate3d(5%, 0, 0);
+        opacity: 0;
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+/* to use 
+.div {
+	position :relative;
+ @include animation('slideInUp 3s');
+} */
+
+
+// triangle mixin
+// --------------------------------------------------
+@mixin triangle ($size, $color, $direction) {
+    height: 0;
+    width: 0;
+
+    $width: nth($size, 1);
+    $height: nth($size, length($size));
+
+    $foreground-color: nth($color, 1);
+    $background-color: if(length($color) == 2, nth($color, 2), transparent);
+
+    @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+
+        $width: $width / 2;
+        $height: if(length($size) > 1, $height, $height/2);
+
+        @if $direction == up {
+            border-bottom: $height solid $foreground-color;
+            border-left: $width solid $background-color;
+            border-right: $width solid $background-color;
+        }
+        @else if $direction == right {
+            border-bottom: $width solid $background-color;
+            border-left: $height solid $foreground-color;
+            border-top: $width solid $background-color;
+        }
+        @else if $direction == down {
+            border-left: $width solid $background-color;
+            border-right: $width solid $background-color;
+            border-top: $height solid $foreground-color;
+        }
+        @else if $direction == left {
+            border-bottom: $width solid $background-color;
+            border-right: $height solid $foreground-color;
+            border-top: $width solid $background-color;
+        }
+    }
+
+    @else if ($direction == up-right) or ($direction == up-left) {
+        border-top: $height solid $foreground-color;
+
+        @if $direction == up-right {
+            border-left: $width solid $background-color;
+        }
+        @else if $direction == up-left {
+            border-right: $width solid $background-color;
+        }
+    }
+
+    @else if ($direction == down-right) or ($direction == down-left) {
+        border-bottom: $height solid $foreground-color;
+
+        @if $direction == down-right {
+            border-left: $width solid $background-color;
+        }
+        @else if $direction == down-left {
+            border-right: $width solid $background-color;
+        }
+    }
+
+    @else if ($direction == inset-up) {
+        border-color: $background-color $background-color $foreground-color;
+        border-style: solid;
+        border-width: $height $width;
+    }
+
+    @else if ($direction == inset-down) {
+        border-color: $foreground-color $background-color $background-color;
+        border-style: solid;
+        border-width: $height $width;
+    }
+
+    @else if ($direction == inset-right) {
+        border-color: $background-color $background-color $background-color $foreground-color;
+        border-style: solid;
+        border-width: $width $height;
+    }
+
+    @else if ($direction == inset-left) {
+        border-color: $background-color $foreground-color $background-color $background-color;
+        border-style: solid;
+        border-width: $width $height;
+    }
+}

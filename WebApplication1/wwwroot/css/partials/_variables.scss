@@ -1,0 +1,51 @@
+﻿// screen sizes
+
+// Extra small screen / phone
+$screen-xs:                  320px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// X-Large screen / wide desktop
+$screen-xlg:                 1450px !default;
+$screen-xlg-min:             $screen-xlg !default;
+$screen-xlg-desktop:         $screen-xlg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:              1410px !default;
+
+
+// colors
+
+$grey: #6d6e71 !default;
+$black: #000000 !default;
+$gray-dovegray: #666666 !default;
+$blue-astronaut: #013d63 !default;
+$blue-glacier: #74a3bf !default;
+$blue-cerulean: #0090d6 !default;
+$blue-frenchpass: #b4f2ff !default;
+$blue-catskillwhite: #eff4f7 !default;
+$orange-peel: #fb9a00 !default;
+$orange-white: #fefeea !default;
+$green-shamrock: #33cc99 !default;
+$color-facebook: #3b5998 !default;
+$color-twitter: #1da1f2 !default;
+$color-google: #d34836 !default;
+$color-linkedin: #0077b5 !default;
