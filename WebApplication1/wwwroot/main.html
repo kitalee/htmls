@@ -29,6 +29,15 @@
                 $("html, body").animate({ scrollTop: 0 }, 600);
                 return false;
             });
+
+            //$('.nav__item__link').hover(function () {
+            //    var menuNo = $(this).data("menu");
+            //    $('#menu-' + menuNo).css("display", "flex");
+            //}
+            //, function () {
+            //    var menuNo = $(this).data("menu");
+            //    $('#menu-' + menuNo).css("display", "none");
+            //});
         });
 
     </script>
@@ -51,7 +60,7 @@
         <div class="menu-item__xs-menu">
             <button><i class="fas fa-bars"></i></button>
         </div>
-        <div class="menu-item">
+        <nav class="menu-item">
             <div class="menu-item__search">
                 <input class="menu-item__search__input" type="text" placeholder="Search HRD">
                 <button class="menu-item__search__btn"><i class="fa fa-search"></i></button>
@@ -59,27 +68,136 @@
             <div class="menu-item__nav">
                 <ul class="nav nav--header">
                     <li class="nav__item">
-                        <a class="nav__item__link nav__item__link--active" href="#">NEWS</a>
+                        <a class="nav__item__link nav__item__link--active" data-menu="1" href="#">NEWS</a>
+                        <div class="nav__item__container">
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Menu-1</a></li>
+                                    <li><a class="menu-label" href="#">News</a></li>
+                                    <li><a class="menu-label" href="#">International News</a></li>
+                                    <li><a class="menu-label" href="#">Rankings</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Industry news</a></li>
+                                    <li><a class="menu-label" href="#">Special Reports</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Opinion and Best Practice</a></li>
+                                    <li><a class="menu-label" href="#">Profiles</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__item__link" href="#">FEATURES</a>
+                        <a class="nav__item__link" data-menu="2" href="#">FEATURES</a>
+                        <div class="nav__item__container">
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Menu-2</a></li>
+                                    <li><a class="menu-label" href="#">News</a></li>
+                                    <li><a class="menu-label" href="#">International News</a></li>
+                                    <li><a class="menu-label" href="#">Rankings</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Industry news</a></li>
+                                    <li><a class="menu-label" href="#">Special Reports</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Opinion and Best Practice</a></li>
+                                    <li><a class="menu-label" href="#">Profiles</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__item__link" href="#">RESOURCES</a>
+                        <a class="nav__item__link" data-menu="3" href="#">RESOURCES</a>
+                        <div class="nav__item__container">
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Menu-3</a></li>
+                                    <li><a class="menu-label" href="#">News</a></li>
+                                    <li><a class="menu-label" href="#">International News</a></li>
+                                    <li><a class="menu-label" href="#">Rankings</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Industry news</a></li>
+                                    <li><a class="menu-label" href="#">Special Reports</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Opinion and Best Practice</a></li>
+                                    <li><a class="menu-label" href="#">Profiles</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__item__link" href="#">EVENTS</a>
+                        <a class="nav__item__link" data-menu="4" href="#">EVENTS</a>
+                        <div class="nav__item__container">
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Menu-4</a></li>
+                                    <li><a class="menu-label" href="#">News</a></li>
+                                    <li><a class="menu-label" href="#">International News</a></li>
+                                    <li><a class="menu-label" href="#">Rankings</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Industry news</a></li>
+                                    <li><a class="menu-label" href="#">Special Reports</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Opinion and Best Practice</a></li>
+                                    <li><a class="menu-label" href="#">Profiles</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__item__link" href="#">SUBSCRIBE</a>
+                        <a class="nav__item__link" data-menu="5" href="#">SUBSCRIBE</a>
+                        <div class="nav__item__container">
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Menu-5</a></li>
+                                    <li><a class="menu-label" href="#">News</a></li>
+                                    <li><a class="menu-label" href="#">International News</a></li>
+                                    <li><a class="menu-label" href="#">Rankings</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Industry news</a></li>
+                                    <li><a class="menu-label" href="#">Special Reports</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <ul>
+                                    <li><a class="menu-label" href="#">Opinion and Best Practice</a></li>
+                                    <li><a class="menu-label" href="#">Profiles</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav__item__link nav__item__link--icon" href="#"><i class="fas fa-bars"></i></a>
                     </li>
                 </ul>
             </div>
-        </div>
-
+        </nav>
     </header>
 
     <!--mobile ad1-->
@@ -212,7 +330,7 @@
             <div class="latest-news-left">
                 <p class="section-title">LATEST NEWS</p>
                 <div class="latest-news__item">
-                    <img class="latest-news__item__img" src="images/ln1.jpg" />
+                    <div class="latest-news__item__img"><img src="images/ln1.jpg" /></div>
                     <div class="latest-news__item__passage">
                         <p><a class="article-title2" href="#">Pepsi 'moving in the right direction' as CEO Indra Nooyi steps down</a></p>
                         <p class="article-passage2">By <span>HRD</span>   /   JUNE 10, 2015</p>
@@ -221,7 +339,7 @@
                 </div>
 
                 <div class="latest-news__item">
-                    <img class="latest-news__item__img" src="images/ln2.jpg" />
+                    <div class="latest-news__item__img"><img src="images/ln2.jpg" /></div>
                     <div class="latest-news__item__passage">
                         <p><a class="article-title2" href="#">Working under the stars – a dream job for some </a></p>
                         <p class="article-passage2">By <span>HRD</span>   /   JUNE 10, 2015</p>
@@ -230,7 +348,7 @@
                 </div>
 
                 <div class="latest-news__item">
-                    <img class="latest-news__item__img" src="images/ln3.jpg" />
+                    <div class="latest-news__item__img"><img src="images/ln3.jpg" /></div>
                     <div class="latest-news__item__passage">
                         <p><a class="article-title2" href="#">Social media policy: What HR needs to know</a></p>
                         <p class="article-passage2">By <span>HRD</span>   /   JUNE 10, 2015</p>
@@ -239,7 +357,7 @@
                 </div>
 
                 <div class="latest-news__item">
-                    <img class="latest-news__item__img" src="images/ln4.jpg" />
+                    <div class="latest-news__item__img"><img src="images/ln4.jpg" /></div>
                     <div class="latest-news__item__passage">
                         <p><a class="article-title2" href="#">We set a goal to have the world’s healthiest workforce by 2020'</a></p>
                         <p class="article-passage2">By <span>HRD</span>   /   JUNE 10, 2015</p>
@@ -248,7 +366,7 @@
                 </div>
 
                 <div class="latest-news__item">
-                    <img class="latest-news__item__img" src="images/ln5.jpg" />
+                    <div class="latest-news__item__img"><img src="images/ln5.jpg" /></div>
                     <div class="latest-news__item__passage">
                         <p><a class="article-title2" href="#">British Airways worker alleges sexism over 'man bun' sacking</a></p>
                         <p class="article-passage2">By <span>HRD</span>   /   JUNE 10, 2015</p>
@@ -286,7 +404,7 @@
     </section>
 
     <!--top video & industry news & hr jobs-->
-    <section class="wrapper wrapper--flex">
+    <section class="wrapper wrapper--video-news-job">
         <div class="top-videos">
             <div class="top-videos__part1">
                 <p class="section-title">TOP VIDEOS</p>

@@ -19,6 +19,9 @@ body, table, div, p {
     width: 100%;
     min-width: $screen-xs-min;
 }
+.wrapper-fluid--relative {
+    position: relative;
+}
 // footer
 .wrapper-fluid--footer {
     background-color: $bgcolor1;
@@ -74,10 +77,46 @@ body, table, div, p {
     justify-content: space-between;
     align-items: flex-end;
     padding-top: 20px;
-    padding-bottom: 20px;
+    //padding-bottom: 20px;
 
     @media (max-width: $screen-xs-max) {
         align-items: center;
+    }
+}
+
+/*.wrapper--menu-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 70%;
+    padding: 30px 30px;
+}*/
+
+.menu-container {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 30px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $white;
+    -webkit-box-shadow: 0 3px 5px $black;
+    -moz-box-shadow: 0 3px 5px $black;
+    box-shadow: 0 3px 5px $black;
+    z-index: 999;
+
+    div {
+        width: 23%;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -88,6 +127,7 @@ body, table, div, p {
 // header
 // logo items
 .logo {
+    padding-bottom: 20px;
 }
 
 .logo__btn {
@@ -206,6 +246,11 @@ body, table, div, p {
 }
 
 .nav__item {
+    &:hover {
+        .nav__item__container{
+            display:flex;
+        }
+    }
 }
 
 .nav__item--active {
@@ -219,12 +264,45 @@ body, table, div, p {
 .nav__item__link {
     color: $black;
     text-decoration: none;
+    padding: 20px 10px;
+    display: inline-block;
 
     &:hover {
         color: $red;
         text-decoration: none;
     }
 }
+
+.nav__item__container {
+    display: none;
+    position: absolute;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border-top: 1px solid #eaeaea;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px 30px;
+    background-color: $white;
+    -webkit-box-shadow: 0 3px 5px $black;
+    -moz-box-shadow: 0 3px 5px $black;
+    box-shadow: 0 3px 5px $black;
+    z-index: 999;
+
+    div {
+        width: 23%;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+}
+
 
 .nav__item__link--active {
     color: $red;
@@ -671,7 +749,7 @@ body, table, div, p {
 }
 
 .latest-news__item {
-    display: inline-flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     padding-top: 15px;
@@ -864,7 +942,7 @@ body, table, div, p {
     cursor:pointer;
 }
 
-.wrapper--flex {
+.wrapper--video-news-job {
     display: block;
 
     @media (min-width: $screen-lg-min) {
@@ -1037,7 +1115,16 @@ body, table, div, p {
     }
 }
 
+.menu-label {
+    color: $black;
+    font-size: 18px;
+    line-height: 200%;
 
+    &:hover {
+        text-decoration: none;
+        color: $red;
+    }
+}
 
 .article-label1 {
     font-family: $font2;
@@ -1053,6 +1140,7 @@ body, table, div, p {
     font-weight: 700;
     line-height: $basic-line-height;
 }
+
 // font-size : 26->24->24
 .article-title1 {
     color: $black;
