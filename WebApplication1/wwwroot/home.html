@@ -30,14 +30,26 @@
                 return false;
             });
 
-            //$('.nav__item__link').hover(function () {
-            //    var menuNo = $(this).data("menu");
-            //    $('#menu-' + menuNo).css("display", "flex");
-            //}
-            //, function () {
-            //    var menuNo = $(this).data("menu");
-            //    $('#menu-' + menuNo).css("display", "none");
-            //});
+            $('.js-btn-search').click(function () {
+                $('body').css('overflow', 'hidden');
+                $('.js-search-overay').css('display', 'block');
+                $('#txtSearch').focus();
+            });
+
+            $('#btnCloseSearch').click(function () {
+                $('body').css('overflow', 'auto');
+                $('.js-search-overay').css('display', 'none');
+            });
+
+            $('.js-btn-menu').click(function () {
+                $('body').css('overflow', 'hidden');
+                $('.js-menu-overay').css('display', 'block');
+            });
+
+            $('#btnCloseMenu').click(function () {
+                $('body').css('overflow', 'auto');
+                $('.js-menu-overay').css('display', 'none');
+            });
         });
 
     </script>
@@ -45,7 +57,7 @@
 <body class="page">
     <header class="wrapper wrapper--header">
         <div class="menu-item__xs-search">
-            <button><i class="fa fa-search"></i></button>
+            <button class="js-btn-search"><i class="fa fa-search"></i></button>
         </div>
         <div class="logo">
             <a href="/"><img src="images/logo.jpg" /></a>
@@ -58,12 +70,12 @@
             </div>
         </div>
         <div class="menu-item__xs-menu">
-            <button><i class="fas fa-bars"></i></button>
+            <button class="js-btn-menu"><i class="fas fa-bars"></i></button>
         </div>
         <nav class="menu-item">
             <div class="menu-item__search">
-                <input class="menu-item__search__input" type="text" placeholder="Search HRD">
-                <button class="menu-item__search__btn"><i class="fa fa-search"></i></button>
+                <input class="menu-item__search__input js-btn-search" type="text" placeholder="Search HRD">
+                <button class="menu-item__search__btn js-btn-search"><i class="fa fa-search"></i></button>
             </div>
             <div class="menu-item__nav">
                 <ul class="nav nav--header">
@@ -193,7 +205,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav__item__link nav__item__link--icon" href="#"><i class="fas fa-bars"></i></a>
+                        <a class="nav__item__link nav__item__link--icon js-btn-menu" href="#"><i class="fas fa-bars"></i></a>
                     </li>
                 </ul>
             </div>
@@ -277,7 +289,6 @@
 
     </section>
     <!--masthead end-->
-    
     <!--pc ad1-->
     <section class="wrapper-fluid">
         <div class="lg-ad">
@@ -291,7 +302,7 @@
             <p class="section-title section-title--center">LATEST PROFILE</p>
             <div class="latest-profile__contents">
                 <div class="latest-profile__item">
-                    <img class="latest-profile__item__img" src="images/lp1.jpg"/>
+                    <img class="latest-profile__item__img" src="images/lp1.jpg" />
                     <div class="latest-profile__item__passage">
                         <p><a class="article-title1" href="#">Why Bosch HR head is a 'glocal' agent of change</a></p>
                         <span class="article-passage1">Rosa Lee has crossed continents to carry on her commitment to culture and people transformation. She shares</span>
@@ -321,7 +332,7 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 
     <!--latest news-->
@@ -379,7 +390,7 @@
                 <img src="images/pcAd2.jpg" />
             </div>
         </div>
-        
+
     </section>
 
     <!--mobile ad2-->
@@ -568,18 +579,99 @@
         </div>
     </footer>
 
+    <!--Search Layout-->
+    <section class="over-layout over-layout--search js-search-overay" aria-hidden="false">
+        <div class="wrapper">
+            <div style="text-align:right">
+                <a id="btnCloseSearch" style="color:white;" href="#"><span><i class="far fa-window-close fa-3x"></i></span></a>
+            </div>
+            <div>
+                <input id="txtSearch" class="search-input" type="text" placeholder="SEARCH HRD">
+            </div>
+        </div>
+    </section>
 
+    <!--Menu Layout-->
+    <section class="over-layout over-layout--menu js-menu-overay">
+        <div class="wrapper">
+            <div style="text-align:right">
+                <a id="btnCloseMenu" style="color:white;" href="#"><span><i class="far fa-window-close fa-3x"></i></span></a>
+            </div>
+            <div class="over-layout__menus">
+                <div class="over-layout__menus__item">
+                    <p class="over-layout-menu-title">NEWS</p>
+                    <ul>
+                        <li><a class="menu-label menu-label--overlay" href="#">News</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Industry news</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Opinion and Best Practice</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">International News</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Special Reports</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Profiles</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Rankings</a></li>
+                    </ul>
+                </div>
 
+                <div class="over-layout__menus__item">
+                    <p class="over-layout-menu-title">FEATURES</p>
+                    <ul>
+                        <li><a class="menu-label menu-label--overlay" href="#">Benefits</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Corporate Wellness</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Diversity & Inclusion</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Employee Engagement</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Employment Law</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Employment Litigation & Advice</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Financial Wellness</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">HR Technology</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Industrial Relations</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Leadership</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Learning & Development</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Mental Health</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">MICE</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Payroll</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Workplace Health and Safety</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Recruitment</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Reward & Recognition</a></li>
+                    </ul>
+                </div>
 
+                <div class="over-layout__menus__item">
+                    <p class="over-layout-menu-title">RESOURCES</p>
+                    <ul>
+                        <li><a class="menu-label menu-label--overlay" href="#">Jobs</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">White Papers</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">E-mag</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Poll</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Video</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">e-learning</a></li>
+                    </ul>
+                </div>
 
+                <div class="over-layout__menus__item">
+                    <p class="over-layout-menu-title">EVENTS</p>
+                    <ul>
+                        <li><a class="menu-label menu-label--overlay" href="#">National HR Summit</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">HR Summit Perth</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">HR Summit Melbourne</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">HR Summit  Brisbane</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Australian HR Awards</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">HR Tech Summit</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">L & D Sydney</a></li>
+                    </ul>
+                </div>
 
+                <div class="over-layout__menus__item">
+                    <p class="over-layout-menu-title">SUBSCRIBE</p>
+                    <ul>
+                        <li><a class="menu-label menu-label--overlay" href="#">Free E-newsletter</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Author</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">HRD Magazine</a></li>
+                        <li><a class="menu-label menu-label--overlay" href="#">Back Issues</a></li>
+                    </ul>
+                </div>
 
+            </div>
+        </div>
+    </section>
 
-
-
-
-
-
-    
 </body>
 </html>
