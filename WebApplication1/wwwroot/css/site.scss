@@ -235,10 +235,6 @@ body, table, div, p {
     padding-top: 20px;
 }
 
-// nav
-.nav {
-}
-
 // header nav
 .nav--header {
     display: flex;
@@ -330,6 +326,10 @@ body, table, div, p {
     align-items: flex-start;
     font-family: $font2;
     font-size: 16px;
+
+    @media (max-width: $screen-md-max) {
+        flex-direction: row;
+    }
 }
 
 .nav__item--masthead {
@@ -338,14 +338,18 @@ body, table, div, p {
     width: 100%;
     padding-left: 25px;
     border: outset 1px $grey;
+
+    @media (max-width: $screen-md-max) {
+        text-align:center;
+        padding-left: 0;
+        height: 50px;
+        width: 33.33333333333333%;
+    }
 }
 
 .nav__item--masthead-active {
-    display: table;
-    height: 70px;
-    width: 100%;
-    padding-left: 25px;
     background-color: $red;
+    border: outset 1px $red;
 }
 
 .nav__item__link--masthead {
@@ -357,6 +361,10 @@ body, table, div, p {
     &:hover {
         color: $white;
         text-decoration: none;
+    }
+
+    @media (max-width: $screen-md-max) {
+        padding:0;
     }
 }
 
@@ -468,10 +476,14 @@ body, table, div, p {
 
 .masthead__menu {
     display: none;
+    background-color: $dark-grey;
+
+    @media (min-width: $screen-sm-min) {
+        display: block;
+    }
 
     @media (min-width: $screen-lg-min) { // 1200px
         display: block;
-        background-color: $dark-grey;
         height: 540px;
         float: left;
         width: 195px;
