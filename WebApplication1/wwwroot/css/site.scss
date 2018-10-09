@@ -4,10 +4,8 @@
 @import "partials/_header.scss";
 @import "partials/_footer.scss";
 
-// default style
-body, table, div, p {
-    font-family: $font1;
-    font-weight: 400;
+.border-test {
+    border: solid 1px red;
 }
 
 // ==================== home
@@ -91,7 +89,7 @@ body, table, div, p {
     @media (max-width: $screen-xs-max) {
         display: block;
         text-align: center;
-        padding: 10px 10px;
+        padding: 20px 10px;
     }
 }
 
@@ -331,32 +329,15 @@ body, table, div, p {
 .masthead__article__label--3 {
     background-color: #4c9385;
 }
-// font-size : 28->24->22
-.section-title {
-    color: $black;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: $basic-line-height;
 
-    @media (min-width: $screen-sm-min) {
-        font-size: 24px;
-    }
+//========================== profile list
 
-    @media (min-width: $screen-lg-min) {
-        font-size: 28px;
-    }
-}
-
-.section-title--center {
-    text-align: center;
-}
-
-.latest-profile {
+.profile {
     padding-top: 50px;
     text-align: center;
 }
 
-.latest-profile__contents {
+.profile__contents {
     margin-top: 20px;
     display: flex;
     flex-direction: row;
@@ -376,7 +357,7 @@ body, table, div, p {
     }
 }
 
-.latest-profile__item {
+.profile__item {
     flex-basis: 100%;
     height: 396px;
     margin-bottom: 50px;
@@ -390,13 +371,23 @@ body, table, div, p {
     }
 }
 
-.latest-profile__item__img {
+.profile__item__img {
     position: relative;
-    overflow: hidden;
     width: 100%;
+    padding-top: 60%;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 }
 
-.latest-profile__item__passage {
+.profile__item__passage {
     position: relative;
     width: 94%;
     margin-top: -25px;
@@ -407,44 +398,143 @@ body, table, div, p {
     text-align: left;
 }
 
-.latest-news {
+//========================== news list
+
+.article-list__head {
     width: 100%;
-    @include clearfix;
+    max-width: 930px;
+    margin-bottom: 0;
+    border-bottom: solid $bar-color 1px;
+
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 30px;
+    }
+    //height: 560px;
+    /*height: 396px;
+    margin-bottom: 50px;*/
+    /*@media (min-width: $screen-sm-min) {
+        flex-basis: 47.91666666666667%;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        flex-basis: 23.40425531914894%;
+    }*/
 }
 
-.latest-news-left {
+.article-list__head__img {
+    max-height: 560px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+        width: 290px;
+        height: 175px;
+
+        @media (min-width: $screen-sm-min) {
+            width: 718px;
+            height: 430px;
+        }
+
+        @media (min-width: $screen-lg-min) {
+            width: 930px;
+            height: 560px;
+        }
+    }
+}
+
+.article-list__head__passage {
+    position: initial;
+    width: 100%;
+    background-color: $white;
+    min-height: 100px;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    //height: 300px;
+    span {
+        color: #4fafd0;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        padding: 30px 30px;
+        position: relative;
+        width: 94%;
+        margin-top: -115px;
+        left: 3%;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        padding: 30px 50px;
+        //padding-bottom: 20px;
+    }
+}
+
+.article-list {
+    width: 100%;
+    padding: 0;
+    @include clearfix;
+
+    /*@media (min-width: $screen-sm-min) {
+        padding: 20px 0;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        padding: 40px 0;
+    }*/
+}
+
+.article-list-left {
     max-width: 100%;
     width: 100%;
     float: left;
 
     @media (min-width: $screen-lg-min) {
-        max-width: 69%;
+        max-width: 930px;
+    }
+
+    @media (max-width: $screen-sm - 1) {
+        .article-list__item + .article-list__item {border-top: solid $bar-color 1px;}
     }
 }
 
-.latest-news__item {
+.article-list__item {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding-top: 15px;
-    padding-bottom: 15px;
-
+    padding: 20px 0;
+    /*padding-top: 15px;
+    padding-bottom: 15px;*/
     @media (max-width: $screen-sm - 1) {
         display: block;
-        border-bottom: solid $bar-color 1px;
+        //border-bottom: solid $bar-color 1px;
+        padding-top: 20px;
+        padding-bottom: 5px;
     }
 }
 
-.latest-news__item__img {
+.article-list__item__img {
     display: none;
     margin-right: 20px;
+
+    img {
+        @media (min-width: $screen-sm-min) {
+            width: 160px;
+            height: 96px;
+        }
+
+        @media (min-width: $screen-lg-min) {
+            width: 200px;
+            height: 122px;
+        }
+    }
 
     @media (min-width: $screen-sm-min) {
         display: block;
     }
 }
 
-.latest-news__item__passage {
+.article-list__item__passage {
     max-width: 100%;
 
     @media (min-width: $screen-sm-min) {
@@ -456,6 +546,34 @@ body, table, div, p {
     }
 }
 
+.article-list__item-btn {
+    padding: 0;
+
+    button {
+        width: 100%;
+        font-family: $font2;
+        font-size: 16px;
+        color: $white;
+        background-color: #d9d9d9;
+        line-height: $basic-line-height;
+        padding: 20px 0;
+        border: 0;
+        @include rounded(0);
+
+        @media (max-width: $screen-sm-max) {
+            padding: 15px 0;
+        }
+    }
+
+    @media (min-width: $screen-sm-min) {
+        padding-top: 20px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        padding-bottom: 45px;
+    }
+}
+
 .hide-from-xs {
     display: none;
 
@@ -464,15 +582,38 @@ body, table, div, p {
     }
 }
 
-.latest-news-right-ad {
+.hide-from-sm {
+    display: none;
+
+    @media (min-width: $screen-md-min) {
+        display: block;
+    }
+}
+
+.hide-from-md {
     display: none;
 
     @media (min-width: $screen-lg-min) {
+        display: block;
+    }
+}
+
+.article-list-right-ad {
+    display: none;
+
+    @media (min-width: 1325px) {
         display: block;
         text-align: center;
         width: 330px;
         float: right;
     }
+
+    /*@media (min-width: $screen-lg-min) {
+        display: block;
+        text-align: center;
+        width: 330px;
+        float: right;
+    }*/
 }
 
 .magazine {
@@ -493,8 +634,12 @@ body, table, div, p {
     }
 
     img {
+        width: 142px;
+        height: 190px;
+
         @media (max-width: $screen-xs-max) {
             width: 72px;
+            height: 96px;
         }
     }
 }
@@ -570,6 +715,7 @@ body, table, div, p {
 .top-videos__part1 {
     flex-basis: 100%;
     padding: 0;
+    padding-bottom: 30px;
     border-right: 0;
 
     @media (min-width: $screen-sm-min) {
@@ -580,11 +726,24 @@ body, table, div, p {
         flex-basis: 100%;
         padding-right: 50px;
         border-right: solid $bar-color 1px;
+        padding-bottom: 30px;
     }
 }
 
 .top-videos__part1__img {
+    position: relative;
     width: 100%;
+    padding-top: 56.44444444444444%;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 }
 
 .top-videos__part2 {
@@ -610,37 +769,36 @@ body, table, div, p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    padding-bottom: 20px;
     p {
-        flex-basis: 50%;
+        flex-basis: 48%;
     }
 }
 
 .top-videos__part2__item__img {
     flex-basis: 50%;
     text-align: right;
-
+    position: relative;
+    padding-top: 28.3%;
+    
     img {
-        max-width: 290px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
         width: 100%;
+        height: 100%;
     }
 
     @media (min-width: $screen-sm-min) {
         flex-basis: 45%;
-
-        img {
-            max-width: 345px;
-            width: 100%;
-        }
+        padding-top: 25.445%;
     }
 
     @media (min-width: $screen-lg-min) {
         flex-basis: 48%;
-
-        img {
-            max-width: 450px;
-            width: 100%;
-        }
+        padding-top: 27.14%;
     }
 }
 
@@ -660,6 +818,7 @@ body, table, div, p {
 
     img {
         width: 120px;
+        height: 60px;
     }
 
     @media (min-width: $screen-sm-min) {
