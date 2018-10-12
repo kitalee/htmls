@@ -11,48 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/site.js"></script>
     <title>Human Capital Magazine</title>
-    <script>
-        
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-                document.getElementById("btnGoTop").style.display = "block";
-            } else {
-                document.getElementById("btnGoTop").style.display = "none";
-            }
-        }
-
-        $(document).ready(function () {
-            $('#btnGoTop').click(function () {
-                $("html, body").animate({ scrollTop: 0 }, 600);
-                return false;
-            });
-
-            $('.js-btn-search').click(function () {
-                $('body').css('overflow', 'hidden');
-                $('.js-search-overay').css('display', 'block');
-                $('#txtSearch').focus();
-            });
-
-            $('#btnCloseSearch').click(function () {
-                $('body').css('overflow', 'auto');
-                $('.js-search-overay').css('display', 'none');
-            });
-
-            $('.js-btn-menu').click(function () {
-                $('body').css('overflow', 'hidden');
-                $('.js-menu-overay').css('display', 'block');
-            });
-
-            $('#btnCloseMenu').click(function () {
-                $('body').css('overflow', 'auto');
-                $('.js-menu-overay').css('display', 'none');
-            });
-        });
-
-    </script>
 </head>
 <body class="page">
     <header class="wrapper wrapper--header">
@@ -229,15 +189,13 @@
         </div>
     </section>
 
-   
     <section class="wrapper">
-        <div class="article-list">
-            <p class="section-title2">News</p>
+        <p class="section-title2">News</p>
+        <div class="article-list js-sticky-container">
             <div class="article-list-left">
                 <div class="article-list__head">
                     <img class="article-list__head__img" src="images/main_img1.jpg" />
                     <div class="article-list__head__passage">
-
                         <p><a class="article-title7" href="#">Pepsi 'moving in the right direction' as CEO Indra Nooyi steps down</a></p>
                         <p class="article-passage4">By <span>HRD</span>   /   JUNE 10, 2015</p>
                         <p class="article-passage4">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
@@ -289,12 +247,12 @@
                     </div>
                 </div>
 
-                <div class="article-list__item-btn">
+                <div class="article-list__item-btn js-sticky-stopper">
                     <button type="button" class="btn">Show more</button>
                 </div>
 
             </div>
-            <div class="article-list-right-ad">
+            <div class="article-list-right-ad js-sticky">
                 <img src="images/pcAd2.jpg" />
             </div>
         </div>

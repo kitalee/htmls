@@ -74,6 +74,30 @@ p {
     color: $rss-color;
 }
 
+.hide-from-xs {
+    display: none;
+
+    @media (min-width: $screen-sm-min) {
+        display: block;
+    }
+}
+
+.hide-from-sm {
+    display: none;
+
+    @media (min-width: $screen-md-min) {
+        display: block;
+    }
+}
+
+.hide-from-md {
+    display: none;
+
+    @media (min-width: $screen-lg-min) {
+        display: block;
+    }
+}
+
 //=================== labels
 
 // font-size : 28->24->22

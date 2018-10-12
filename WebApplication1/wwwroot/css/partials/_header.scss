@@ -45,10 +45,10 @@
     vertical-align: top;
     text-align: center;
     background-color: $grey;
-}
 
-.logo__btn__item--active {
-    background-color: $red;
+    &.active {
+        background-color: $red;
+    }
 }
 
 .logo__btn__item > a {
@@ -151,10 +151,6 @@
     }
 }
 
-.nav__item--active {
-    background-color: $red;
-}
-
 .nav__item--narrow {
     padding: 0 0;
 }
@@ -168,6 +164,10 @@
     &:hover {
         color: $red;
         text-decoration: none;
+    }
+
+    &.active {
+        color: $red;
     }
 
     @media (max-width: $screen-md-max) {
@@ -203,10 +203,6 @@
         padding: 0;
         margin: 0;
     }
-}
-
-.nav__item__link--active {
-    color: $red;
 }
 
 .nav__item__link--icon {
