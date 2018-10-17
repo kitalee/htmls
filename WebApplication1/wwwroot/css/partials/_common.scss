@@ -1,6 +1,8 @@
-﻿// default style
+﻿@import "_variables.scss";
+@import "_mixins.scss";
+// default style
 body, table, div, p {
-    font-family: $font1;
+    font-family: $font-1;
     font-weight: 400;
     padding:0;
     margin:0;
@@ -23,11 +25,13 @@ p {
 .wrapper {
     width: 100%;
     min-width: $screen-xs-min;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 
     @media (min-width: $screen-xs-min) { // 320px
         max-width: $screen-xs-max;
-        padding-left: 15px;
-        padding-right: 15px;
     }
 
     @media (min-width: $screen-sm-min) { // 768px
@@ -53,8 +57,20 @@ p {
         width: 100%;
         padding-left: 0;
         padding-right: 0;
-        margin-left: auto;
-        margin-right: auto;
+    }
+}
+
+.wrapper--center {
+    text-align:center;
+}
+
+.wrapper--flex-1 {
+    display: block;
+
+    @media (min-width: $screen-lg-min) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
 
@@ -68,6 +84,26 @@ p {
 
 .no-padding {
     padding: 0;
+}
+
+.no-deco {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.margin-bottom-type-1 {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 45px;
+    }
 }
 
 .rss-color {
@@ -105,7 +141,22 @@ p {
     color: $black;
     font-size: 22px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: calc(2vw + 4px);
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 28px;
+    }
+}
+
+/*.section-title2 {
+    color: $black;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: $default-line-height;
 
     @media (min-width: $screen-sm-min) {
         font-size: 24px;
@@ -114,23 +165,8 @@ p {
     @media (min-width: $screen-lg-min) {
         font-size: 28px;
     }
-}
+}*/
 
-.section-title2 {
-    color: $black;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: $basic-line-height;
-    margin-top: .5em;
-
-    @media (min-width: $screen-sm-min) {
-        font-size: 44px;
-    }
-
-    @media (min-width: $screen-lg-min) {
-        font-size: 62px;
-    }
-}
 
 .section-title--center {
     text-align: center;
@@ -159,19 +195,19 @@ p {
 }
 
 .article-label1 {
-    font-family: $font2;
+    font-family: $font-2;
     color: #8f7669;
     font-size: 18px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 }
 
 .article-label2 {
-    font-family: $font2;
+    font-family: $font-2;
     color: #8f7669;
     font-size: 14px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 }
 
 // font-size : 26->24->24
@@ -179,7 +215,7 @@ p {
     color: $black;
     font-size: 24px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $black;
@@ -194,7 +230,7 @@ p {
     color: $black;
     font-size: 20px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $black;
@@ -213,7 +249,7 @@ p {
     color: $black;
     font-size: 22px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $black;
@@ -228,7 +264,7 @@ p {
     color: $black;
     font-size: 18px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $black;
@@ -243,7 +279,7 @@ p {
     color: $black;
     font-size: 20px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $black;
@@ -258,7 +294,7 @@ p {
     color: $black;
     font-size: 22px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $black;
@@ -273,7 +309,7 @@ p {
     color: $black;
     font-size: 26px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $black;
@@ -287,13 +323,53 @@ p {
         font-size: 40px;
     }
 }
+// font-size : 22->20->18
+.article-title8 {
+    color: $black;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: $line-height-1;
+
+    &:hover {
+        color: $black;
+    }
+
+    a {
+        color: #3aa8cc;
+        text-decoration: underline;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        font-size: calc(1vw + 10px);
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 22px;
+    }
+}
+.article-title9 {
+    color: $black;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: $default-line-height;
+    margin-top: .5em;
+
+    @media (min-width: $screen-sm-min) {
+        //font-size: 44px;
+        font-size: calc(10px + 4vw);
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 62px;
+    }
+}
 // font-size : 18 -> 16 -> 16
 .article-passage1 {
-    font-family: $font2;
+    font-family: $font-2;
     color: $passage-color;
     font-size: 16px;
     font-weight: 400;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $passage-color;
@@ -305,11 +381,11 @@ p {
 }
 // font-size : 18 -> 16 -> 14
 .article-passage2 {
-    font-family: $font2;
+    font-family: $font-2;
     color: $passage-color;
     font-size: 14px;
     font-weight: 400;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $passage-color;
@@ -317,6 +393,7 @@ p {
 
     @media (min-width: $screen-sm-min) {
         font-size: 16px;
+        //font-size: calc(1vw + 5.5px);
     }
 
     @media (min-width: $screen-lg-min) {
@@ -325,11 +402,11 @@ p {
 }
 // font-size : 16 -> 16 -> 14
 .article-passage3 {
-    font-family: $font2;
+    font-family: $font-2;
     color: $passage-color;
     font-size: 14px;
     font-weight: 400;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $passage-color;
@@ -341,11 +418,11 @@ p {
 }
 // font-size : 20 -> 18 -> 16
 .article-passage4 {
-    font-family: $font2;
+    font-family: $font-2;
     color: $passage-color;
     font-size: 16px;
     font-weight: 400;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $passage-color;
@@ -359,11 +436,33 @@ p {
         font-size: 20px;
     }
 }
+// font-size : 22 -> 20 -> 18
+.article-passage5 {
+    @extend .article-title8;
+    font-weight: 400;
+}
 .passage-color2 {
-    color: $passage-color2;
+    color: $passage-color-2;
 
     &:hover {
-        color: $passage-color2;
+        color: $passage-color-2;
+    }
+}
+// font-size : 18 -> 16 -> 14
+.article-passage6 {
+    @extend .article-passage2;
+
+    @media (min-width: $screen-sm-min) {
+        //font-size: 16px;
+        font-size: calc(1vw + 5.5px);
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 18px;
+    }
+
+    span {
+        color: #4fafd0;
     }
 }
 
@@ -444,4 +543,43 @@ p {
     &:hover {
         color: $red;
     }
+}
+
+.grey-line {
+    border-top: 1px solid #eaeaea;
+}
+
+// breadcrumb
+.wrapper--breadcrumb {
+    padding-top: 20px;
+
+    @media (min-width: $screen-sm-min) {
+        padding-top: 30px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        padding-top: 48px;
+    }
+}
+.breadcrumb {
+    padding: 0;
+    margin: 0;
+    background-color: $white; //3aa8cc
+}
+.breadcrumb-item {
+    font-family: $font-2;
+
+    a {
+        @extend .article-passage1;
+        color: #3aa8cc;
+        text-decoration: none;
+
+        &:hover {
+            color: #3aa8cc;
+        }
+    }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "·";
+    color: #b7b7b7;
 }

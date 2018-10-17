@@ -5,14 +5,13 @@
     var $stickyContainer = $('.js-sticky-container');
 
     if (!!$sticky.offset()) {
-
         var stickyWidth = $sticky.outerWidth();
         var stickyTopOff = $sticky.offset().top;
         var stickyLeftOff = $sticky.offset().left;
         var stickOffset = 0; 
 
         $(window).bind("load scroll resize", function () {
-            if ($sticky.css('display') == 'block') {
+            if ($sticky.css('display') === 'block') {
                 stickyTopOff = $stickyContainer.offset().top;
                 stickyWidth = $sticky.outerWidth();
             }
@@ -23,26 +22,26 @@
 
             if (stopPointOff <= windowTop) {
                 // stop at bottom
-                $sticky.css({ position: 'absolute', top: stopPoint, right: 0, left: 'auto' });
+                $sticky.css({ position: 'absolute', top: stopPoint, left: 'auto', right: 0  });
             } else if (stickyTopOff < windowTop + stickOffset) {
                 // sticking
                 $sticky.css({ position: 'fixed', top: stickOffset, left: stickyLeftPos, right: 'auto' });
             } else {
                 // stop at top
-                $sticky.css({ position: 'absolute', top: 0, right: 0, left: 'auto' });
+                $sticky.css({ position: 'absolute', top: 0, left: 'auto', right: 0  });
             }
         });
     }
 
     $(window).scroll(function () {
         if ($(document.body).scrollTop() > 400 || $(document.documentElement).scrollTop() > 400) {
-            $('#btnGoTop').css('display', 'block');
+            $('.js-btn-go-top').css('display', 'block');
         } else {
-            $('#btnGoTop').css('display', 'none');
+            $('.js-btn-go-top').css('display', 'none');
         }
     });
 
-    $('#btnGoTop').click(function () {
+    $('.js-btn-go-top').click(function () {
         $("html, body").animate({ scrollTop: 0 }, 600);
         return false;
     });

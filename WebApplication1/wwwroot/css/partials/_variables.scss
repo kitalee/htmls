@@ -1,9 +1,10 @@
 ﻿// basic line-height
-$basic-line-height: 120% !default;
+$default-line-height: 120% !default;
+$line-height-1: 130% !default;
 // font-family
-$font1: 'Titillium Web', Arial, sans-serif !default;
-$font2: Roboto, Arial, sans-serif !default;
-$font3: NanumGothic, Arial, sans-serif !default;
+$font-1: 'Titillium Web', Arial, sans-serif !default;
+$font-2: Roboto, Arial, sans-serif !default;
+$font-3: NanumGothic, Arial, sans-serif !default;
 
 // screen sizes
 
@@ -47,7 +48,7 @@ $black: #000000 !default;
 $red: red !default;
 $white: white !default;
 $passage-color: #888888 !default;
-$passage-color2: #b2b2b2 !default;
+$passage-color-2: #b2b2b2 !default;
 $bar-color: #dfdfdf !default;
 $bgcolor1: #f0f0f0 !default;
 $rss-color: #f59b5a !default;

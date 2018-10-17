@@ -106,5 +106,397 @@
   {
     "outputFile": "wwwroot/js/site.es5.js",
     "inputFile": "Views"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newslist.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newsdetails.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/images"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/images"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/css/site.scss"
   }
 ]

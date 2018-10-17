@@ -52,8 +52,8 @@
 }
 
 .logo__btn__item > a {
-    line-height: $basic-line-height;
-    font-family: $font2;
+    line-height: $default-line-height;
+    font-family: $font-2;
     font-size: 13px;
     font-weight: bold;
     display: inline-block;
@@ -193,6 +193,7 @@
     -moz-box-shadow: 0 3px 5px $black;
     box-shadow: 0 3px 5px $black;*/
     z-index: 999;
+    box-shadow:0 3px 3px rgba(0,0,0,.35);
 
     div {
         width: 23%;
@@ -289,7 +290,7 @@
     color: $grey;
     font-size: 26px;
     font-weight: 700;
-    line-height: $basic-line-height;
+    line-height: $default-line-height;
 
     &:hover {
         color: $grey;
