@@ -1,10 +1,9 @@
 ﻿$(function () {
 
-    var $sticky = $('.js-sticky');
-    var $stickyrStopper = $('.js-sticky-stopper');
-    var $stickyContainer = $('.js-sticky-container');
-
-    if (!!$sticky.offset()) {
+    if (!!$('.js-sticky').offset()) {
+        var $sticky = $('.js-sticky');
+        var $stickyrStopper = $('.js-sticky-stopper');
+        var $stickyContainer = $('.js-sticky-container');
         var stickyWidth = $sticky.outerWidth();
         var stickyTopOff = $sticky.offset().top;
         var stickyLeftOff = $sticky.offset().left;
@@ -90,6 +89,9 @@
 
     });
 
-
+    $('.js-overlay-tab').click(function () {
+        $('.js-overlay-tab').removeClass('active');
+        $(this).addClass('active');
+    });
 
 });

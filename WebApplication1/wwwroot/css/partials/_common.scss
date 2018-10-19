@@ -74,6 +74,7 @@ p {
     }
 }
 
+// remove properties
 .no-border {
     border: 0;
 }
@@ -94,7 +95,21 @@ p {
     }
 }
 
-.margin-bottom-type-1 {
+// underline
+.underline-1 {
+    border-bottom: solid $bar-color 1px;
+}
+
+.underline-2 {
+    border-bottom: 1px solid $bar-color-2;
+}
+
+.underline-3 {
+    border-bottom: 1px solid $bar-color-3;
+}
+
+// margin bottom
+.margin-bottom-1 {
     margin-bottom: 25px;
 
     @media (min-width: $screen-sm-min) {
@@ -106,10 +121,19 @@ p {
     }
 }
 
-.rss-color {
-    color: $rss-color;
+.margin-bottom-2 {
+    margin-bottom: 35px;
+
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 50px;
+    }
 }
 
+// display none by screen size
 .hide-from-xs {
     display: none;
 
@@ -134,10 +158,152 @@ p {
     }
 }
 
-//=================== labels
+// etc
+.rss-color {
+    color: $rss-color;
+}
+//=================== ads
+// mobile ad 1
+.xs-ad {
+    display: none;
+    background-color: $bgcolor1;
+    margin-bottom: 30px;
 
-// font-size : 28->24->22
-.section-title {
+    @media (max-width: $screen-xs-max) { // 768px - 1
+        display: block;
+        text-align: center;
+        padding: 0 15px;
+        padding-bottom: 30px;
+
+        p {
+            margin: 0;
+        }
+
+        p::before {
+            content: "ADVERTISEMENT";
+            display: block;
+            color: #bbbbbb;
+            font-size: 11px;
+            font-family: $font-2;
+            line-height: 30px;
+        }
+    }
+}
+
+// ipad + mobile ad
+.sm-ad {
+    display: none;
+
+    @media (max-width: $screen-md-max) {
+        display: block;
+        text-align: center;
+        padding: 30px 30px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        display: block;
+        text-align: center;
+        padding: 20px 10px;
+    }
+}
+
+// pc ad 1
+.lg-ad {
+    display: none;
+    background-color: $bgcolor1;
+    @extend .margin-bottom-1;
+
+    @media (min-width: $screen-sm-min) { // 768px
+        display: block;
+        text-align: center;
+        padding: 0 30px;
+        padding-bottom: 30px;
+
+        img {
+            max-width: 970px;
+            width: 100%
+        }
+
+        p {
+            margin: 0;
+        }
+
+        p::before {
+            content: "ADVERTISEMENT";
+            display: block;
+            color: #bbbbbb;
+            font-size: 11px;
+            font-family: $font-2;
+            line-height: 30px;
+        }
+    }
+}
+
+//==================== font style for label, section, title, passage
+// static font size
+.font-label-1 {
+    font-family: $font-2;
+    color: #8f7669;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: $default-line-height;
+
+    &:hover {
+        text-decoration: none;
+        color: #8f7669;
+    }
+}
+
+.font-label-2 {
+    font-family: $font-2;
+    color: #8f7669;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: $default-line-height;
+
+    &:hover {
+        text-decoration: none;
+        color: #8f7669;
+    }
+}
+
+.font-label-3 {
+    font-family: $font-2;
+    line-height: $default-line-height;
+    color: #bcbcbc;
+    font-size: 15px;
+    font-weight: 400;
+
+    &:hover {
+        text-decoration: underline;
+        color: #bcbcbc;
+    }
+}
+
+.font-label-4 {
+    color: $black;
+    font-size: 18px;
+    line-height: 200%;
+
+    &:hover {
+        text-decoration: none;
+        color: $red;
+    }
+}
+
+.font-label-5 {
+    color: $grey;
+    font-size: 20px;
+    line-height: 200%;
+
+    &:hover {
+        text-decoration: none;
+        color: $red;
+    }
+}
+
+// font-size (lg->sm->xs) : 28->24->22
+.font-section-1 {
     color: $black;
     font-size: 22px;
     font-weight: 700;
@@ -152,66 +318,38 @@ p {
     }
 }
 
-/*.section-title2 {
+// font-size (lg->sm->xs) : 28->26->26
+.font-section-2 {
     color: $black;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 700;
     line-height: $default-line-height;
-
-    @media (min-width: $screen-sm-min) {
-        font-size: 24px;
-    }
 
     @media (min-width: $screen-lg-min) {
         font-size: 28px;
     }
-}*/
-
-
-.section-title--center {
-    text-align: center;
 }
 
-.menu-label {
+// font-size (lg->sm->xs) : 62->44->30
+.font-section-3 {
     color: $black;
-    font-size: 18px;
-    line-height: 200%;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: $default-line-height;
+    margin-top: .5em;
 
-    &:hover {
-        text-decoration: none;
-        color: $red;
+    @media (min-width: $screen-sm-min) {
+        //font-size: 44px;
+        font-size: calc(10px + 4vw);
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 62px;
     }
 }
 
-.menu-label--overlay {
-    color: $white;
-    font-size: 20px;
-    line-height: 200%;
-
-    &:hover {
-        text-decoration: none;
-        color: $red;
-    }
-}
-
-.article-label1 {
-    font-family: $font-2;
-    color: #8f7669;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: $default-line-height;
-}
-
-.article-label2 {
-    font-family: $font-2;
-    color: #8f7669;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: $default-line-height;
-}
-
-// font-size : 26->24->24
-.article-title1 {
+// font-size (lg->sm->xs) : 26->24->24
+.font-title-1 {
     color: $black;
     font-size: 24px;
     font-weight: 700;
@@ -225,8 +363,8 @@ p {
         font-size: 26px;
     }
 }
-// font-size : 26->24->20
-.article-title2 {
+// font-size (lg->sm->xs) : 26->24->20
+.font-title-2 {
     color: $black;
     font-size: 20px;
     font-weight: 700;
@@ -244,8 +382,8 @@ p {
         font-size: 26px;
     }
 }
-// font-size : 26->22->22
-.article-title3 {
+// font-size (lg->sm->xs) : 26->22->22
+.font-title-3 {
     color: $black;
     font-size: 22px;
     font-weight: 700;
@@ -259,8 +397,8 @@ p {
         font-size: 26px;
     }
 }
-// font-size : 22->18->18
-.article-title4 {
+// font-size (lg->sm->xs) : 22->18->18
+.font-title-4 {
     color: $black;
     font-size: 18px;
     font-weight: 700;
@@ -274,8 +412,8 @@ p {
         font-size: 22px;
     }
 }
-// font-size : 22->20->20
-.article-title5 {
+// font-size (lg->sm->xs) : 22->20->20
+.font-title-5 {
     color: $black;
     font-size: 20px;
     font-weight: 700;
@@ -289,8 +427,8 @@ p {
         font-size: 22px;
     }
 }
-// font-size : 26->26->22
-.article-title6 {
+// font-size (lg->sm->xs) : 26->26->22
+.font-title-6 {
     color: $black;
     font-size: 22px;
     font-weight: 700;
@@ -304,8 +442,8 @@ p {
         font-size: 26px;
     }
 }
-// font-size : 40->36->26
-.article-title7 {
+// font-size (lg->sm->xs) : 40->36->26
+.font-title-7 {
     color: $black;
     font-size: 26px;
     font-weight: 700;
@@ -323,8 +461,8 @@ p {
         font-size: 40px;
     }
 }
-// font-size : 22->20->18
-.article-title8 {
+// font-size (lg->sm->xs) : 22->20->18
+.font-title-8 {
     color: $black;
     font-size: 18px;
     font-weight: 700;
@@ -347,7 +485,8 @@ p {
         font-size: 22px;
     }
 }
-.article-title9 {
+// font-size (lg->sm->xs) : 62->44->30
+.font-title-9 {
     color: $black;
     font-size: 30px;
     font-weight: 700;
@@ -363,8 +502,8 @@ p {
         font-size: 62px;
     }
 }
-// font-size : 18 -> 16 -> 16
-.article-passage1 {
+// font-size (lg->sm->xs) : 18 -> 16 -> 16
+.font-passage-1 {
     font-family: $font-2;
     color: $passage-color;
     font-size: 16px;
@@ -379,8 +518,8 @@ p {
         font-size: 18px;
     }
 }
-// font-size : 18 -> 16 -> 14
-.article-passage2 {
+// font-size (lg->sm->xs) : 18 -> 16 -> 14
+.font-passage-2 {
     font-family: $font-2;
     color: $passage-color;
     font-size: 14px;
@@ -400,8 +539,8 @@ p {
         font-size: 18px;
     }
 }
-// font-size : 16 -> 16 -> 14
-.article-passage3 {
+// font-size (lg->sm->xs) : 16 -> 16 -> 14
+.font-passage-3 {
     font-family: $font-2;
     color: $passage-color;
     font-size: 14px;
@@ -416,8 +555,8 @@ p {
         font-size: 16px;
     }
 }
-// font-size : 20 -> 18 -> 16
-.article-passage4 {
+// font-size (lg->sm->xs) : 20 -> 18 -> 16
+.font-passage-4 {
     font-family: $font-2;
     color: $passage-color;
     font-size: 16px;
@@ -436,33 +575,70 @@ p {
         font-size: 20px;
     }
 }
-// font-size : 22 -> 20 -> 18
-.article-passage5 {
-    @extend .article-title8;
+// font-size (lg->sm->xs) : 22 -> 20 -> 18
+.font-passage-5 {
+    color: $black;
+    font-size: 18px;
     font-weight: 400;
-}
-.passage-color2 {
-    color: $passage-color-2;
+    line-height: $line-height-1;
 
     &:hover {
-        color: $passage-color-2;
+        color: $black;
     }
-}
-// font-size : 18 -> 16 -> 14
-.article-passage6 {
-    @extend .article-passage2;
+
+    a {
+        color: #3aa8cc;
+        text-decoration: underline;
+    }
 
     @media (min-width: $screen-sm-min) {
-        //font-size: 16px;
+        font-size: calc(1vw + 10px);
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 22px;
+    }
+}
+
+// font-size (lg->sm->xs) : 18 -> 16 -> 14
+.font-passage-6 {
+    font-family: $font-2;
+    color: $passage-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: $default-line-height;
+
+    &:hover {
+        color: $passage-color;
+    }
+
+    span {
+        color: #4fafd0;
+    }
+
+    @media (min-width: $screen-sm-min) {
         font-size: calc(1vw + 5.5px);
     }
 
     @media (min-width: $screen-lg-min) {
         font-size: 18px;
     }
+}
 
-    span {
-        color: #4fafd0;
+// font-size (lg->sm->xs) : 16 -> 16 -> 14
+.font-passage-7 {
+    font-family: $font-2;
+    color: $passage-color-2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: $default-line-height;
+
+    &:hover {
+        color: $passage-color-2;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 16px;
     }
 }
 
@@ -545,9 +721,6 @@ p {
     }
 }
 
-.grey-line {
-    border-top: 1px solid #eaeaea;
-}
 
 // breadcrumb
 .wrapper--breadcrumb {
@@ -561,16 +734,18 @@ p {
         padding-top: 48px;
     }
 }
+
 .breadcrumb {
     padding: 0;
     margin: 0;
     background-color: $white; //3aa8cc
 }
+
 .breadcrumb-item {
     font-family: $font-2;
 
     a {
-        @extend .article-passage1;
+        @extend .font-passage-1;
         color: #3aa8cc;
         text-decoration: none;
 
@@ -579,6 +754,7 @@ p {
         }
     }
 }
+
 .breadcrumb-item + .breadcrumb-item::before {
     content: "·";
     color: #b7b7b7;
