@@ -339,10 +339,11 @@ p {
       font-size: 40px; } }
 
 .font-title-8 {
+  font-family: Roboto, Arial, sans-serif;
   color: #000000;
   font-size: 18px;
   font-weight: 700;
-  line-height: 130%; }
+  line-height: 150%; }
   .font-title-8:hover {
     color: #000000; }
   .font-title-8 a {
@@ -423,10 +424,11 @@ p {
       font-size: 20px; } }
 
 .font-passage-5, .related-story {
+  font-family: Roboto, Arial, sans-serif;
   color: #000000;
   font-size: 18px;
-  font-weight: 400;
-  line-height: 130%; }
+  font-weight: 300;
+  line-height: 150%; }
   .font-passage-5:hover, .related-story:hover {
     color: #000000; }
   .font-passage-5 a, .related-story a {
@@ -1356,6 +1358,8 @@ p {
     @media (max-width: 991px) {
       .article-list__item-btn button {
         padding: 15px 0; } }
+  .article-list__item-btn button:hover {
+    background-color: #323232; }
   @media (min-width: 768px) {
     .article-list__item-btn {
       padding-top: 20px; } }
@@ -1404,9 +1408,9 @@ p {
 .hrd-btn-go-top {
   display: none;
   position: fixed;
-  bottom: 15px;
+  bottom: 60px;
   right: 15px;
-  z-index: 999;
+  z-index: 9999;
   border: none;
   background-color: red;
   opacity: 0.5;
@@ -1610,8 +1614,7 @@ p {
   list-style: none;
   padding: 0; }
   .related-story li {
-    text-indent: -20px;
-    padding-left: 20px;
+    padding: 0;
     line-height: 150%; }
   .related-story li::before {
     content: ""; }

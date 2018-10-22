@@ -193,7 +193,7 @@
     padding: 30px 30px;
     background-color: $white;
     z-index: 999;
-    box-shadow:0 3px 3px rgba(0,0,0,.35);
+    box-shadow: 0 3px 3px rgba(0,0,0,.35);
 
     div {
         width: 23%;
@@ -309,6 +309,7 @@
     display: inline-block;
     padding: 10px 30px;
     color: $black;
+
     &.active {
         border-bottom: solid 3px $red;
     }

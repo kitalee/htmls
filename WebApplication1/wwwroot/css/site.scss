@@ -265,7 +265,6 @@
     @media (min-width: $screen-lg-min) { // 1200px
         height: 540px;
         flex-basis: 24.92211838006231%;
-
     }
 }
 
@@ -369,7 +368,6 @@
     @media (min-width: $screen-sm-min) {
         margin-bottom: 30px;
     }
-
 }
 
 .article-list__head__img {
@@ -398,6 +396,7 @@
     text-align: left;
     padding-top: 20px;
     padding-bottom: 5px;
+
     span {
         color: #4fafd0;
     }
@@ -432,8 +431,8 @@
     }
 
     @media (max-width: $screen-sm - 1) {
-        .article-list__item + .article-list__item { 
-            border-top: solid $bar-color 1px; 
+        .article-list__item + .article-list__item {
+            border-top: solid $bar-color 1px;
         }
     }
 }
@@ -460,6 +459,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 20px 0;
+
     @media (max-width: $screen-sm - 1) {
         display: block;
         padding-top: 20px;
@@ -523,6 +523,10 @@
         }
     }
 
+    button:hover {
+        background-color: $dark-grey;
+    }
+
     @media (min-width: $screen-sm-min) {
         padding-top: 20px;
     }
@@ -582,9 +586,9 @@
 .hrd-btn-go-top {
     display: none;
     position: fixed;
-    bottom: 15px;
+    bottom: 60px;
     right: 15px;
-    z-index: 999;
+    z-index: 9999;
     border: none;
     background-color: $red;
     opacity: 0.5;
@@ -676,6 +680,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 20px;
+
     p {
         flex-basis: 48%;
     }
@@ -686,7 +691,7 @@
     text-align: right;
     position: relative;
     padding-top: 28.3%;
-    
+
     img {
         position: absolute;
         top: 0;
@@ -842,8 +847,7 @@
     padding: 0;
 
     li {
-        text-indent: -20px;
-        padding-left: 20px;
+        padding: 0;
         line-height: 150%;
     }
 
@@ -855,7 +859,7 @@
         color: #2a7aff;
         text-decoration: none;
     }
-    
+
     a:hover {
         text-decoration: underline;
     }
@@ -870,10 +874,10 @@
 }
 
 .newsletter__item {
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
 
     div {
         margin-top: 10px;
@@ -897,9 +901,11 @@
 
 .newsletter__item__btn {
     flex-basis: 100%;
+
     button {
         width: 100%;
     }
+
     @media (min-width: $screen-sm-min) {
         flex-basis: 25%;
     }
@@ -922,6 +928,7 @@
 
 .article-video__list {
     display: block;
+
     @media (min-width: $screen-sm-min) {
         display: flex;
         flex-direction: row;
@@ -983,6 +990,7 @@
 .most-read-article__item {
     @extend .underline-1;
     margin-bottom: 15px;
+
     span {
         color: #4fafd0;
     }
