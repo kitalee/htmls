@@ -1042,5 +1042,17 @@
   {
     "outputFile": "wwwroot/css/partials/_common.css",
     "inputFile": "wwwroot/css/site.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newsdetails.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newsdetails.html"
+  },
+  {
+    "outputFile": "wwwroot/css/partials/_common.css",
+    "inputFile": "wwwroot/newsdetails.html"
   }
 ]

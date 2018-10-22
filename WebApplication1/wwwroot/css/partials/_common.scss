@@ -1,6 +1,11 @@
 ﻿@import "_variables.scss";
 @import "_mixins.scss";
-// default style
+
+/*
+==========================================================================
+    Default
+========================================================================== 
+*/
 body, table, div, p {
     font-family: $font-1;
     font-weight: 400;
@@ -12,7 +17,11 @@ p {
     margin-bottom: 15px;
 }
 
-// wrapper
+/*
+==========================================================================
+    Wrapper
+========================================================================== 
+*/
 .wrapper-fluid {
     width: 100%;
     min-width: $screen-xs-min;
@@ -74,7 +83,11 @@ p {
     }
 }
 
-// remove properties
+/*
+==========================================================================
+    Single property classes
+========================================================================== 
+*/
 .no-border {
     border: 0;
 }
@@ -162,14 +175,19 @@ p {
 .rss-color {
     color: $rss-color;
 }
-//=================== ads
+
+/*
+==========================================================================
+    Advertisements
+========================================================================== 
+*/
 // mobile ad 1
 .xs-ad {
     display: none;
     background-color: $bgcolor1;
     margin-bottom: 30px;
 
-    @media (max-width: $screen-xs-max) { // 768px - 1
+    @media (max-width: $screen-xs-max) {
         display: block;
         text-align: center;
         padding: 0 15px;
@@ -213,7 +231,7 @@ p {
     background-color: $bgcolor1;
     @extend .margin-bottom-1;
 
-    @media (min-width: $screen-sm-min) { // 768px
+    @media (min-width: $screen-sm-min) {
         display: block;
         text-align: center;
         padding: 0 30px;
@@ -239,7 +257,12 @@ p {
     }
 }
 
-//==================== font style for label, section, title, passage
+/*
+==========================================================================
+    Font styles for label, section, title, passage
+========================================================================== 
+*/
+
 // static font size
 .font-label-1 {
     font-family: $font-2;
@@ -644,7 +667,11 @@ p {
     }
 }
 
-// buttons
+/*
+==========================================================================
+    Buttons
+========================================================================== 
+*/
 .hrd-btn-outline {
     padding: 10px 30px;
     height: 40px;
@@ -723,8 +750,28 @@ p {
     }
 }
 
+.hrd-btn-go-top {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 15px;
+    z-index: 9999;
+    border: none;
+    background-color: $red;
+    opacity: 0.5;
+    color: $white;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
-// breadcrumb
+/*
+==========================================================================
+    Breadcrumb
+========================================================================== 
+*/
 .wrapper--breadcrumb {
     padding-top: 20px;
 
@@ -760,4 +807,141 @@ p {
 .breadcrumb-item + .breadcrumb-item::before {
     content: "·";
     color: #b7b7b7;
+}
+
+/*
+==========================================================================
+     Overlay (Search & sitemap)
+========================================================================== 
+*/
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fafafa;
+    color: $black;
+    z-index: 1000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 20px;
+}
+
+.overlay__header {
+    @extend .margin-bottom-2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay__header__btn {
+    a {
+        color: $grey;
+    }
+}
+
+.overlay__search-input {
+    background-color: $white;
+    color: $grey;
+    width: 100%;
+    font-size: 30px;
+    font-weight: 400;
+    padding: .3em .5em;
+    border: solid 1px #ced4da;
+    margin-bottom: 1.3em;
+
+    @media (max-width: $screen-sm-max) {
+        font-size: 26px;
+    }
+}
+
+.overlay__menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 50px;
+
+    @media (max-width: $screen-sm-max) {
+        display: block;
+    }
+}
+
+.overlay__menus__item {
+    padding: 30px 0;
+
+    p {
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+}
+
+.overlay-menu-title {
+    color: $grey;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: $default-line-height;
+
+    &:hover {
+        color: $grey;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 30px;
+    }
+}
+
+/**
+ * These rules extend `.wrapper-fluid {}` in _common.scss.
+ */
+.wrapper-fluid--overlay-tabs {
+    @extend .underline-2;
+    @extend .margin-bottom-2;
+}
+
+.overlay__tab {
+    @extend .font-passage-1;
+    display: inline-block;
+    padding: 10px 30px;
+    color: $black;
+
+    &.active {
+        border-bottom: solid 3px $red;
+    }
+
+    &:hover {
+        color: $black;
+        text-decoration: none;
+    }
+}
+
+.overlay__result-item {
+    @extend .margin-bottom-2;
+}
+
+// pagination override
+.page-item {
+
+    &.active .page-link {
+        background-color: $red;
+        border-color: #dee2e6;
+    }
+}
+
+.page-link {
+    color: $black;
+
+    &:hover {
+        color: $red;
+        background-color: $white;
+    }
 }

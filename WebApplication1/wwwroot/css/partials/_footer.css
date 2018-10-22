@@ -1,4 +1,7 @@
-﻿.wrapper-fluid--footer {
+﻿/**
+ * These rules extend `.wrapper-fluid {}` in _common.scss.
+ */
+.wrapper-fluid--footer {
   background-color: #f0f0f0;
   padding: 30px 0; }
   @media (min-width: 1200px) {

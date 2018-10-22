@@ -1,6 +1,9 @@
 ﻿@import "_variables.scss";
 @import "_mixins.scss";
 
+/**
+ * These rules extend `.wrapper {}` in _common.scss.
+ */
 .wrapper--header {
     display: flex;
     flex-direction: row;
@@ -131,7 +134,9 @@
     padding-top: 20px;
 }
 
-// header nav
+/**
+ * These rules extend `.nav {}` in _nav.scss in bootstrap.
+ */
 .nav--header {
     display: flex;
     justify-content: space-between;
@@ -210,134 +215,4 @@
     color: $grey;
     padding-left: 0;
     padding-right: 0;
-}
-
-// Search & Menu overlay
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fafafa;
-    color: $black;
-    z-index: 1000;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding-top: 20px;
-}
-
-.overlay__header {
-    @extend .margin-bottom-2;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.overlay__header__btn {
-    a {
-        color: $grey;
-    }
-}
-
-.overlay__search-input {
-    background-color: $white;
-    color: $grey;
-    width: 100%;
-    font-size: 30px;
-    font-weight: 400;
-    padding: .3em .5em;
-    border: solid 1px #ced4da;
-    margin-bottom: 1.3em;
-
-    @media (max-width: $screen-sm-max) {
-        font-size: 26px;
-    }
-}
-
-.overlay__menus {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 50px 50px;
-
-    @media (max-width: $screen-sm-max) {
-        display: block;
-    }
-}
-
-.overlay__menus__item {
-    padding: 30px 0;
-
-    p {
-        text-align: center;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-    }
-}
-
-.overlay-menu-title {
-    color: $grey;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: $default-line-height;
-
-    &:hover {
-        color: $grey;
-    }
-
-    @media (min-width: $screen-lg-min) {
-        font-size: 30px;
-    }
-}
-
-.wrapper-fluid--overlay-tabs {
-    @extend .underline-2;
-    @extend .margin-bottom-2;
-}
-
-.overlay__tab {
-    @extend .font-passage-1;
-    display: inline-block;
-    padding: 10px 30px;
-    color: $black;
-
-    &.active {
-        border-bottom: solid 3px $red;
-    }
-
-    &:hover {
-        color: $black;
-        text-decoration: none;
-    }
-}
-
-.overlay__result-item {
-    @extend .margin-bottom-2;
-}
-
-// pagination override
-.page-item {
-
-    &.active .page-link {
-        background-color: $red;
-        border-color: #dee2e6;
-    }
-}
-
-.page-link {
-    color: $black;
-
-    &:hover {
-        color: $red;
-        background-color: $white;
-    }
 }

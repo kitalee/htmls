@@ -8,7 +8,9 @@
     border: solid 1px red;
 }
 
-// ==================== home
+/**
+ * These rules extend `.nav {}` in _nav.scss in bootstrap.
+ */
 // masthead nav
 .nav--masthead {
     display: flex;
@@ -131,7 +133,7 @@
         display: block;
     }
 
-    @media (min-width: $screen-lg-min) { // 1200px
+    @media (min-width: $screen-lg-min) {
         display: block;
         height: 540px;
         float: left;
@@ -146,7 +148,7 @@
         display: block;
         overflow: hidden;
 
-        @media (min-width: $screen-lg-min) { // 1200px
+        @media (min-width: $screen-lg-min) {
             display: flex;
         }
     }
@@ -225,7 +227,7 @@
 
 .masthead__article__img--1 {
 
-    @media (min-width: $screen-sm-min) { // 768px
+    @media (min-width: $screen-sm-min) {
         height: 336px;
         width: 100%;
         position: relative;
@@ -239,7 +241,7 @@
         }
     }
 
-    @media (min-width: $screen-lg-min) { // 1200px
+    @media (min-width: $screen-lg-min) {
         height: 540px;
         flex-basis: 50.15576323987539%;
     }
@@ -247,7 +249,7 @@
 
 .masthead__article__img--2 {
 
-    @media (min-width: $screen-sm-min) { // 768px
+    @media (min-width: $screen-sm-min) {
         float: left;
         height: 230px;
         width: 50%;
@@ -262,7 +264,7 @@
         }
     }
 
-    @media (min-width: $screen-lg-min) { // 1200px
+    @media (min-width: $screen-lg-min) {
         height: 540px;
         flex-basis: 24.92211838006231%;
     }
@@ -287,8 +289,6 @@
 .masthead__article__label--3 {
     background-color: #4c9385;
 }
-
-//========================== profile list
 
 .profile {
     padding-top: 20px;
@@ -356,8 +356,6 @@
     min-height: 100px;
     text-align: left;
 }
-
-//========================== news list
 
 .article-list__head {
     width: 100%;
@@ -583,23 +581,6 @@
     }
 }
 
-.hrd-btn-go-top {
-    display: none;
-    position: fixed;
-    bottom: 60px;
-    right: 15px;
-    z-index: 9999;
-    border: none;
-    background-color: $red;
-    opacity: 0.5;
-    color: $white;
-    font-size: 20px;
-    text-align: center;
-    padding: 5px 12px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
 .top-videos {
     padding: 20px 0;
     flex-basis: 100%;
@@ -781,11 +762,17 @@
     }
 }
 
+/**
+ * These rules extend `.wrapper {}` in _common.scss.
+ */
 .wrapper--detail-img {
     max-width: 930px;
     text-align: center;
 }
 
+/**
+ * These rules extend `.wrapper {}` in _common.scss.
+ */
 .wrapper--detail {
     padding-left: 15px;
     padding-right: 15px;
@@ -811,6 +798,9 @@
     }
 }
 
+/**
+ * These rules extend `.wrapper {}` in _common.scss.
+ */
 .wrapper--detail-title {
     padding-bottom: 20px;
 

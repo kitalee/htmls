@@ -1,4 +1,9 @@
 ﻿@charset "UTF-8";
+/*
+==========================================================================
+    Default
+========================================================================== 
+*/
 body, table, div, p {
   font-family: "Titillium Web", Arial, sans-serif;
   font-weight: 400;
@@ -8,6 +13,11 @@ body, table, div, p {
 p {
   margin-bottom: 15px; }
 
+/*
+==========================================================================
+    Wrapper
+========================================================================== 
+*/
 .wrapper-fluid {
   width: 100%;
   min-width: 320px; }
@@ -58,6 +68,11 @@ p {
       flex-direction: row;
       justify-content: space-between; } }
 
+/*
+==========================================================================
+    Single property classes
+========================================================================== 
+*/
 .no-border {
   border: 0; }
 
@@ -120,6 +135,11 @@ p {
 .rss-color {
   color: #f59b5a; }
 
+/*
+==========================================================================
+    Advertisements
+========================================================================== 
+*/
 .xs-ad {
   display: none;
   background-color: #f0f0f0;
@@ -175,12 +195,17 @@ p {
         font-family: Roboto, Arial, sans-serif;
         line-height: 30px; } }
 
+/*
+==========================================================================
+    Font styles for label, section, title, passage
+========================================================================== 
+*/
 .font-label-1 {
   font-family: Roboto, Arial, sans-serif;
   color: #8f7669;
   font-size: 18px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-label-1:hover {
     text-decoration: none;
     color: #8f7669; }
@@ -190,14 +215,14 @@ p {
   color: #8f7669;
   font-size: 14px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-label-2:hover {
     text-decoration: none;
     color: #8f7669; }
 
 .font-label-3 {
   font-family: Roboto, Arial, sans-serif;
-  line-height: 120%;
+  line-height: 140%;
   color: #bcbcbc;
   font-size: 15px;
   font-weight: 400; }
@@ -225,7 +250,7 @@ p {
   color: #000000;
   font-size: 22px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   @media (min-width: 768px) {
     .font-section-1 {
       font-size: calc(2vw + 4px); } }
@@ -237,7 +262,7 @@ p {
   color: #000000;
   font-size: 26px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   @media (min-width: 1200px) {
     .font-section-2 {
       font-size: 28px; } }
@@ -246,7 +271,7 @@ p {
   color: #000000;
   font-size: 30px;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 140%;
   margin-top: .5em; }
   @media (min-width: 768px) {
     .font-section-3 {
@@ -259,7 +284,7 @@ p {
   color: #000000;
   font-size: 24px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-title-1:hover {
     color: #000000; }
   @media (min-width: 1200px) {
@@ -270,7 +295,7 @@ p {
   color: #000000;
   font-size: 20px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-title-2:hover {
     color: #000000; }
   @media (min-width: 768px) {
@@ -284,7 +309,7 @@ p {
   color: #000000;
   font-size: 22px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-title-3:hover {
     color: #000000; }
   @media (min-width: 1200px) {
@@ -295,7 +320,7 @@ p {
   color: #000000;
   font-size: 18px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-title-4:hover {
     color: #000000; }
   @media (min-width: 1200px) {
@@ -306,7 +331,7 @@ p {
   color: #000000;
   font-size: 20px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-title-5:hover {
     color: #000000; }
   @media (min-width: 1200px) {
@@ -317,7 +342,7 @@ p {
   color: #000000;
   font-size: 22px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-title-6:hover {
     color: #000000; }
   @media (min-width: 768px) {
@@ -328,7 +353,7 @@ p {
   color: #000000;
   font-size: 26px;
   font-weight: 700;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-title-7:hover {
     color: #000000; }
   @media (min-width: 768px) {
@@ -360,7 +385,7 @@ p {
   color: #000000;
   font-size: 30px;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 140%;
   margin-top: .5em; }
   @media (min-width: 768px) {
     .font-title-9 {
@@ -374,7 +399,7 @@ p {
   color: #888888;
   font-size: 16px;
   font-weight: 400;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-passage-1:hover, .breadcrumb-item a:hover, .overlay__tab:hover {
     color: #888888; }
   @media (min-width: 1200px) {
@@ -386,7 +411,7 @@ p {
   color: #888888;
   font-size: 14px;
   font-weight: 400;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-passage-2:hover {
     color: #888888; }
   @media (min-width: 768px) {
@@ -401,7 +426,7 @@ p {
   color: #888888;
   font-size: 14px;
   font-weight: 400;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-passage-3:hover {
     color: #888888; }
   @media (min-width: 768px) {
@@ -413,7 +438,7 @@ p {
   color: #888888;
   font-size: 16px;
   font-weight: 400;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-passage-4:hover {
     color: #888888; }
   @media (min-width: 768px) {
@@ -446,7 +471,7 @@ p {
   color: #888888;
   font-size: 14px;
   font-weight: 400;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-passage-6:hover {
     color: #888888; }
   .font-passage-6 span {
@@ -463,13 +488,18 @@ p {
   color: #b2b2b2;
   font-size: 14px;
   font-weight: 400;
-  line-height: 120%; }
+  line-height: 140%; }
   .font-passage-7:hover {
     color: #b2b2b2; }
   @media (min-width: 768px) {
     .font-passage-7 {
       font-size: 16px; } }
 
+/*
+==========================================================================
+    Buttons
+========================================================================== 
+*/
 .hrd-btn-outline {
   padding: 10px 30px;
   height: 40px;
@@ -531,6 +561,27 @@ p {
   .hrd-btn-inline--red:hover {
     color: red; }
 
+.hrd-btn-go-top {
+  display: none;
+  position: fixed;
+  bottom: 60px;
+  right: 15px;
+  z-index: 9999;
+  border: none;
+  background-color: red;
+  opacity: 0.5;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 12px;
+  border-radius: 50%;
+  cursor: pointer; }
+
+/*
+==========================================================================
+    Breadcrumb
+========================================================================== 
+*/
 .wrapper--breadcrumb {
   padding-top: 20px; }
   @media (min-width: 768px) {
@@ -557,6 +608,104 @@ p {
   content: "·";
   color: #b7b7b7; }
 
+/*
+==========================================================================
+     Overlay (Search & sitemap)
+========================================================================== 
+*/
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fafafa;
+  color: #000000;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 20px; }
+
+.overlay__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.overlay__header__btn a {
+  color: #6d6e71; }
+
+.overlay__search-input {
+  background-color: white;
+  color: #6d6e71;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 400;
+  padding: .3em .5em;
+  border: solid 1px #ced4da;
+  margin-bottom: 1.3em; }
+  @media (max-width: 991px) {
+    .overlay__search-input {
+      font-size: 26px; } }
+
+.overlay__menus {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 50px; }
+  @media (max-width: 991px) {
+    .overlay__menus {
+      display: block; } }
+
+.overlay__menus__item {
+  padding: 30px 0; }
+  .overlay__menus__item p {
+    text-align: center; }
+  .overlay__menus__item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; }
+
+.overlay-menu-title {
+  color: #6d6e71;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 140%; }
+  .overlay-menu-title:hover {
+    color: #6d6e71; }
+  @media (min-width: 1200px) {
+    .overlay-menu-title {
+      font-size: 30px; } }
+
+/**
+ * These rules extend `.wrapper-fluid {}` in _common.scss.
+ */
+.overlay__tab {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #000000; }
+  .overlay__tab.active {
+    border-bottom: solid 3px red; }
+  .overlay__tab:hover {
+    color: #000000;
+    text-decoration: none; }
+
+.page-item.active .page-link {
+  background-color: red;
+  border-color: #dee2e6; }
+
+.page-link {
+  color: #000000; }
+  .page-link:hover {
+    color: red;
+    background-color: white; }
+
+/**
+ * These rules extend `.wrapper {}` in _common.scss.
+ */
 .wrapper--header {
   display: flex;
   flex-direction: row;
@@ -598,7 +747,7 @@ p {
   .logo__btn__item.active {
     background-color: red; }
   .logo__btn__item a {
-    line-height: 120%;
+    line-height: 140%;
     font-family: Roboto, Arial, sans-serif;
     font-size: 13px;
     font-weight: bold;
@@ -662,6 +811,9 @@ p {
 .menu-item__nav {
   padding-top: 20px; }
 
+/**
+ * These rules extend `.nav {}` in _nav.scss in bootstrap.
+ */
 .nav--header {
   display: flex;
   justify-content: space-between;
@@ -721,93 +873,9 @@ p {
   padding-left: 0;
   padding-right: 0; }
 
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fafafa;
-  color: #000000;
-  z-index: 1000;
-  overflow-x: hidden;
-  overflow-y: auto;
-  padding-top: 20px; }
-
-.overlay__header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center; }
-
-.overlay__header__btn a {
-  color: #6d6e71; }
-
-.overlay__search-input {
-  background-color: white;
-  color: #6d6e71;
-  width: 100%;
-  font-size: 30px;
-  font-weight: 400;
-  padding: .3em .5em;
-  border: solid 1px #ced4da;
-  margin-bottom: 1.3em; }
-  @media (max-width: 991px) {
-    .overlay__search-input {
-      font-size: 26px; } }
-
-.overlay__menus {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 50px 50px; }
-  @media (max-width: 991px) {
-    .overlay__menus {
-      display: block; } }
-
-.overlay__menus__item {
-  padding: 30px 0; }
-  .overlay__menus__item p {
-    text-align: center; }
-  .overlay__menus__item ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center; }
-
-.overlay-menu-title {
-  color: #6d6e71;
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 120%; }
-  .overlay-menu-title:hover {
-    color: #6d6e71; }
-  @media (min-width: 1200px) {
-    .overlay-menu-title {
-      font-size: 30px; } }
-
-.overlay__tab {
-  display: inline-block;
-  padding: 10px 30px;
-  color: #000000; }
-  .overlay__tab.active {
-    border-bottom: solid 3px red; }
-  .overlay__tab:hover {
-    color: #000000;
-    text-decoration: none; }
-
-.page-item.active .page-link {
-  background-color: red;
-  border-color: #dee2e6; }
-
-.page-link {
-  color: #000000; }
-  .page-link:hover {
-    color: red;
-    background-color: white; }
-
+/**
+ * These rules extend `.wrapper-fluid {}` in _common.scss.
+ */
 .wrapper-fluid--footer {
   background-color: #f0f0f0;
   padding: 30px 0; }
@@ -955,6 +1023,9 @@ p {
 .border-test {
   border: solid 1px red; }
 
+/**
+ * These rules extend `.nav {}` in _nav.scss in bootstrap.
+ */
 .nav--masthead {
   display: flex;
   flex-direction: column;
@@ -1067,7 +1138,7 @@ p {
   font-size: 28px;
   font-weight: 700;
   text-shadow: 0 2px 3px #000000;
-  line-height: 120%; }
+  line-height: 140%; }
   .masthead-title:hover {
     color: white; }
 
@@ -1349,7 +1420,7 @@ p {
     font-size: 16px;
     color: white;
     background-color: #d9d9d9;
-    line-height: 120%;
+    line-height: 140%;
     padding: 20px 0;
     border: 0;
     -webkit-border-radius: 0;
@@ -1404,22 +1475,6 @@ p {
       height: 296px;
       padding: 50px 0;
       padding-left: 40px; } }
-
-.hrd-btn-go-top {
-  display: none;
-  position: fixed;
-  bottom: 60px;
-  right: 15px;
-  z-index: 9999;
-  border: none;
-  background-color: red;
-  opacity: 0.5;
-  color: white;
-  font-size: 20px;
-  text-align: center;
-  padding: 5px 12px;
-  border-radius: 50%;
-  cursor: pointer; }
 
 .top-videos {
   padding: 20px 0;
@@ -1566,10 +1621,16 @@ p {
   .hr-jobs__item__part {
     flex-basis: 50%; } }
 
+/**
+ * These rules extend `.wrapper {}` in _common.scss.
+ */
 .wrapper--detail-img {
   max-width: 930px;
   text-align: center; }
 
+/**
+ * These rules extend `.wrapper {}` in _common.scss.
+ */
 .wrapper--detail {
   padding-left: 15px;
   padding-right: 15px; }
@@ -1588,6 +1649,9 @@ p {
       .wrapper--detail p {
         margin-bottom: 40px; } }
 
+/**
+ * These rules extend `.wrapper {}` in _common.scss.
+ */
 .wrapper--detail-title {
   padding-bottom: 20px; }
   @media (min-width: 768px) {
