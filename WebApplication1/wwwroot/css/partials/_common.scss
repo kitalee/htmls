@@ -765,6 +765,9 @@ p {
     padding: 5px 12px;
     border-radius: 50%;
     cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
 }
 
 /*

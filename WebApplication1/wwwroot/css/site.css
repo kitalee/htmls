@@ -837,6 +837,10 @@ p {
   cursor: pointer;
 }
 
+.hrd-btn-go-top:hover {
+  opacity: 1;
+}
+
 /*
 ==========================================================================
     Breadcrumb
@@ -1891,40 +1895,40 @@ p {
   }
 }
 
-.article-list {
+.article-list, .author-list {
   position: relative;
   width: 100%;
   padding: 0;
 }
 
-.article-list:before, .article-list:after {
+.article-list:before, .author-list:before, .article-list:after, .author-list:after {
   content: " ";
   display: table;
 }
 
-.article-list:after {
+.article-list:after, .author-list:after {
   clear: both;
 }
 
-.article-list-left {
+.article-list-left, .author-list-left {
   max-width: 100%;
   width: 100%;
   float: left;
 }
 
 @media (min-width: 1200px) {
-  .article-list-left {
+  .article-list-left, .author-list-left {
     max-width: 930px;
   }
 }
 
 @media (max-width: 767px) {
-  .article-list-left .article-list__item + .article-list__item {
+  .article-list-left .article-list__item + .article-list__item, .author-list-left .article-list__item + .article-list__item {
     border-top: solid #dfdfdf 1px;
   }
 }
 
-.article-list-right-ad {
+.article-list-right-ad, .author-list-right-ad {
   display: none;
   /*@media (min-width: $screen-lg-min) {
         display: block;
@@ -1935,7 +1939,7 @@ p {
 }
 
 @media (min-width: 1325px) {
-  .article-list-right-ad {
+  .article-list-right-ad, .author-list-right-ad {
     display: block;
     text-align: center;
     width: 330px;
@@ -2000,11 +2004,11 @@ p {
   color: #4fafd0;
 }
 
-.article-list__item-btn {
+.article-list__item-btn, .author-list__item-btn {
   padding: 0;
 }
 
-.article-list__item-btn button {
+.article-list__item-btn button, .author-list__item-btn button {
   width: 100%;
   font-family: Roboto, Arial, sans-serif;
   font-size: 16px;
@@ -2019,23 +2023,23 @@ p {
 }
 
 @media (max-width: 991px) {
-  .article-list__item-btn button {
+  .article-list__item-btn button, .author-list__item-btn button {
     padding: 15px 0;
   }
 }
 
-.article-list__item-btn button:hover {
+.article-list__item-btn button:hover, .author-list__item-btn button:hover {
   background-color: #323232;
 }
 
 @media (min-width: 768px) {
-  .article-list__item-btn {
+  .article-list__item-btn, .author-list__item-btn {
     padding-top: 20px;
   }
 }
 
 @media (min-width: 1200px) {
-  .article-list__item-btn {
+  .article-list__item-btn, .author-list__item-btn {
     padding-bottom: 45px;
   }
 }
@@ -2539,4 +2543,84 @@ p {
 
 .most-read-article__item span {
   color: #4fafd0;
+}
+
+/*
+==========================================================================
+     authors_list
+==========================================================================
+*/
+.author-list-left {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.author-list__item {
+  position: relative;
+  flex-basis: 100%;
+  height: 190px;
+  margin-bottom: 45px;
+}
+
+@media (min-width: 768px) {
+  .author-list__item {
+    flex-basis: 50%;
+    height: 200px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .author-list__item {
+    flex-basis: 33.33333%;
+    height: 220px;
+    margin-bottom: 45px;
+  }
+}
+
+.author-list__item__img {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  padding-top: 15%;
+  margin: 0 auto;
+}
+
+.author-list__item__img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .author-list__item__img {
+    padding-top: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .author-list__item__img {
+    width: 160px;
+    height: 160px;
+    padding-top: 45%;
+  }
+}
+
+.author-list__item__passage {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.author-list__item-btn {
+  width: 100%;
 }

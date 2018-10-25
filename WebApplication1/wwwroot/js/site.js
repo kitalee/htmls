@@ -7,7 +7,7 @@
         var stickyWidth = $sticky.outerWidth();
         var stickyTopOff = $sticky.offset().top;
         var stickyLeftOff = $sticky.offset().left;
-        var stickOffset = 0; 
+        var stickOffset = 0;
 
         $(window).bind("load scroll resize", function () {
             if ($sticky.css('display') === 'block') {
@@ -16,23 +16,25 @@
             }
             var windowTop = $(window).scrollTop();
             var stopPointOff = $stickyrStopper.offset().top - $sticky.outerHeight() - stickOffset;
-            var stopPoint = stopPointOff - stickyTopOff;
+            var stopPoint = (stopPointOff - stickyTopOff) > 0 ? stopPointOff - stickyTopOff : 0;
+            // if there is no content, the banner position should be inherit.
+            var bannerPosition = stopPoint == 0 ? 'inherit' : 'absolute';
             var stickyLeftPos = $stickyContainer.offset().left + $stickyContainer.outerWidth() - stickyWidth;
 
             if (stopPointOff <= windowTop) {
                 // stop at bottom
-                $sticky.css({ position: 'absolute', top: stopPoint, left: 'auto', right: 0  });
+                $sticky.css({ position: bannerPosition, top: stopPoint, left: 'auto', right: 0  });
             } else if (stickyTopOff < windowTop + stickOffset) {
-                // sticking
+                // sticking 
                 $sticky.css({ position: 'fixed', top: stickOffset, left: stickyLeftPos, right: 'auto' });
             } else {
                 // stop at top
-                $sticky.css({ position: 'absolute', top: 0, left: 'auto', right: 0  });
+                $sticky.css({ position: bannerPosition, top: 0, left: 'auto', right: 0  });
             }
         });
     }
 
-    $(window).scroll(function () {
+    $(window).bind('load scroll', function () {
         if ($(document.body).scrollTop() > 400 || $(document.documentElement).scrollTop() > 400) {
             $('.js-btn-go-top').css('display', 'block');
         } else {
