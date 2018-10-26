@@ -1,4 +1,4 @@
-﻿@import "partials/_variables.scss";
+@import "partials/_variables.scss";
 @import "partials/_mixins.scss";
 @import "partials/_common.scss";
 @import "partials/_header.scss";
@@ -7,18 +7,17 @@
 .border-test {
     border: solid 1px red;
 }
-
 /**
  * These rules extend `.nav {}` in _nav.scss in bootstrap.
  */
 // masthead nav
+
 .nav--masthead {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-family: $font-2;
     font-size: 16px;
-
     @media (max-width: $screen-md-max) {
         flex-direction: row;
     }
@@ -41,7 +40,6 @@
         background-color: $red;
         border: outset 1px $red;
     }
-
     @media (max-width: $screen-md-max) {
         text-align: center;
         padding-left: 0;
@@ -60,17 +58,15 @@
         color: $white;
         text-decoration: none;
     }
-
     @media (max-width: $screen-md-max) {
         padding: 0;
     }
 }
-
 // mobile dropdown
+
 .xs-dropdown {
     display: none;
     background-color: $dark-grey;
-
     @media (max-width: $screen-xs-max) {
         display: flex;
     }
@@ -117,26 +113,23 @@
         }
     }
 }
-
 // masthead
+
 .masthead {
     width: 100%;
-    overflow: auto;
     @include clearfix;
 }
 
 .masthead__menu {
     display: none;
     background-color: $dark-grey;
-
     @media (min-width: $screen-sm-min) {
         display: block;
     }
-
     @media (min-width: $screen-lg-min) {
         display: block;
-        height: 540px;
         float: left;
+        height: 540px;
         width: 195px;
     }
 }
@@ -146,8 +139,6 @@
 
     &.active {
         display: block;
-        overflow: hidden;
-
         @media (min-width: $screen-lg-min) {
             display: flex;
         }
@@ -166,16 +157,17 @@
     }
 }
 // font-size (lg->sm->xs) : 50 -> 44 -> 28
+
 .masthead-title--1 {
     @media (min-width: $screen-sm-min) {
         font-size: 44px;
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 50px;
     }
 }
 // font-size (lg->sm->xs) : 32 -> 28 -> 28
+
 .masthead-title--2 {
     @media (min-width: $screen-lg-min) {
         font-size: 32px;
@@ -202,7 +194,7 @@
         display: block;
         color: $white;
         z-index: 1;
-        padding: 20px 20px;
+        padding: 20px;
 
         p {
             display: none;
@@ -226,21 +218,19 @@
 }
 
 .masthead__article__img--1 {
-
     @media (min-width: $screen-sm-min) {
         height: 336px;
         width: 100%;
         position: relative;
 
         div {
-            padding: 40px 40px;
+            padding: 40px;
 
             p {
                 display: block;
             }
         }
     }
-
     @media (min-width: $screen-lg-min) {
         height: 540px;
         flex-basis: 50.15576323987539%;
@@ -248,7 +238,6 @@
 }
 
 .masthead__article__img--2 {
-
     @media (min-width: $screen-sm-min) {
         float: left;
         height: 230px;
@@ -256,14 +245,13 @@
         position: relative;
 
         div {
-            padding: 40px 40px;
+            padding: 40px;
 
             p {
                 display: block;
             }
         }
     }
-
     @media (min-width: $screen-lg-min) {
         height: 540px;
         flex-basis: 24.92211838006231%;
@@ -301,17 +289,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
     @media (max-width: $screen-lg - 1) {
         max-width: 935px;
-        margin: 0 auto;
-        margin-top: 20px;
+        margin: 20px auto 0;
     }
-
     @media (max-width: $screen-sm - 1) {
         max-width: 445px;
-        margin: 0 auto;
-        margin-top: 20px;
+        margin: 20px auto 0;
     }
 }
 
@@ -319,12 +303,10 @@
     flex-basis: 100%;
     height: 396px;
     margin-bottom: 40px;
-
     @media (min-width: $screen-sm-min) {
         flex-basis: 47.91666666666667%;
         margin-bottom: 50px;
     }
-
     @media (min-width: $screen-lg-min) {
         flex-basis: 23.40425531914894%;
     }
@@ -352,7 +334,7 @@
     margin-top: -25px;
     left: 3%;
     background-color: $white;
-    padding: 20px 20px;
+    padding: 20px;
     min-height: 100px;
     text-align: left;
 }
@@ -362,7 +344,6 @@
     max-width: 930px;
     margin-bottom: 0;
     border-bottom: solid $bar-color 1px;
-
     @media (min-width: $screen-sm-min) {
         margin-bottom: 30px;
     }
@@ -398,15 +379,13 @@
     span {
         color: #4fafd0;
     }
-
     @media (min-width: $screen-sm-min) {
-        padding: 30px 30px;
+        padding: 30px;
         position: relative;
         width: 94%;
         margin-top: -115px;
         left: 3%;
     }
-
     @media (min-width: $screen-lg-min) {
         padding: 30px 50px;
     }
@@ -423,11 +402,9 @@
     max-width: 100%;
     width: 100%;
     float: left;
-
     @media (min-width: $screen-lg-min) {
         max-width: 930px;
     }
-
     @media (max-width: $screen-sm - 1) {
         .article-list__item + .article-list__item {
             border-top: solid $bar-color 1px;
@@ -437,7 +414,6 @@
 
 .article-list-right-ad {
     display: none;
-
     @media (min-width: 1325px) {
         display: block;
         text-align: center;
@@ -457,7 +433,6 @@
     flex-direction: row;
     flex-wrap: nowrap;
     padding: 20px 0;
-
     @media (max-width: $screen-sm - 1) {
         display: block;
         padding-top: 20px;
@@ -473,26 +448,31 @@
         width: 100%;
         height: 100%;
     }
-
-
     @media (min-width: $screen-sm-min) {
         display: block;
         flex-basis: 160px;
         width: 160px;
         height: 96px;
     }
-
     @media (min-width: $screen-lg-min) {
         display: block;
         flex-basis: 200px;
         width: 200px;
         height: 122px;
     }
+
+    &.author {
+        @media (min-width: $screen-lg-min) {
+            display: block;
+            flex-basis: 160px;
+            width: 160px;
+            height: 96px;
+        }
+    }
 }
 
 .article-list__item__passage {
     max-width: 100%;
-
     @media (min-width: $screen-sm-min) {
         max-width: 75%;
     }
@@ -515,7 +495,6 @@
         padding: 20px 0;
         border: 0;
         @include rounded(0);
-
         @media (max-width: $screen-sm-max) {
             padding: 15px 0;
         }
@@ -524,11 +503,9 @@
     button:hover {
         background-color: $dark-grey;
     }
-
     @media (min-width: $screen-sm-min) {
         padding-top: 20px;
     }
-
     @media (min-width: $screen-lg-min) {
         padding-bottom: 45px;
     }
@@ -545,7 +522,6 @@
     text-align: right;
     height: 250px;
     padding: 30px 0;
-
     @media (min-width: $screen-sm-min) {
         height: 296px;
         padding: 50px 0;
@@ -554,7 +530,6 @@
     img {
         width: 142px;
         height: 190px;
-
         @media (max-width: $screen-xs-max) {
             width: 72px;
             height: 96px;
@@ -565,19 +540,15 @@
 .magazine-right {
     height: 250px;
     flex-basis: 50%;
-    padding: 30px 0;
-    padding-left: 40px;
-
+    padding: 30px 0 30px 40px;
     @media (max-width: $screen-xs-max) {
         padding-left: 20px;
         flex-basis: 70%;
     }
-
     @media (min-width: $screen-sm-min) {
         flex-basis: 40%;
         height: 296px;
-        padding: 50px 0;
-        padding-left: 40px;
+        padding: 50px 0 50px 40px;
     }
 }
 
@@ -586,7 +557,6 @@
     flex-basis: 100%;
     display: block;
     border-bottom: solid $bar-color 1px;
-
     @media (min-width: $screen-sm-min) {
         padding: 30px 0;
         flex-basis: 100%;
@@ -594,7 +564,6 @@
         flex-direction: row;
         justify-content: space-between;
     }
-
     @media (min-width: $screen-lg-min) {
         padding: 40px 0;
         flex-basis: 41%;
@@ -605,14 +574,11 @@
 
 .top-videos__part1 {
     flex-basis: 100%;
-    padding: 0;
-    padding-bottom: 30px;
+    padding: 0 0 30px;
     border-right: 0;
-
     @media (min-width: $screen-sm-min) {
         flex-basis: 48%;
     }
-
     @media (min-width: $screen-lg-min) {
         flex-basis: 100%;
         padding-right: 50px;
@@ -642,12 +608,10 @@
     margin-top: 0;
     padding: 0;
     border-right: 0;
-
     @media (min-width: $screen-sm-min) {
         flex-basis: 48%;
         margin-top: 44px;
     }
-
     @media (min-width: $screen-lg-min) {
         flex-basis: 100%;
         margin-top: 0;
@@ -682,12 +646,10 @@
         width: 100%;
         height: 100%;
     }
-
     @media (min-width: $screen-sm-min) {
         flex-basis: 45%;
         padding-top: 25.445%;
     }
-
     @media (min-width: $screen-lg-min) {
         flex-basis: 48%;
         padding-top: 27.14%;
@@ -712,7 +674,6 @@
         width: 120px;
         height: 60px;
     }
-
     @media (min-width: $screen-sm-min) {
         flex-direction: row;
     }
@@ -725,7 +686,6 @@
 .hr-jobs__item {
     display: block;
     justify-content: flex-start;
-
     @media (min-width: $screen-sm-min) {
         display: flex;
         flex-direction: row;
@@ -733,7 +693,6 @@
 }
 
 .hr-jobs__item__part {
-
     ul {
         list-style: none;
         padding: 0;
@@ -752,62 +711,53 @@
     }
 
     p {
-        margin: 0 20px;
-        margin-top: 10px;
-        margin-bottom: 30px;
+        margin: 10px 20px 30px;
     }
-
     @media (min-width: $screen-sm-min) {
         flex-basis: 50%;
     }
 }
-
 /**
  * These rules extend `.wrapper {}` in _common.scss.
  */
+
 .wrapper--detail-img {
     max-width: 930px;
     text-align: center;
 }
-
 /**
  * These rules extend `.wrapper {}` in _common.scss.
  */
+
 .wrapper--detail {
     padding-left: 15px;
     padding-right: 15px;
-
     @media (min-width: $screen-sm-min) {
         max-width: 595px;
     }
-
     @media (min-width: $screen-lg-min) {
         max-width: 690px;
     }
 
     p {
         margin-bottom: 30px;
-
         @media (min-width: $screen-sm-min) {
             margin-bottom: 35px;
         }
-
         @media (min-width: $screen-lg-min) {
             margin-bottom: 40px;
         }
     }
 }
-
 /**
  * These rules extend `.wrapper {}` in _common.scss.
  */
+
 .wrapper--detail-title {
     padding-bottom: 20px;
-
     @media (min-width: $screen-sm-min) {
         padding-bottom: 40px;
     }
-
     @media (min-width: $screen-lg-min) {
         padding-bottom: 45px;
     }
@@ -854,8 +804,8 @@
         text-decoration: underline;
     }
 }
-
 // free newsletter
+
 .newsletter {
     @extend .margin-bottom-1;
     width: 100%;
@@ -883,7 +833,6 @@
         font-size: 16px;
         color: $bar-color;
     }
-
     @media (min-width: $screen-sm-min) {
         flex-basis: 70%;
     }
@@ -895,22 +844,19 @@
     button {
         width: 100%;
     }
-
     @media (min-width: $screen-sm-min) {
         flex-basis: 25%;
     }
 }
-
 // recent articles & video / most read articles
+
 .article-video {
     flex-basis: 930px;
     margin-bottom: 25px;
     margin-right: 0;
-
     @media (min-width: $screen-sm-min) {
         margin-bottom: 30px;
     }
-
     @media (min-width: $screen-lg-min) {
         margin-right: 30px;
     }
@@ -918,7 +864,6 @@
 
 .article-video__list {
     display: block;
-
     @media (min-width: $screen-sm-min) {
         display: flex;
         flex-direction: row;
@@ -930,7 +875,6 @@
 .article-video__list__item {
     flex-basis: 31.29032258064516%;
     text-align: left;
-
     @media (min-width: $screen-sm-min) {
         text-align: center;
     }
@@ -956,18 +900,16 @@
     position: initial;
     width: 100%;
     padding: 12px 0;
-
     @media (min-width: $screen-sm-min) {
         padding: 15px 0;
     }
-
     @media (min-width: $screen-lg-min) {
         position: relative;
         width: 94%;
         margin-top: -25px;
         left: 3%;
         background-color: $white;
-        padding: 20px 20px;
+        padding: 20px;
         min-height: 100px;
     }
 }
@@ -985,18 +927,18 @@
         color: #4fafd0;
     }
 }
-
 /*
 ==========================================================================
-     authors_list
+     authors_list & authors_newslist
 ==========================================================================
 */
+
 .author-list {
-  @extend .article-list; 
+    @extend .article-list;
 }
 
 .author-list-right-ad {
-  @extend .article-list-right-ad;
+    @extend .article-list-right-ad;
 }
 
 .author-list-left {
@@ -1011,13 +953,11 @@
     flex-basis: 100%;
     height: 190px;
     margin-bottom: 45px;
-
     @media (min-width: $screen-sm-min) {
         flex-basis: 50%;
         height: 200px;
         margin-bottom: 45px;
     }
-
     @media (min-width: $screen-lg-min) {
         flex-basis: 33.33333%;
         height: 220px;
@@ -1031,6 +971,7 @@
     height: 140px;
     padding-top: 15%;
     margin: 0 auto;
+
     img {
         position: absolute;
         width: 100%;
@@ -1041,11 +982,9 @@
         bottom: 0;
         border-radius: 50%;
     }
-
     @media (min-width: $screen-sm-min) {
         padding-top: 25%;
     }
-
     @media (min-width: $screen-lg-min) {
         width: 160px;
         height: 160px;
@@ -1053,7 +992,7 @@
     }
 }
 
-.author-list__item__passage{
+.author-list__item__passage {
     width: 100%;
     position: absolute;
     text-align: center;
@@ -1065,4 +1004,68 @@
 .author-list__item-btn {
     @extend .article-list__item-btn;
     width: 100%;
+}
+
+.author-header {
+    display: table;
+    width: 100%;
+    padding: 20px 0;
+    border-top: solid 2px $dark-grey;
+    border-bottom: solid 2px $dark-grey;
+    margin-bottom: 15px;
+    @media (min-width: $screen-sm-min) {
+        padding: 30px 0;
+        margin-bottom: 20px;
+    }
+    @media (min-width: $screen-lg-min) {
+        padding: 50px 0;
+        margin-bottom: 25px;
+    }
+}
+
+.author-header__img {
+    display: block;
+    vertical-align: middle;
+    @media (min-width: $screen-sm-min) {
+        display: table-cell;
+    }
+
+    div {
+        position: relative;
+        width: 140px;
+        height: 140px;
+        padding-top: 15%;
+        margin: 0 auto;
+        @media (min-width: $screen-lg-min) {
+            width: 160px;
+            height: 160px;
+        }
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+    }
+}
+
+.author-header__passage {
+    display: block;
+    vertical-align: middle;
+    height: 100%;
+    padding-top: 20px;
+    @media (min-width: $screen-sm-min) {
+        padding-top: 0;
+        padding-left: 30px;
+        display: table-cell;
+    }
+
+    a {
+        color: $dark-grey;
+    }
 }

@@ -83,98 +83,7 @@ p {
     }
 }
 
-/*
-==========================================================================
-    Single property classes
-==========================================================================
-*/
-.no-border {
-    border: 0;
-}
 
-.no-margin {
-    margin: 0;
-}
-
-.no-padding {
-    padding: 0;
-}
-
-.no-deco {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-// underline
-.underline-1 {
-    border-bottom: solid $bar-color 1px;
-}
-
-.underline-2 {
-    border-bottom: 1px solid $bar-color-2;
-}
-
-.underline-3 {
-    border-bottom: 1px solid $bar-color-3;
-}
-
-// margin bottom
-.margin-bottom-1 {
-    margin-bottom: 25px;
-
-    @media (min-width: $screen-sm-min) {
-        margin-bottom: 30px;
-    }
-
-    @media (min-width: $screen-lg-min) {
-        margin-bottom: 45px;
-    }
-}
-
-.margin-bottom-2 {
-    margin-bottom: 35px;
-
-    @media (min-width: $screen-sm-min) {
-        margin-bottom: 40px;
-    }
-
-    @media (min-width: $screen-lg-min) {
-        margin-bottom: 50px;
-    }
-}
-
-// display none by screen size
-.hide-from-xs {
-    display: none;
-
-    @media (min-width: $screen-sm-min) {
-        display: block;
-    }
-}
-
-.hide-from-sm {
-    display: none;
-
-    @media (min-width: $screen-md-min) {
-        display: block;
-    }
-}
-
-.hide-from-md {
-    display: none;
-
-    @media (min-width: $screen-lg-min) {
-        display: block;
-    }
-}
-
-// etc
-.rss-color {
-    color: $rss-color;
-}
 
 /*
 ==========================================================================
@@ -524,6 +433,25 @@ p {
 
     @media (min-width: $screen-lg-min) {
         font-size: 62px;
+    }
+}
+// font-size (lg->sm->xs) : 24->22->18
+.font-title-10 {
+    color: $black;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: $default-line-height;
+
+    &:hover {
+        color: $black;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 22px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 24px;
     }
 }
 // font-size (lg->sm->xs) : 18 -> 16 -> 16
@@ -947,4 +875,104 @@ p {
         color: $red;
         background-color: $white;
     }
+}
+
+/*
+==========================================================================
+    Single property classes
+==========================================================================
+*/
+.no-border {
+    border: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-deco {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// underline
+.underline-1 {
+    border-bottom: solid $bar-color 1px;
+}
+
+.underline-2 {
+    border-bottom: 1px solid $bar-color-2;
+}
+
+.underline-3 {
+    border-bottom: 1px solid $bar-color-3;
+}
+
+// margin bottom
+.margin-bottom-1 {
+    margin-bottom: 25px;
+
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 45px;
+    }
+}
+
+.margin-bottom-2 {
+    margin-bottom: 35px;
+
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 40px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 50px;
+    }
+}
+
+// display none by screen size
+.hide-from-xs {
+    display: none;
+
+    @media (min-width: $screen-sm-min) {
+        display: block;
+    }
+}
+
+.hide-from-sm {
+    display: none;
+
+    @media (min-width: $screen-md-min) {
+        display: block;
+    }
+}
+
+.hide-from-md {
+    display: none;
+
+    @media (min-width: $screen-lg-min) {
+        display: block;
+    }
+}
+
+// font color, etc
+.dark-grey{
+    color: $dark-grey;
+    &:hover {
+        color: $dark-grey
+    }
+}
+
+.rss-color {
+    color: $rss-color;
 }
