@@ -454,7 +454,27 @@ p {
         font-size: 24px;
     }
 }
-// font-size (lg->sm->xs) : 18 -> 16 -> 16
+// font-size (lg->sm->xs) : 18->18->16
+.font-18-18-16 {
+    font-family: $font-2;
+    color: $black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: $default-line-height;
+
+    &:hover {
+        color: $black;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 18px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 18px;
+    }
+}
+// font-size (lg->sm->xs) : 18->16->16
 .font-passage-1 {
     font-family: $font-2;
     color: $passage-color;
@@ -470,7 +490,7 @@ p {
         font-size: 18px;
     }
 }
-// font-size (lg->sm->xs) : 18 -> 16 -> 14
+// font-size (lg->sm->xs) : 18->16->14
 .font-passage-2 {
     font-family: $font-2;
     color: $passage-color;
@@ -491,7 +511,7 @@ p {
         font-size: 18px;
     }
 }
-// font-size (lg->sm->xs) : 16 -> 16 -> 14
+// font-size (lg->sm->xs) : 16->16->14
 .font-passage-3 {
     font-family: $font-2;
     color: $passage-color;
@@ -507,7 +527,7 @@ p {
         font-size: 16px;
     }
 }
-// font-size (lg->sm->xs) : 20 -> 18 -> 16
+// font-size (lg->sm->xs) : 20->18->16
 .font-passage-4 {
     font-family: $font-2;
     color: $passage-color;
@@ -527,7 +547,7 @@ p {
         font-size: 20px;
     }
 }
-// font-size (lg->sm->xs) : 22 -> 20 -> 18
+// font-size (lg->sm->xs) : 22->20->18
 .font-passage-5 {
     font-family: $font-2;
     color: $black;
@@ -553,7 +573,7 @@ p {
     }
 }
 
-// font-size (lg->sm->xs) : 18 -> 16 -> 14
+// font-size (lg->sm->xs) : 18->16->14
 .font-passage-6 {
     font-family: $font-2;
     color: $passage-color;
@@ -578,7 +598,7 @@ p {
     }
 }
 
-// font-size (lg->sm->xs) : 16 -> 16 -> 14
+// font-size (lg->sm->xs) : 16->16->14
 .font-passage-7 {
     font-family: $font-2;
     color: $passage-color-2;
@@ -965,7 +985,7 @@ p {
     }
 }
 
-// font color, etc
+// font color, weight, etc
 .dark-grey{
     color: $dark-grey;
     &:hover {
@@ -975,4 +995,11 @@ p {
 
 .rss-color {
     color: $rss-color;
+}
+
+.bold {
+    font-weight: 700;
+}
+.bolder {
+    font-weight: 800;
 }
