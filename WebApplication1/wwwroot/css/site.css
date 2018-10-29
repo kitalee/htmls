@@ -1989,18 +1989,18 @@ p {
   }
 }
 
-.article-list__item__img {
+.article-list__item__img, .author-newslist__img {
   display: none;
   margin-right: 20px;
 }
 
-.article-list__item__img img {
+.article-list__item__img img, .author-newslist__img img {
   width: 100%;
   height: 100%;
 }
 
 @media (min-width: 768px) {
-  .article-list__item__img {
+  .article-list__item__img, .author-newslist__img {
     display: block;
     flex-basis: 160px;
     width: 160px;
@@ -2009,20 +2009,11 @@ p {
 }
 
 @media (min-width: 1200px) {
-  .article-list__item__img {
+  .article-list__item__img, .author-newslist__img {
     display: block;
     flex-basis: 200px;
     width: 200px;
     height: 122px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .article-list__item__img.author {
-    display: block;
-    flex-basis: 160px;
-    width: 160px;
-    height: 96px;
   }
 }
 
@@ -2734,3 +2725,55 @@ p {
 .author-header__passage a {
   color: #323232;
 }
+
+@media (min-width: 1200px) {
+  .author-newslist__img {
+    display: block;
+    flex-basis: 160px;
+    width: 160px;
+    height: 96px;
+  }
+}
+
+/*
+==========================================================================
+     contact us
+==========================================================================
+*/
+.contact-us {
+  width: 100%;
+  padding: 20px 0;
+  border-top: solid 2px #323232;
+  border-bottom: solid 2px #323232;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  .contact-us {
+    padding: 30px 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-us {
+    padding: 50px 0;
+    margin-bottom: 25px;
+  }
+}
+
+.article-list--contact-us {
+  margin: 0;
+}
+
+@media (min-width: 1200px) {
+  .article-list--contact-us {
+    margin-bottom: 50px;
+  }
+}
+
+/*
+==========================================================================
+     hr jobs
+==========================================================================
+*/

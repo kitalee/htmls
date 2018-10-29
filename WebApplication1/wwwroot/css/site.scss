@@ -460,15 +460,6 @@
         width: 200px;
         height: 122px;
     }
-
-    &.author {
-        @media (min-width: $screen-lg-min) {
-            display: block;
-            flex-basis: 160px;
-            width: 160px;
-            height: 96px;
-        }
-    }
 }
 
 .article-list__item__passage {
@@ -1069,3 +1060,48 @@
         color: $dark-grey;
     }
 }
+
+.author-newslist__img {
+    @extend .article-list__item__img;
+    @media (min-width: $screen-lg-min) {
+        display: block;
+        flex-basis: 160px;
+        width: 160px;
+        height: 96px;
+    }
+}
+
+/*
+==========================================================================
+     contact us
+==========================================================================
+*/
+
+.contact-us {
+    width: 100%;
+    padding: 20px 0;
+    border-top: solid 2px $dark-grey;
+    border-bottom: solid 2px $dark-grey;
+    margin-bottom: 15px;
+    @media (min-width: $screen-sm-min) {
+        padding: 30px 0;
+        margin-bottom: 20px;
+    }
+    @media (min-width: $screen-lg-min) {
+        padding: 50px 0;
+        margin-bottom: 25px;
+    }
+}
+
+.article-list--contact-us {
+    margin: 0;
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 50px;
+    }
+}
+
+/*
+==========================================================================
+     hr jobs
+==========================================================================
+*/
