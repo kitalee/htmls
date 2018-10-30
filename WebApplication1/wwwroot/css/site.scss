@@ -97,12 +97,12 @@
 }
 
 .xs-dropdown__link {
-    color: $gray-dovegray;
+    color: $dove-gray;
     font-family: $font-2;
     font-size: 13px;
 
     &:hover {
-        color: $gray-dovegray;
+        color: $dove-gray;
     }
 
     &.active {
@@ -148,7 +148,7 @@
 .masthead-title {
     color: $white;
     font-size: 28px;
-    font-weight: 700;
+    font-weight: $bold;
     text-shadow: 0 2px 3px $black;
     line-height: $default-line-height;
 
@@ -411,7 +411,7 @@
         }
     }
 
-    &.underbar {
+    &.underline {
         .article-list__item + .article-list__item {
             border-top: solid $bar-color 1px;
         }
@@ -729,6 +729,7 @@
 .wrapper--detail {
     padding-left: 15px;
     padding-right: 15px;
+
     @media (min-width: $screen-sm-min) {
         max-width: 595px;
     }
@@ -737,6 +738,7 @@
     }
 
     p {
+        line-height: $line-height-3;
         margin-bottom: 30px;
         @media (min-width: $screen-sm-min) {
             margin-bottom: 35px;
@@ -744,6 +746,14 @@
         @media (min-width: $screen-lg-min) {
             margin-bottom: 40px;
         }
+    }
+
+    a {
+        color: $link-color;
+    }
+
+    & > .font2-22-20C-18 {
+        font-weight: $light;
     }
 }
 /**
@@ -778,7 +788,7 @@
 }
 
 .related-story {
-    @extend .font-passage-5;
+    @extend .font2-22-20C-18;
     @extend .margin-bottom-1;
     list-style: none;
     padding: 0;
@@ -1090,6 +1100,12 @@
     border-top: solid 2px $dark-grey;
     border-bottom: solid 2px $dark-grey;
     margin-bottom: 15px;
+
+    a {
+        color: $link-color;
+        text-decoration: underline;
+    }
+
     @media (min-width: $screen-sm-min) {
         padding: 30px 0;
         margin-bottom: 20px;
