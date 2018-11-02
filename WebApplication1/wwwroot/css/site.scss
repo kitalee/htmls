@@ -412,7 +412,7 @@
     }
 
     &.underline {
-        .article-list__item + .article-list__item {
+        .list-underline + .list-underline {
             border-top: solid $bar-color 1px;
         }
     }
@@ -771,7 +771,7 @@
 }
 
 .article-detail__img {
-    @extend .margin-bottom-1;
+    @extend .mb-45-30-25;
     position: relative;
     width: 100%;
     padding-top: 60%;
@@ -789,7 +789,7 @@
 
 .related-story {
     @extend .font2-22-20C-18;
-    @extend .margin-bottom-1;
+    @extend .mb-45-30-25;
     list-style: none;
     padding: 0;
 
@@ -814,7 +814,7 @@
 // free newsletter
 
 .newsletter {
-    @extend .margin-bottom-1;
+    @extend .mb-45-30-25;
     width: 100%;
     padding: 35px 30px;
     background-color: #f8f8f8;
@@ -923,7 +923,7 @@
 }
 
 .most-read-article {
-    @extend .margin-bottom-1;
+    @extend .mb-45-30-25;
     flex-basis: 330px;
 }
 
@@ -1094,34 +1094,7 @@
 ==========================================================================
 */
 
-.contact-us {
-    width: 100%;
-    padding: 20px 0;
-    border-top: solid 2px $dark-grey;
-    border-bottom: solid 2px $dark-grey;
-    margin-bottom: 15px;
 
-    a {
-        color: $link-color;
-        text-decoration: underline;
-    }
-
-    @media (min-width: $screen-sm-min) {
-        padding: 30px 0;
-        margin-bottom: 20px;
-    }
-    @media (min-width: $screen-lg-min) {
-        padding: 50px 0;
-        margin-bottom: 25px;
-    }
-}
-
-.article-list--contact-us {
-    margin: 0;
-    @media (min-width: $screen-lg-min) {
-        margin-bottom: 50px;
-    }
-}
 
 /*
 ==========================================================================
@@ -1129,22 +1102,48 @@
 ==========================================================================
 */
 
-.featured-box {
-    position: relative;
-    border: solid 2px $bar-color;
-    padding: 40px 50px;
+.job-list-item {
+    padding: 30px 0;
+    @media (min-width: $screen-sm-min) {
+        padding: 35px 0;
+    }
+    @media (min-width: $screen-lg-min) {
+        padding: 45px 0;
+    }
+}
 
-    & > .box-label {
-        position: absolute;
-        background-color: $red;
-        color: $white;
-        top: -2px;
-        left: -2px;
-        font-size: 14px;
-        line-height: $line-height-2;
-        padding: 0 .5em;
-        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.35);
+/*
+==========================================================================
+     people
+==========================================================================
+*/
+
+.people-list {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+    & > li {
+        flex-basis: 100%;
+        line-height: 250%;
+        display: list-item;
+        @media (min-width: $screen-sm-min) {
+            flex-basis: 50%;
+        }
+        @media (min-width: $screen-lg-min) {
+            flex-basis: 33%;
+        }
+    }
+    & > li::before {
+        content: "•";
+        margin-right: 5px;
     }
 
-
 }
+
+/*
+==========================================================================
+     poll
+==========================================================================
+*/

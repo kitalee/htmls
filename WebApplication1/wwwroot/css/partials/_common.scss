@@ -1,5 +1,7 @@
-@import "_variables.scss";
-@import "_mixins.scss"; /*
+// main: ../site.scss
+// @import "_variables.scss";
+// @import "_mixins.scss";
+/*
 ==========================================================================
     Default
 ==========================================================================
@@ -133,7 +135,7 @@ p {
 .lg-ad {
     display: none;
     background-color: $bg-color;
-    @extend .margin-bottom-1;
+    @extend .mb-45-30-25;
     @media (min-width: $screen-sm-min) {
         display: block;
         text-align: center;
@@ -238,11 +240,28 @@ p {
     }
 }
 
+.font2-18-18-16-B {
+    @extend .font2-18-18-16;
+    font-weight: $bold;
+}
+
 // font-size (lg->sm->xs) : 28->24->22
-.font1-28-24C-22-B {
+.font1-28-24-22-B {
     @extend .font1;
     font-size: 22px;
     font-weight: $bold;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 24px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 28px;
+    }
+}
+
+// font-size (lg->sm->xs) : 28->24->22
+.font1-28-24C-22-B {
+    @extend .font1-28-24-22-B;
 
     @media (min-width: $screen-sm-min) {
         font-size: calc(2vw + 4px);
@@ -403,6 +422,20 @@ p {
     }
 }
 
+// font-size (lg->sm->xs) : 24->22->20
+.font2-24-22-20-B {
+    @extend .font2;
+    font-size: 20px;
+    font-weight: $bold;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 22px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 24px;
+    }
+}
+
 // font-size (lg->sm->xs) : 22->20->18
 .font2-22-20C-18 {
     @extend .font2;
@@ -414,6 +447,39 @@ p {
     @media (min-width: $screen-lg-min) {
         font-size: 22px;
     }
+}
+
+// font-size (lg->sm->xs) : 22->20->20
+.font2-20-20-18-L {
+    @extend .font2;
+    font-weight: $light;
+    font-size: 18px;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 20px;
+    }
+}
+
+// font-size (lg->sm->xs) : 22->20->18
+.font2-22-20-18 {
+    @extend .font2;
+    font-size: 18px;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 20px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 22px;
+    }
+}
+.font2-22-20-18-L {
+    @extend .font2-22-20-18;
+    font-weight: $light;
+}
+.font2-22-20-18-B {
+    @extend .font2-22-20-18;
+    font-weight: $bold;
 }
 
 // font-size (lg->sm->xs) : 18->16->16
@@ -476,22 +542,23 @@ p {
     }
 }
 
-// font-size (lg->sm->xs) : 16->16->14
-.passage-16-16-14 {
+// font-size (lg->sm->xs) : 18->18->16
+.passage-18-18-16 {
     @extend .passage;
-    font-size: 14px;
+    font-size: 16px;
 
     @media (min-width: $screen-sm-min) {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
+
 /*
 ==========================================================================
     Buttons
 ==========================================================================
 */
 
-.hrd-btn-outline {
+.btn-outline {
     padding: 10px 30px;
     height: 40px;
     font-size: 18px;
@@ -515,7 +582,7 @@ p {
     }
 }
 
-.hrd-btn-outline--red {
+.btn-outline--red {
     color: $red;
     border-color: $red;
 
@@ -525,7 +592,7 @@ p {
     }
 }
 
-.hrd-btn-outline--grey {
+.btn-outline--grey {
     color: $grey;
     border-color: $grey;
 
@@ -535,7 +602,7 @@ p {
     }
 }
 
-.hrd-btn-inline {
+.btn-inline {
     padding: 10px 30px;
     height: 40px;
     font-size: 18px;
@@ -558,7 +625,7 @@ p {
     }
 }
 
-.hrd-btn-inline--red {
+.btn-inline--red {
     background-color: $red;
     border-color: $red;
 
@@ -567,7 +634,7 @@ p {
     }
 }
 
-.hrd-btn-go-top {
+.btn-go-top {
     display: none;
     position: fixed;
     bottom: 60px;
@@ -609,7 +676,7 @@ p {
 .breadcrumb {
     padding: 0;
     margin: 0;
-    background-color: $white; //3aa8cc
+    background-color: $white;
 }
 
 .breadcrumb-item {
@@ -652,7 +719,7 @@ p {
 }
 
 .overlay__header {
-    @extend .margin-bottom-2;
+    @extend .mb-50-40-35;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -733,7 +800,7 @@ p {
 
 .wrapper-fluid--overlay-tabs {
     @extend .underline-2;
-    @extend .margin-bottom-2;
+    @extend .mb-50-40-35;
 }
 
 .overlay__tab {
@@ -753,7 +820,7 @@ p {
 }
 
 .overlay__result-item {
-    @extend .margin-bottom-2;
+    @extend .mb-50-40-35;
 }
 // pagination override
 
@@ -774,7 +841,113 @@ p {
 }
 /*
 ==========================================================================
-    Single property classes
+    Containers
+==========================================================================
+*/
+
+.border-container {
+    width: 100%;
+    padding: 20px 0;
+    border-top: solid 2px $dark-grey;
+    border-bottom: solid 2px $dark-grey;
+    margin-bottom: 15px;
+
+    a {
+        color: $link-color;
+        text-decoration: underline;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        padding: 30px 0;
+        margin-bottom: 20px;
+    }
+    @media (min-width: $screen-lg-min) {
+        padding: 50px 0;
+        margin-bottom: 25px;
+    }
+}
+
+.border-container__header {
+    display:table;
+    width:100%;
+    div:nth-child(1){
+        display:table-cell;
+        width:90%;
+        vertical-align: middle;
+    }
+    div:nth-child(2){
+        display:table-cell;
+        text-align:right;
+        font-size: 36px;
+
+        @media (min-width: $screen-sm-min) {
+            font-size: 48px;
+        }
+    }
+}
+
+.labelled-container {
+    position: relative;
+    border: solid 2px $bar-color;
+    padding: 40px 50px;
+
+    & > .container-label {
+        position: absolute;
+        background-color: $red;
+        color: $white;
+        top: -2px;
+        left: -2px;
+        font-size: 14px;
+        line-height: $line-height-2;
+        padding: 0 .5em;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.input-container {
+    width: 100%;
+    & > div {
+        @extend .mb-25-20-15;
+    }
+
+    & input[type="radio"] {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+.input-container-2 {
+    @extend .input-container;
+
+    @media (min-width: $screen-sm-min) {
+        width: 70%;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: 60%;
+    }
+}
+
+/*
+==========================================================================
+    Validation
+==========================================================================
+*/
+.valid-feedback, .invalid-feedback{
+    font-family: $font-2;
+    font-size: 14px;
+}
+.form-check {
+    padding: 0;
+    margin: 0;
+}
+.form-check-input {
+    position: inherit;
+    padding: 0;
+    margin: 0;
+}
+/*
+==========================================================================
+    Single property
 ==========================================================================
 */
 
@@ -797,8 +970,8 @@ p {
         text-decoration: none;
     }
 }
-// underline
 
+// underline
 .underline-1 {
     border-bottom: solid $bar-color 1px;
 }
@@ -810,9 +983,19 @@ p {
 .underline-3 {
     border-bottom: 1px solid $bar-color-3;
 }
-// margin bottom
 
-.margin-bottom-1 {
+// margin bottom
+.mb-50-40-35 {
+    margin-bottom: 35px;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 40px;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 50px;
+    }
+}
+
+.mb-45-30-25 {
     margin-bottom: 25px;
     @media (min-width: $screen-sm-min) {
         margin-bottom: 30px;
@@ -822,15 +1005,43 @@ p {
     }
 }
 
-.margin-bottom-2 {
-    margin-bottom: 35px;
+.mb-35-20-15 {
+    margin-bottom: 15px;
     @media (min-width: $screen-sm-min) {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 35px;
+    }
+}
+
+.mb-25-20-15 {
+    margin-bottom: 15px;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 20px;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 25px;
+    }
+}
+
+.mb-0-0-20 {
+    margin-bottom: 20px;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 0px;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 0px;
+    }
+}
+
+.mb-50-0-0 {
+    margin-bottom: 0;
     @media (min-width: $screen-lg-min) {
         margin-bottom: 50px;
     }
 }
+
 // display none by screen size
 
 .hide-from-xs {

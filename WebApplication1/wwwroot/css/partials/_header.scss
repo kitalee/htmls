@@ -1,8 +1,10 @@
-@import "_variables.scss";
-@import "_mixins.scss"; /**
+// main: ../site.scss
+// @import "_variables.scss";
+// @import "_mixins.scss";
+
+/**
  * These rules extend `.wrapper {}` in _common.scss.
  */
-
 .wrapper--header {
     display: flex;
     flex-direction: row;
