@@ -1,4 +1,6 @@
-﻿// basic line-height
+// main: ../site.scss
+
+/* basic line-height */
 $default-line-height: 140% !default;
 $line-height-1: 120% !default;
 $line-height-2: 130% !default;
@@ -7,6 +9,12 @@ $line-height-3: 150% !default;
 // font-family
 $font-1: 'Titillium Web', Arial, sans-serif !default;
 $font-2: Roboto, Arial, sans-serif !default;
+
+// font-weight
+$light: 300 !default;
+$regular: 400 !default;
+$bold: 700 !default;
+$bolder: 800 !default;
 
 // screen sizes
 // Extra small screen / phone
@@ -43,19 +51,24 @@ $screen-lg-max: 1410px !default;
 $screen-max: 1810px !default;
 
 // colors
+$light-grey: #bcbcbc !default;
 $grey: #6d6e71 !default;
-$gray-dovegray: #666666 !default;
+$dove-gray: #666666 !default;
 $dark-grey: #323232 !default;
 $black: #000000 !default;
 $red: red !default;
 $white: white !default;
+$light-brown: #8f7669 !default;
+
 $passage-color: #888888 !default;
 $passage-color-2: #b2b2b2 !default;
 $bar-color: #dfdfdf !default;
 $bar-color-2: #b3b3b3 !default;
 $bar-color-3: #eaeaea !default;
-$bgcolor1: #f0f0f0 !default;
+$bg-color: #f0f0f0 !default;
 $rss-color: #f59b5a !default;
+$link-color: #3aa8cc !default;
+
 
 $color-facebook: #3b5998 !default;
 $color-twitter: #1da1f2 !default;

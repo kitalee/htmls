@@ -1,11 +1,11 @@
-﻿@import "_variables.scss";
-@import "_mixins.scss";
-
+// main: ../site.scss
+// ﻿@import "_variables.scss";
+// @import "_mixins.scss";
 /**
  * These rules extend `.wrapper-fluid {}` in _common.scss.
  */
 .wrapper-fluid--footer {
-    background-color: $bgcolor1;
+    background-color: $bg-color;
     padding: 30px 0;
 
     @media (min-width: $screen-lg-min) {

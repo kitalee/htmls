@@ -1,14 +1,18 @@
-﻿@import "_variables.scss";
-@import "_mixins.scss";
-
+// main: ../site.scss
+// @import "_variables.scss";
+// @import "_mixins.scss";
 /*
 ==========================================================================
     Default
 ==========================================================================
 */
-body, table, div, p {
+
+body,
+div,
+p,
+table {
     font-family: $font-1;
-    font-weight: 400;
+    font-weight: $regular;
     padding: 0;
     margin: 0;
 }
@@ -16,12 +20,12 @@ body, table, div, p {
 p {
     margin-bottom: 15px;
 }
-
 /*
 ==========================================================================
     Wrapper
 ==========================================================================
 */
+
 .wrapper-fluid {
     width: 100%;
     min-width: $screen-xs-min;
@@ -38,30 +42,30 @@ p {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-
-    @media (min-width: $screen-xs-min) { // 320px
+    @media (min-width: $screen-xs-min) {
+        // 320px
         max-width: $screen-xs-max;
     }
-
-    @media (min-width: $screen-sm-min) { // 768px
+    @media (min-width: $screen-sm-min) {
+        // 768px
         max-width: $screen-sm-max;
         padding-left: 24px;
         padding-right: 24px;
     }
-
-    @media (min-width: $screen-md-min) { // 992px
+    @media (min-width: $screen-md-min) {
+        // 992px
         max-width: $screen-md-max;
         padding-left: 24px;
         padding-right: 24px;
     }
-
-    @media (min-width: $screen-lg-min) { // 1200px
+    @media (min-width: $screen-lg-min) {
+        // 1200px
         max-width: $screen-lg-max;
         padding-left: 24px;
         padding-right: 24px;
     }
-
-    @media (min-width: $screen-xlg-min) { // 1450px
+    @media (min-width: $screen-xlg-min) {
+        // 1450px
         max-width: $screen-lg-max;
         width: 100%;
         padding-left: 0;
@@ -75,32 +79,27 @@ p {
 
 .wrapper--flex-1 {
     display: block;
-
     @media (min-width: $screen-lg-min) {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 }
-
-
-
 /*
 ==========================================================================
     Advertisements
 ==========================================================================
 */
 // mobile ad 1
+
 .xs-ad {
     display: none;
-    background-color: $bgcolor1;
+    background-color: $bg-color;
     margin-bottom: 30px;
-
     @media (max-width: $screen-xs-max) {
         display: block;
         text-align: center;
-        padding: 0 15px;
-        padding-bottom: 30px;
+        padding: 0 15px 30px;
 
         p {
             margin: 0;
@@ -116,39 +115,35 @@ p {
         }
     }
 }
-
 // ipad + mobile ad
+
 .sm-ad {
     display: none;
-
     @media (max-width: $screen-md-max) {
         display: block;
         text-align: center;
-        padding: 30px 30px;
+        padding: 30px;
     }
-
     @media (max-width: $screen-xs-max) {
         display: block;
         text-align: center;
         padding: 20px 10px;
     }
 }
-
 // pc ad 1
+
 .lg-ad {
     display: none;
-    background-color: $bgcolor1;
-    @extend .margin-bottom-1;
-
+    background-color: $bg-color;
+    @extend .mb-45-30-25;
     @media (min-width: $screen-sm-min) {
         display: block;
         text-align: center;
-        padding: 0 30px;
-        padding-bottom: 30px;
+        padding: 0 30px 30px;
 
         img {
             max-width: 970px;
-            width: 100%
+            width: 100%;
         }
 
         p {
@@ -165,97 +160,122 @@ p {
         }
     }
 }
-
 /*
 ==========================================================================
     Font styles for label, section, title, passage
 ==========================================================================
 */
 
-// static font size
-.font-label-1 {
-    font-family: $font-2;
-    color: #8f7669;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: $default-line-height;
-
-    &:hover {
-        text-decoration: none;
-        color: #8f7669;
-    }
-}
-
-.font-label-2 {
-    font-family: $font-2;
-    color: #8f7669;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: $default-line-height;
-
-    &:hover {
-        text-decoration: none;
-        color: #8f7669;
-    }
-}
-
-.font-label-3 {
-    font-family: $font-2;
-    line-height: $default-line-height;
-    color: #bcbcbc;
-    font-size: 15px;
-    font-weight: 400;
-
-    &:hover {
-        text-decoration: underline;
-        color: #bcbcbc;
-    }
-}
-
-.font-label-4 {
+.font1 {
+    font-family: $font-1;
     color: $black;
-    font-size: 18px;
-    line-height: 200%;
+    font-weight: $regular;
+    line-height: $default-line-height;
 
     &:hover {
-        text-decoration: none;
-        color: $red;
+        color: $black;
     }
 }
 
-.font-label-5 {
-    color: $grey;
-    font-size: 20px;
-    line-height: 200%;
+.font2 {
+    font-family: $font-2;
+    color: $black;
+    font-weight: $regular;
+    line-height: $default-line-height;
 
     &:hover {
-        text-decoration: none;
-        color: $red;
+        color: $black;
+    }
+}
+
+.passage {
+    font-family: $font-2;
+    color: $passage-color;
+    font-weight: $regular;
+    line-height: $default-line-height;
+
+    &:hover {
+        color: $passage-color
+    }
+}
+
+// static size font (B = Bold)
+.font2-18-B {
+    @extend .font2;
+    font-size: 18px;
+    font-weight: $bold;
+}
+
+.font2-14-B {
+    @extend .font2;
+    font-size: 14px;
+    font-weight: $bold;
+}
+
+.font2-15 {
+    @extend .font2;
+    font-size: 15px;
+}
+
+.font1-18 {
+    @extend .font1;
+    font-size: 18px;
+}
+
+.font1-20 {
+    @extend .font1;
+    font-size: 20px;
+}
+
+// variable size font
+// font-size (lg->sm->xs) : 18->18->16
+.font2-18-18-16 {
+    @extend .font2;
+    font-size: 16px;
+    @media (min-width: $screen-sm-min) {
+        font-size: 18px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 18px;
+    }
+}
+
+.font2-18-18-16-B {
+    @extend .font2-18-18-16;
+    font-weight: $bold;
+}
+
+// font-size (lg->sm->xs) : 28->24->22
+.font1-28-24-22-B {
+    @extend .font1;
+    font-size: 22px;
+    font-weight: $bold;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 24px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 28px;
     }
 }
 
 // font-size (lg->sm->xs) : 28->24->22
-.font-section-1 {
-    color: $black;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: $default-line-height;
+.font1-28-24C-22-B {
+    @extend .font1-28-24-22-B;
 
     @media (min-width: $screen-sm-min) {
         font-size: calc(2vw + 4px);
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 28px;
     }
 }
 
 // font-size (lg->sm->xs) : 28->26->26
-.font-section-2 {
-    color: $black;
+.font1-28-26-26-B {
+    @extend .font1;
     font-size: 26px;
-    font-weight: 700;
-    line-height: $default-line-height;
+    font-weight: $bold;
 
     @media (min-width: $screen-lg-min) {
         font-size: 28px;
@@ -263,335 +283,272 @@ p {
 }
 
 // font-size (lg->sm->xs) : 62->44->30
-.font-section-3 {
-    color: $black;
+.font1-62-44C-30-B {
+    @extend .font1;
     font-size: 30px;
-    font-weight: 800;
-    line-height: $default-line-height;
-    margin-top: .5em;
+    font-weight: $bolder;
 
     @media (min-width: $screen-sm-min) {
         //font-size: 44px;
         font-size: calc(10px + 4vw);
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 62px;
     }
 }
 
 // font-size (lg->sm->xs) : 26->24->24
-.font-title-1 {
-    color: $black;
+.font1-26-24-24-B {
+    @extend .font1;
     font-size: 24px;
-    font-weight: 700;
-    line-height: $default-line-height;
-
-    &:hover {
-        color: $black;
-    }
+    font-weight: $bold;
 
     @media (min-width: $screen-lg-min) {
         font-size: 26px;
     }
 }
-// font-size (lg->sm->xs) : 26->24->20
-.font-title-2 {
-    color: $black;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: $default-line-height;
 
-    &:hover {
-        color: $black;
-    }
+// font-size (lg->sm->xs) : 26->24->20
+.font1-26-24-20-B {
+    @extend .font1;
+    font-size: 20px;
+    font-weight: $bold;
 
     @media (min-width: $screen-sm-min) {
         font-size: 24px;
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 26px;
     }
 }
+
 // font-size (lg->sm->xs) : 26->22->22
-.font-title-3 {
-    color: $black;
+.font1-26-22-22-B {
+    @extend .font1;
     font-size: 22px;
-    font-weight: 700;
-    line-height: $default-line-height;
-
-    &:hover {
-        color: $black;
-    }
+    font-weight: $bold;
 
     @media (min-width: $screen-lg-min) {
         font-size: 26px;
     }
 }
+
 // font-size (lg->sm->xs) : 22->18->18
-.font-title-4 {
-    color: $black;
+.font1-22-18-18-B {
+    @extend .font1;
     font-size: 18px;
-    font-weight: 700;
-    line-height: $default-line-height;
-
-    &:hover {
-        color: $black;
-    }
+    font-weight: $bold;
 
     @media (min-width: $screen-lg-min) {
         font-size: 22px;
     }
 }
+
 // font-size (lg->sm->xs) : 22->20->20
-.font-title-5 {
-    color: $black;
+.font1-22-20-20-B {
+    @extend .font1;
     font-size: 20px;
-    font-weight: 700;
-    line-height: $default-line-height;
-
-    &:hover {
-        color: $black;
-    }
+    font-weight: $bold;
 
     @media (min-width: $screen-lg-min) {
         font-size: 22px;
     }
 }
-// font-size (lg->sm->xs) : 26->26->22
-.font-title-6 {
-    color: $black;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: $default-line-height;
 
-    &:hover {
-        color: $black;
-    }
+// font-size (lg->sm->xs) : 26->26->22
+.font1-26-26-22-B {
+    @extend .font1;
+    font-size: 22px;
+    font-weight: $bold;
 
     @media (min-width: $screen-sm-min) {
         font-size: 26px;
     }
 }
-// font-size (lg->sm->xs) : 40->36->26
-.font-title-7 {
-    color: $black;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: $default-line-height;
 
-    &:hover {
-        color: $black;
-    }
+// font-size (lg->sm->xs) : 40->36->26
+.font1-40-36-26-B {
+    @extend .font1;
+    font-size: 26px;
+    font-weight: $bold;
 
     @media (min-width: $screen-sm-min) {
         font-size: 36px;
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 40px;
     }
 }
+
 // font-size (lg->sm->xs) : 22->20->18
-.font-title-8 {
-    font-family: $font-2;
-    color: $black;
+.font2-22-20C-18-B {
+    @extend .font2;
     font-size: 18px;
-    font-weight: 700;
-    line-height: $line-height-3;
-
-    &:hover {
-        color: $black;
-    }
-
-    a {
-        color: #3aa8cc;
-        text-decoration: underline;
-    }
+    font-weight: $bold;
 
     @media (min-width: $screen-sm-min) {
         font-size: calc(1vw + 10px);
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 22px;
     }
 }
 // font-size (lg->sm->xs) : 62->44->30
-.font-title-9 {
-    color: $black;
+.font1-62-44C-30-B {
+    @extend .font1;
     font-size: 30px;
-    font-weight: 800;
-    line-height: $default-line-height;
-    margin-top: .5em;
+    font-weight: $bolder;
 
     @media (min-width: $screen-sm-min) {
         //font-size: 44px;
         font-size: calc(10px + 4vw);
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 62px;
     }
 }
-// font-size (lg->sm->xs) : 24->22->18
-.font-title-10 {
-    color: $black;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: $default-line-height;
 
-    &:hover {
-        color: $black;
+// font-size (lg->sm->xs) : 24->22->20
+.font1-24-22-20-B {
+    @extend .font1;
+    font-size: 20px;
+    font-weight: $bold;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 22px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 24px;
+    }
+}
+
+// font-size (lg->sm->xs) : 24->22->20
+.font2-24-22-20-B {
+    @extend .font2;
+    font-size: 20px;
+    font-weight: $bold;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 22px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 24px;
+    }
+}
+
+// font-size (lg->sm->xs) : 22->20->18
+.font2-22-20C-18 {
+    @extend .font2;
+    font-size: 18px;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: calc(1vw + 10px);
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 22px;
+    }
+}
+
+// font-size (lg->sm->xs) : 22->20->20
+.font2-20-20-18-L {
+    @extend .font2;
+    font-weight: $light;
+    font-size: 18px;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 20px;
+    }
+}
+
+// font-size (lg->sm->xs) : 22->20->18
+.font2-22-20-18 {
+    @extend .font2;
+    font-size: 18px;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 20px;
     }
 
     @media (min-width: $screen-sm-min) {
         font-size: 22px;
     }
-
-    @media (min-width: $screen-lg-min) {
-        font-size: 24px;
-    }
 }
-// font-size (lg->sm->xs) : 18 -> 16 -> 16
-.font-passage-1 {
-    font-family: $font-2;
-    color: $passage-color;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: $default-line-height;
+.font2-22-20-18-L {
+    @extend .font2-22-20-18;
+    font-weight: $light;
+}
+.font2-22-20-18-B {
+    @extend .font2-22-20-18;
+    font-weight: $bold;
+}
 
-    &:hover {
-        color: $passage-color;
-    }
+// font-size (lg->sm->xs) : 18->16->16
+.passage-18-16-16 {
+    @extend .passage;
+    font-size: 16px;
 
     @media (min-width: $screen-lg-min) {
         font-size: 18px;
     }
 }
-// font-size (lg->sm->xs) : 18 -> 16 -> 14
-.font-passage-2 {
-    font-family: $font-2;
-    color: $passage-color;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: $default-line-height;
 
-    &:hover {
-        color: $passage-color;
-    }
+// font-size (lg->sm->xs) : 18->16->14
+.passage-18-16-14 {
+    @extend .passage;
+    font-size: 14px;
 
     @media (min-width: $screen-sm-min) {
         font-size: 16px;
         //font-size: calc(1vw + 5.5px);
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 18px;
     }
 }
-// font-size (lg->sm->xs) : 16 -> 16 -> 14
-.font-passage-3 {
-    font-family: $font-2;
-    color: $passage-color;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: $default-line-height;
 
-    &:hover {
-        color: $passage-color;
-    }
+// font-size (lg->sm->xs) : 16->16->14
+.passage-16-16-14 {
+    @extend .passage;
+    font-size: 14px;
 
     @media (min-width: $screen-sm-min) {
         font-size: 16px;
     }
 }
-// font-size (lg->sm->xs) : 20 -> 18 -> 16
-.font-passage-4 {
-    font-family: $font-2;
-    color: $passage-color;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: $default-line-height;
 
-    &:hover {
-        color: $passage-color;
-    }
+// font-size (lg->sm->xs) : 20->18->16
+.passage-20-18-16 {
+    @extend .passage;
+    font-size: 16px;
 
     @media (min-width: $screen-sm-min) {
         font-size: 18px;
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 20px;
     }
 }
-// font-size (lg->sm->xs) : 22 -> 20 -> 18
-.font-passage-5 {
-    font-family: $font-2;
-    color: $black;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: $line-height-3;
 
-    &:hover {
-        color: $black;
-    }
-
-    a {
-        color: #3aa8cc;
-        text-decoration: underline;
-    }
-
-    @media (min-width: $screen-sm-min) {
-        font-size: calc(1vw + 10px);
-    }
-
-    @media (min-width: $screen-lg-min) {
-        font-size: 22px;
-    }
-}
-
-// font-size (lg->sm->xs) : 18 -> 16 -> 14
-.font-passage-6 {
-    font-family: $font-2;
-    color: $passage-color;
+// font-size (lg->sm->xs) : 18->16->14
+.passage-18-16C-14 {
+    @extend .passage;
     font-size: 14px;
-    font-weight: 400;
-    line-height: $default-line-height;
-
-    &:hover {
-        color: $passage-color;
-    }
-
-    span {
-        color: #4fafd0;
-    }
 
     @media (min-width: $screen-sm-min) {
         font-size: calc(1vw + 5.5px);
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 18px;
     }
 }
 
-// font-size (lg->sm->xs) : 16 -> 16 -> 14
-.font-passage-7 {
-    font-family: $font-2;
-    color: $passage-color-2;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: $default-line-height;
-
-    &:hover {
-        color: $passage-color-2;
-    }
+// font-size (lg->sm->xs) : 18->18->16
+.passage-18-18-16 {
+    @extend .passage;
+    font-size: 16px;
 
     @media (min-width: $screen-sm-min) {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
@@ -600,12 +557,13 @@ p {
     Buttons
 ==========================================================================
 */
-.hrd-btn-outline {
+
+.btn-outline {
     padding: 10px 30px;
     height: 40px;
     font-size: 18px;
     line-height: 90%;
-    font-weight: 700;
+    font-weight: $bold;
     border-width: 2px;
     border-radius: 30px;
     background-color: transparent;
@@ -618,14 +576,13 @@ p {
         background-color: $black;
         border-color: $black;
     }
-
     @media (max-width: $screen-xs-max) {
         padding: 10px 15px;
         font-size: 14px;
     }
 }
 
-.hrd-btn-outline--red {
+.btn-outline--red {
     color: $red;
     border-color: $red;
 
@@ -635,7 +592,7 @@ p {
     }
 }
 
-.hrd-btn-outline--grey {
+.btn-outline--grey {
     color: $grey;
     border-color: $grey;
 
@@ -645,12 +602,12 @@ p {
     }
 }
 
-.hrd-btn-inline {
+.btn-inline {
     padding: 10px 30px;
     height: 40px;
     font-size: 18px;
     line-height: 90%;
-    font-weight: 700;
+    font-weight: $bold;
     border-width: 2px;
     border-radius: 30px;
     color: $white;
@@ -662,14 +619,13 @@ p {
         background-color: transparent;
         background-image: none;
     }
-
     @media (max-width: $screen-xs-max) {
         padding: 10px 15px;
         font-size: 14px;
     }
 }
 
-.hrd-btn-inline--red {
+.btn-inline--red {
     background-color: $red;
     border-color: $red;
 
@@ -678,7 +634,7 @@ p {
     }
 }
 
-.hrd-btn-go-top {
+.btn-go-top {
     display: none;
     position: fixed;
     bottom: 60px;
@@ -693,39 +649,41 @@ p {
     padding: 5px 12px;
     border-radius: 50%;
     cursor: pointer;
+
     &:hover {
         opacity: 1;
     }
 }
-
 /*
 ==========================================================================
     Breadcrumb
 ==========================================================================
 */
+
 .wrapper--breadcrumb {
     padding-top: 20px;
-
+    padding-bottom: 20px;
     @media (min-width: $screen-sm-min) {
         padding-top: 30px;
+        padding-bottom: 20px;
     }
-
     @media (min-width: $screen-lg-min) {
         padding-top: 48px;
+        padding-bottom: 30px;
     }
 }
 
 .breadcrumb {
     padding: 0;
     margin: 0;
-    background-color: $white; //3aa8cc
+    background-color: $white;
 }
 
 .breadcrumb-item {
     font-family: $font-2;
 
     a {
-        @extend .font-passage-1;
+        @extend .passage-18-16-16;
         color: #3aa8cc;
         text-decoration: none;
 
@@ -739,12 +697,12 @@ p {
     content: "·";
     color: #b7b7b7;
 }
-
 /*
 ==========================================================================
      Overlay (Search & sitemap)
 ==========================================================================
 */
+
 .overlay {
     display: none;
     position: fixed;
@@ -761,7 +719,7 @@ p {
 }
 
 .overlay__header {
-    @extend .margin-bottom-2;
+    @extend .mb-50-40-35;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -779,11 +737,10 @@ p {
     color: $grey;
     width: 100%;
     font-size: 30px;
-    font-weight: 400;
-    padding: .3em .5em;
+    font-weight: $regular;
+    padding: 0.3em 0.5em;
     border: solid 1px #ced4da;
     margin-bottom: 1.3em;
-
     @media (max-width: $screen-sm-max) {
         font-size: 26px;
     }
@@ -794,8 +751,7 @@ p {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 50px 50px;
-
+    padding: 50px;
     @media (max-width: $screen-sm-max) {
         display: block;
     }
@@ -814,33 +770,41 @@ p {
         margin: 0;
         text-align: center;
     }
+
+    a {
+        line-height: 200%;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: $red;
+    }
 }
 
 .overlay-menu-title {
     color: $grey;
     font-size: 26px;
-    font-weight: 700;
+    font-weight: $bold;
     line-height: $default-line-height;
 
     &:hover {
         color: $grey;
     }
-
     @media (min-width: $screen-lg-min) {
         font-size: 30px;
     }
 }
-
 /**
  * These rules extend `.wrapper-fluid {}` in _common.scss.
  */
+
 .wrapper-fluid--overlay-tabs {
     @extend .underline-2;
-    @extend .margin-bottom-2;
+    @extend .mb-50-40-35;
 }
 
 .overlay__tab {
-    @extend .font-passage-1;
+    @extend .passage-18-16-16;
     display: inline-block;
     padding: 10px 30px;
     color: $black;
@@ -856,12 +820,11 @@ p {
 }
 
 .overlay__result-item {
-    @extend .margin-bottom-2;
+    @extend .mb-50-40-35;
 }
-
 // pagination override
-.page-item {
 
+.page-item {
     &.active .page-link {
         background-color: $red;
         border-color: #dee2e6;
@@ -876,12 +839,118 @@ p {
         background-color: $white;
     }
 }
+/*
+==========================================================================
+    Containers
+==========================================================================
+*/
+
+.border-container {
+    width: 100%;
+    padding: 20px 0;
+    border-top: solid 2px $dark-grey;
+    border-bottom: solid 2px $dark-grey;
+    margin-bottom: 15px;
+
+    a {
+        color: $link-color;
+        text-decoration: underline;
+    }
+
+    @media (min-width: $screen-sm-min) {
+        padding: 30px 0;
+        margin-bottom: 20px;
+    }
+    @media (min-width: $screen-lg-min) {
+        padding: 50px 0;
+        margin-bottom: 25px;
+    }
+}
+
+.border-container__header {
+    display:table;
+    width:100%;
+    div:nth-child(1){
+        display:table-cell;
+        width:90%;
+        vertical-align: middle;
+    }
+    div:nth-child(2){
+        display:table-cell;
+        text-align:right;
+        font-size: 36px;
+
+        @media (min-width: $screen-sm-min) {
+            font-size: 48px;
+        }
+    }
+}
+
+.labelled-container {
+    position: relative;
+    border: solid 2px $bar-color;
+    padding: 40px 50px;
+
+    & > .container-label {
+        position: absolute;
+        background-color: $red;
+        color: $white;
+        top: -2px;
+        left: -2px;
+        font-size: 14px;
+        line-height: $line-height-2;
+        padding: 0 .5em;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.35);
+    }
+}
+
+.input-container {
+    width: 100%;
+    & > div {
+        @extend .mb-25-20-15;
+    }
+
+    & input[type="radio"] {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+.input-container-2 {
+    @extend .input-container;
+
+    @media (min-width: $screen-sm-min) {
+        width: 70%;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: 60%;
+    }
+}
 
 /*
 ==========================================================================
-    Single property classes
+    Validation
 ==========================================================================
 */
+.valid-feedback, .invalid-feedback{
+    font-family: $font-2;
+    font-size: 14px;
+}
+.form-check {
+    padding: 0;
+    margin: 0;
+}
+.form-check-input {
+    position: inherit;
+    padding: 0;
+    margin: 0;
+}
+/*
+==========================================================================
+    Single property
+==========================================================================
+*/
+
 .no-border {
     border: 0;
 }
@@ -916,34 +985,67 @@ p {
 }
 
 // margin bottom
-.margin-bottom-1 {
-    margin-bottom: 25px;
+.mb-50-40-35 {
+    margin-bottom: 35px;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 40px;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 50px;
+    }
+}
 
+.mb-45-30-25 {
+    margin-bottom: 25px;
     @media (min-width: $screen-sm-min) {
         margin-bottom: 30px;
     }
-
     @media (min-width: $screen-lg-min) {
         margin-bottom: 45px;
     }
 }
 
-.margin-bottom-2 {
-    margin-bottom: 35px;
-
+.mb-35-20-15 {
+    margin-bottom: 15px;
     @media (min-width: $screen-sm-min) {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 35px;
+    }
+}
 
+.mb-25-20-15 {
+    margin-bottom: 15px;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 20px;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 25px;
+    }
+}
+
+.mb-0-0-20 {
+    margin-bottom: 20px;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 0px;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 0px;
+    }
+}
+
+.mb-50-0-0 {
+    margin-bottom: 0;
     @media (min-width: $screen-lg-min) {
         margin-bottom: 50px;
     }
 }
 
 // display none by screen size
+
 .hide-from-xs {
     display: none;
-
     @media (min-width: $screen-sm-min) {
         display: block;
     }
@@ -951,7 +1053,6 @@ p {
 
 .hide-from-sm {
     display: none;
-
     @media (min-width: $screen-md-min) {
         display: block;
     }
@@ -959,20 +1060,52 @@ p {
 
 .hide-from-md {
     display: none;
-
     @media (min-width: $screen-lg-min) {
         display: block;
     }
 }
+// font color, weight, etc
 
-// font color, etc
-.dark-grey{
-    color: $dark-grey;
+.light-grey {
+    color: $light-grey;
+
     &:hover {
-        color: $dark-grey
+        color: $light-grey;
+    }
+}
+
+.grey {
+    color: $grey;
+
+    &:hover {
+        color: $grey;
+    }
+}
+
+.dark-grey {
+    color: $dark-grey;
+
+    &:hover {
+        color: $dark-grey;
+    }
+}
+
+.light-brown {
+    color: $light-brown;
+
+    &:hover {
+        color: $light-brown;
     }
 }
 
 .rss-color {
     color: $rss-color;
+}
+
+.bold {
+    font-weight: $bold;
+}
+
+.bolder {
+    font-weight: $bolder;
 }
