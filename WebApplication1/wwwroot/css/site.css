@@ -1942,28 +1942,6 @@ p {
     }
 }
 
-.masthead__article__label {
-    color: white;
-    font-family: Roboto, Arial, sans-serif;
-    background-color: #000000;
-    padding: 0 15px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-
-.masthead__article__label--1 {
-    background-color: #6363a8;
-}
-
-.masthead__article__label--2 {
-    background-color: #9c855c;
-}
-
-.masthead__article__label--3 {
-    background-color: #4c9385;
-}
-
 .profile {
     padding-top: 20px;
     text-align: center;

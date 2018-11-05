@@ -258,26 +258,6 @@
     }
 }
 
-.masthead__article__label {
-    color: $white;
-    font-family: $font-2;
-    background-color: $black;
-    padding: 0 15px;
-    @include rounded(5px);
-}
-
-.masthead__article__label--1 {
-    background-color: #6363a8;
-}
-
-.masthead__article__label--2 {
-    background-color: #9c855c;
-}
-
-.masthead__article__label--3 {
-    background-color: #4c9385;
-}
-
 .profile {
     padding-top: 20px;
     text-align: center;
