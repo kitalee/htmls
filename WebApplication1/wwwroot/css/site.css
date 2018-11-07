@@ -185,14 +185,14 @@ p {
     Font styles for label, section, title, passage
 ==========================================================================
 */
-.font1, .font1-18, .font1-20, .font1-28-24-22-B, .font1-28-24C-22-B, .font1-28-26-26-B, .font1-62-44C-30-B, .font1-26-24-24-B, .font1-26-24-20-B, .font1-26-22-22-B, .font1-22-18-18-B, .font1-22-20-20-B, .font1-26-26-22-B, .font1-40-36-26-B, .font1-24-22-20-B {
+.font1, .font1-18, .font1-20, .font1-28-24-22-B, .font1-28-24C-22-B, .font1-28-26-26-B, .font1-62-44C-30-B, .font1-26-24-24-B, .font1-26-24-22-B, .font1-26-24-20-B, .font1-26-22-22-B, .font1-22-18-18-B, .font1-22-20-20-B, .font1-26-26-22-B, .font1-40-36-26-B, .font1-24-22-20-B {
     font-family: "Titillium Web", Arial, sans-serif;
     color: #000000;
     font-weight: 400;
     line-height: 140%;
 }
 
-.font1:hover, .font1-18:hover, .font1-20:hover, .font1-28-24-22-B:hover, .font1-28-24C-22-B:hover, .font1-28-26-26-B:hover, .font1-62-44C-30-B:hover, .font1-26-24-24-B:hover, .font1-26-24-20-B:hover, .font1-26-22-22-B:hover, .font1-22-18-18-B:hover, .font1-22-20-20-B:hover, .font1-26-26-22-B:hover, .font1-40-36-26-B:hover, .font1-24-22-20-B:hover {
+.font1:hover, .font1-18:hover, .font1-20:hover, .font1-28-24-22-B:hover, .font1-28-24C-22-B:hover, .font1-28-26-26-B:hover, .font1-62-44C-30-B:hover, .font1-26-24-24-B:hover, .font1-26-24-22-B:hover, .font1-26-24-20-B:hover, .font1-26-22-22-B:hover, .font1-22-18-18-B:hover, .font1-22-20-20-B:hover, .font1-26-26-22-B:hover, .font1-40-36-26-B:hover, .font1-24-22-20-B:hover {
     color: #000000;
 }
 
@@ -324,6 +324,23 @@ p {
 
 @media (min-width: 1200px) {
     .font1-26-24-24-B {
+        font-size: 26px;
+    }
+}
+
+.font1-26-24-22-B {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .font1-26-24-22-B {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .font1-26-24-22-B {
         font-size: 26px;
     }
 }
@@ -952,7 +969,19 @@ p {
 .labelled-container {
     position: relative;
     border: solid 2px #dfdfdf;
-    padding: 40px 50px;
+    padding: 30px 40px;
+}
+
+@media (min-width: 768px) {
+    .labelled-container {
+        padding: 35px 45px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .labelled-container {
+        padding: 40px 50px;
+    }
 }
 
 .labelled-container > .container-label {
@@ -963,7 +992,7 @@ p {
     left: -2px;
     font-size: 14px;
     line-height: 130%;
-    padding: 0 .5em;
+    padding: 0 0.5em;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.35);
 }
 
@@ -993,7 +1022,8 @@ p {
     Validation
 ==========================================================================
 */
-.valid-feedback, .invalid-feedback {
+.invalid-feedback,
+.valid-feedback {
     font-family: Roboto, Arial, sans-serif;
     font-size: 14px;
 }
@@ -1046,18 +1076,18 @@ p {
     border-bottom: 1px solid #eaeaea;
 }
 
-.mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item {
+.mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item {
     margin-bottom: 35px;
 }
 
 @media (min-width: 768px) {
-    .mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item {
+    .mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item {
         margin-bottom: 40px;
     }
 }
 
 @media (min-width: 1200px) {
-    .mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item {
+    .mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item {
         margin-bottom: 50px;
     }
 }
@@ -1116,13 +1146,13 @@ p {
 
 @media (min-width: 768px) {
     .mb-0-0-20 {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 }
 
 @media (min-width: 1200px) {
     .mb-0-0-20 {
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 }
 
@@ -1665,6 +1695,11 @@ p {
     border: solid 1px red;
 }
 
+/*
+==========================================================================
+     home & newslist
+==========================================================================
+*/
 /**
  * These rules extend `.nav {}` in _nav.scss in bootstrap.
  */
@@ -2147,18 +2182,18 @@ p {
     }
 }
 
-.article-list__item__img, .author-newslist__img {
+.article-list__item__img, .article-list__item__img-2 {
     display: none;
     margin-right: 20px;
 }
 
-.article-list__item__img img, .author-newslist__img img {
+.article-list__item__img img, .article-list__item__img-2 img {
     width: 100%;
     height: 100%;
 }
 
 @media (min-width: 768px) {
-    .article-list__item__img, .author-newslist__img {
+    .article-list__item__img, .article-list__item__img-2 {
         display: block;
         flex-basis: 160px;
         width: 160px;
@@ -2167,7 +2202,7 @@ p {
 }
 
 @media (min-width: 1200px) {
-    .article-list__item__img, .author-newslist__img {
+    .article-list__item__img, .article-list__item__img-2 {
         display: block;
         flex-basis: 200px;
         width: 200px;
@@ -2479,6 +2514,11 @@ p {
     }
 }
 
+/*
+==========================================================================
+     news detail
+==========================================================================
+*/
 /**
  * These rules extend `.wrapper {}` in _common.scss.
  */
@@ -2894,7 +2934,7 @@ p {
 }
 
 @media (min-width: 1200px) {
-    .author-newslist__img {
+    .article-list__item__img-2 {
         display: block;
         flex-basis: 160px;
         width: 160px;
@@ -2969,3 +3009,172 @@ p {
      poll
 ==========================================================================
 */
+/*
+==========================================================================
+     hr events
+==========================================================================
+*/
+.hr-event {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hr-event__item {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .hr-event__item {
+        flex-basis: 48%;
+        margin-bottom: 75px;
+    }
+}
+
+.hr-event__item p {
+    margin-bottom: 0.5em;
+}
+
+.hr-event__item span:nth-child(1) {
+    color: #405569;
+}
+
+.hr-event__item span:nth-child(2) {
+    color: #788588;
+}
+
+.hr-event__item__img {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    margin: 0 auto 25px;
+}
+
+@media (min-width: 1200px) {
+    .hr-event__item__img {
+        width: 250px;
+        height: 150px;
+    }
+}
+
+.hr-event__item__img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*
+==========================================================================
+     e-mag
+==========================================================================
+*/
+.emag-header {
+    display: table;
+    width: 100%;
+}
+
+.emag-header__img {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 768px) {
+    .emag-header__img {
+        display: table-cell;
+    }
+}
+
+.emag-header__img img {
+    width: 141px;
+    height: 180px;
+}
+
+@media (min-width: 768px) {
+    .emag-header__img img {
+        width: 157px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .emag-header__img img {
+        width: 188px;
+        height: 241px;
+    }
+}
+
+.emag-header__passage {
+    display: block;
+    padding: 0;
+    vertical-align: top;
+}
+
+@media (min-width: 768px) {
+    .emag-header__passage {
+        display: table-cell;
+        padding-left: 40px;
+    }
+}
+
+.emag-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.emag-list__item {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .emag-list__item {
+        flex-basis: 48%;
+        margin-right: 2%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .emag-list__item {
+        flex-basis: 30%;
+        margin-right: 3%;
+    }
+}
+
+.emag-list__item p {
+    margin-bottom: 0.5em;
+}
+
+.emag-list__item__img {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.emag-list__item__img img {
+    width: 125px;
+    height: 160px;
+}
+
+@media (min-width: 768px) {
+    .emag-list__item__img img {
+        width: 142px;
+        height: 181px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .emag-list__item__img img {
+        width: 157px;
+        height: 200px;
+    }
+}

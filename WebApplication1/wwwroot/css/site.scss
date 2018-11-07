@@ -7,6 +7,11 @@
 .border-test {
     border: solid 1px red;
 }
+/*
+==========================================================================
+     home & newslist
+==========================================================================
+*/
 /**
  * These rules extend `.nav {}` in _nav.scss in bootstrap.
  */
@@ -694,6 +699,11 @@
         flex-basis: 50%;
     }
 }
+/*
+==========================================================================
+     news detail
+==========================================================================
+*/
 /**
  * These rules extend `.wrapper {}` in _common.scss.
  */
@@ -705,11 +715,9 @@
 /**
  * These rules extend `.wrapper {}` in _common.scss.
  */
-
 .wrapper--detail {
     padding-left: 15px;
     padding-right: 15px;
-
     @media (min-width: $screen-sm-min) {
         max-width: 595px;
     }
@@ -1058,7 +1066,7 @@
     }
 }
 
-.author-newslist__img {
+.article-list__item__img-2 {
     @extend .article-list__item__img;
     @media (min-width: $screen-lg-min) {
         display: block;
@@ -1067,15 +1075,11 @@
         height: 96px;
     }
 }
-
 /*
 ==========================================================================
      contact us
 ==========================================================================
 */
-
-
-
 /*
 ==========================================================================
      jobs list
@@ -1091,7 +1095,6 @@
         padding: 45px 0;
     }
 }
-
 /*
 ==========================================================================
      people
@@ -1104,6 +1107,7 @@
     list-style: none;
     padding: 0;
     margin-bottom: 20px;
+
     & > li {
         flex-basis: 100%;
         line-height: 250%;
@@ -1115,15 +1119,155 @@
             flex-basis: 33%;
         }
     }
+
     & > li::before {
         content: "•";
         margin-right: 5px;
     }
-
 }
-
 /*
 ==========================================================================
      poll
 ==========================================================================
 */
+/*
+==========================================================================
+     hr events
+==========================================================================
+*/
+
+.hr-event {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hr-event__item {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    @media (min-width: $screen-sm-min) {
+        flex-basis: 48%;
+        margin-bottom: 75px;
+    }
+
+    p {
+        margin-bottom: 0.5em;
+    }
+
+    span:nth-child(1) {
+        color: #405569;
+    }
+
+    span:nth-child(2) {
+        color: #788588;
+    }
+}
+
+.hr-event__item__img {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    //padding-top: 30%;
+    margin: 0 auto 25px;
+    @media (min-width: $screen-lg-min) {
+        width: 250px;
+        height: 150px;
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+/*
+==========================================================================
+     e-mag
+==========================================================================
+*/
+.emag-header {
+    display: table;
+    width: 100%;
+}
+
+.emag-header__img {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+    @media (min-width: $screen-sm-min) {
+        display: table-cell;
+    }
+
+    img {
+        width: 141px;
+        height: 180px;
+        @media (min-width: $screen-sm-min) {
+            width: 157px;
+            height: 200px;
+        }
+        @media (min-width: $screen-lg-min) {
+            width: 188px;
+            height: 241px;
+        }
+    }
+}
+
+.emag-header__passage {
+    display: block;
+    padding: 0;
+    vertical-align: top;
+    @media (min-width: $screen-sm-min) {
+        display: table-cell;
+        padding-left: 40px;
+    }
+}
+
+.emag-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.emag-list__item {
+    @extend .mb-50-40-35;
+    flex-basis: 100%;
+    text-align: center;
+    @media (min-width: $screen-sm-min) {
+        flex-basis: 48%;
+        margin-right: 2%;
+    }
+    @media (min-width: $screen-lg-min) {
+        flex-basis: 30%;
+        margin-right: 3%;
+    }
+
+    p {
+        margin-bottom: 0.5em;
+    }
+}
+
+.emag-list__item__img {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+
+    img {
+        width: 125px;
+        height: 160px;
+        @media (min-width: $screen-sm-min) {
+            width: 142px;
+            height: 181px;
+        }
+        @media (min-width: $screen-lg-min) {
+            width: 157px;
+            height: 200px;
+        }
+    }
+}
