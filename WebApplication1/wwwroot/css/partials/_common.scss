@@ -241,6 +241,15 @@ p {
     @extend .font2-18-18-16;
     font-weight: $bold;
 }
+// font-size (lg->sm->xs) : 18->16->16
+
+.font2-18-16-16 {
+    @extend .font2;
+    font-size: 16px;
+    @media (min-width: $screen-lg-min) {
+        font-size: 18px;
+    }
+}
 // font-size (lg->sm->xs) : 28->24->22
 
 .font1-28-24-22-B {
@@ -265,6 +274,19 @@ p {
         font-size: 28px;
     }
 }
+// font-size (lg->sm->xs) : 28->26->22
+
+.font1-28-26-22-B {
+    @extend .font1;
+    font-size: 22px;
+    font-weight: $bold;
+    @media (min-width: $screen-sm-min) {
+        font-size: 26px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 28px;
+    }
+}
 // font-size (lg->sm->xs) : 28->26->26
 
 .font1-28-26-26-B {
@@ -280,7 +302,7 @@ p {
 .font1-62-44C-30-B {
     @extend .font1;
     font-size: 30px;
-    font-weight: $bolder;
+    font-weight: $bold;
     @media (min-width: $screen-sm-min) {
         //font-size: 44px;
         font-size: calc(10px + 4vw);
@@ -378,6 +400,16 @@ p {
         font-size: 40px;
     }
 }
+// font-size (lg->sm->xs) : 20->17->17
+
+.font1-20-17-17-B {
+    @extend .font1;
+    font-size: 17px;
+    font-weight: $bold;
+    @media (min-width: $screen-lg-min) {
+        font-size: 20px;
+    }
+}
 // font-size (lg->sm->xs) : 22->20->18
 
 .font2-22-20C-18-B {
@@ -396,7 +428,7 @@ p {
 .font1-62-44C-30-B {
     @extend .font1;
     font-size: 30px;
-    font-weight: $bolder;
+    font-weight: $bold;
     @media (min-width: $screen-sm-min) {
         //font-size: 44px;
         font-size: calc(10px + 4vw);
@@ -443,7 +475,7 @@ p {
         font-size: 22px;
     }
 }
-// font-size (lg->sm->xs) : 22->20->20
+// font-size (lg->sm->xs) : 22->20->18
 
 .font2-20-20-18-L {
     @extend .font2;
@@ -578,6 +610,16 @@ p {
     }
 }
 
+.btn-outline--orange {
+    color: $orange;
+    border-color: $orange;
+
+    &:hover {
+        background-color: $orange;
+        border-color: $orange;
+    }
+}
+
 .btn-outline--grey {
     color: $grey;
     border-color: $grey;
@@ -617,6 +659,15 @@ p {
 
     &:hover {
         color: $red;
+    }
+}
+
+.btn-inline--orange {
+    background-color: $orange;
+    border-color: $orange;
+
+    &:hover {
+        color: $orange;
     }
 }
 
@@ -902,6 +953,8 @@ p {
     & input[type="radio"] {
         width: 17px;
         height: 17px;
+        margin-top: -5px;
+        vertical-align: middle;
     }
 }
 
@@ -912,6 +965,33 @@ p {
     }
     @media (min-width: $screen-lg-min) {
         width: 60%;
+    }
+}
+
+.input-container-3 {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+
+    & > div {
+        flex-basis: 100%;
+        margin-bottom: 1em;
+        @media (min-width: $screen-sm-min) {
+            flex-basis: 50%;
+        }
+    }
+
+    & input[type="radio"] {
+        margin-top: -2px;
+        display: table-cell;
+        vertical-align: middle;
+        width: 17px;
+        height: 17px;
+    }
+
+    & label {
+        //padding: 5px;
+        //margin: 10px;
     }
 }
 /*
@@ -985,6 +1065,16 @@ p {
     }
 }
 
+.mb-60-30-20 {
+    margin-bottom: 20px;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 30px;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 60px;
+    }
+}
+
 .mb-45-30-25 {
     margin-bottom: 25px;
     @media (min-width: $screen-sm-min) {
@@ -1032,6 +1122,7 @@ p {
     }
 }
 // display none by screen size
+
 .hide-from-xs {
     display: none;
     @media (min-width: $screen-sm-min) {
@@ -1095,5 +1186,5 @@ p {
 }
 
 .bolder {
-    font-weight: $bolder;
+    font-weight: $bold;
 }

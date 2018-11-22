@@ -185,25 +185,25 @@ p {
     Font styles for label, section, title, passage
 ==========================================================================
 */
-.font1, .font1-18, .font1-20, .font1-28-24-22-B, .font1-28-24C-22-B, .font1-28-26-26-B, .font1-62-44C-30-B, .font1-26-24-24-B, .font1-26-24-22-B, .font1-26-24-20-B, .font1-26-22-22-B, .font1-22-18-18-B, .font1-22-20-20-B, .font1-26-26-22-B, .font1-40-36-26-B, .font1-24-22-20-B {
+.font1, .font1-18, .font1-20, .font1-28-24-22-B, .font1-28-24C-22-B, .font1-28-26-22-B, .font1-28-26-26-B, .font1-62-44C-30-B, .font1-26-24-24-B, .font1-26-24-22-B, .font1-26-24-20-B, .font1-26-22-22-B, .font1-22-18-18-B, .font1-22-20-20-B, .font1-26-26-22-B, .font1-40-36-26-B, .font1-20-17-17-B, .nav--header, .font1-24-22-20-B {
     font-family: "Titillium Web", Arial, sans-serif;
     color: #000000;
     font-weight: 400;
     line-height: 140%;
 }
 
-.font1:hover, .font1-18:hover, .font1-20:hover, .font1-28-24-22-B:hover, .font1-28-24C-22-B:hover, .font1-28-26-26-B:hover, .font1-62-44C-30-B:hover, .font1-26-24-24-B:hover, .font1-26-24-22-B:hover, .font1-26-24-20-B:hover, .font1-26-22-22-B:hover, .font1-22-18-18-B:hover, .font1-22-20-20-B:hover, .font1-26-26-22-B:hover, .font1-40-36-26-B:hover, .font1-24-22-20-B:hover {
+.font1:hover, .font1-18:hover, .font1-20:hover, .font1-28-24-22-B:hover, .font1-28-24C-22-B:hover, .font1-28-26-22-B:hover, .font1-28-26-26-B:hover, .font1-62-44C-30-B:hover, .font1-26-24-24-B:hover, .font1-26-24-22-B:hover, .font1-26-24-20-B:hover, .font1-26-22-22-B:hover, .font1-22-18-18-B:hover, .font1-22-20-20-B:hover, .font1-26-26-22-B:hover, .font1-40-36-26-B:hover, .font1-20-17-17-B:hover, .nav--header:hover, .font1-24-22-20-B:hover {
     color: #000000;
 }
 
-.font2, .font2-18-B, .font2-14-B, .font2-15, .font2-18-18-16, .font2-18-18-16-B, .font2-22-20C-18-B, .font2-24-22-20-B, .font2-22-20C-18, .related-story, .font2-20-20-18-L, .font2-22-20-18, .font2-22-20-18-L, .font2-22-20-18-B {
+.font2, .font2-18-B, .font2-14-B, .font2-15, .font2-18-18-16, .font2-18-18-16-B, .font2-18-16-16, .font2-22-20C-18-B, .font2-24-22-20-B, .font2-22-20C-18, .related-story, .font2-20-20-18-L, .font2-22-20-18, .font2-22-20-18-L, .font2-22-20-18-B {
     font-family: Roboto, Arial, sans-serif;
     color: #000000;
     font-weight: 400;
     line-height: 140%;
 }
 
-.font2:hover, .font2-18-B:hover, .font2-14-B:hover, .font2-15:hover, .font2-18-18-16:hover, .font2-18-18-16-B:hover, .font2-22-20C-18-B:hover, .font2-24-22-20-B:hover, .font2-22-20C-18:hover, .related-story:hover, .font2-20-20-18-L:hover, .font2-22-20-18:hover, .font2-22-20-18-L:hover, .font2-22-20-18-B:hover {
+.font2:hover, .font2-18-B:hover, .font2-14-B:hover, .font2-15:hover, .font2-18-18-16:hover, .font2-18-18-16-B:hover, .font2-18-16-16:hover, .font2-22-20C-18-B:hover, .font2-24-22-20-B:hover, .font2-22-20C-18:hover, .related-story:hover, .font2-20-20-18-L:hover, .font2-22-20-18:hover, .font2-22-20-18-L:hover, .font2-22-20-18-B:hover {
     color: #000000;
 }
 
@@ -260,6 +260,16 @@ p {
     font-weight: 700;
 }
 
+.font2-18-16-16 {
+    font-size: 16px;
+}
+
+@media (min-width: 1200px) {
+    .font2-18-16-16 {
+        font-size: 18px;
+    }
+}
+
 .font1-28-24-22-B, .font1-28-24C-22-B {
     font-size: 22px;
     font-weight: 700;
@@ -289,6 +299,23 @@ p {
     }
 }
 
+.font1-28-26-22-B {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .font1-28-26-22-B {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .font1-28-26-22-B {
+        font-size: 28px;
+    }
+}
+
 .font1-28-26-26-B {
     font-size: 26px;
     font-weight: 700;
@@ -302,7 +329,7 @@ p {
 
 .font1-62-44C-30-B {
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -423,6 +450,17 @@ p {
     }
 }
 
+.font1-20-17-17-B, .nav--header {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+@media (min-width: 1200px) {
+    .font1-20-17-17-B, .nav--header {
+        font-size: 20px;
+    }
+}
+
 .font2-22-20C-18-B {
     font-size: 18px;
     font-weight: 700;
@@ -442,7 +480,7 @@ p {
 
 .font1-62-44C-30-B {
     font-size: 30px;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -662,6 +700,16 @@ p {
     border-color: red;
 }
 
+.btn-outline--orange {
+    color: #f88033;
+    border-color: #f88033;
+}
+
+.btn-outline--orange:hover {
+    background-color: #f88033;
+    border-color: #f88033;
+}
+
 .btn-outline--grey {
     color: #6d6e71;
     border-color: #6d6e71;
@@ -705,6 +753,15 @@ p {
 
 .btn-inline--red:hover {
     color: red;
+}
+
+.btn-inline--orange {
+    background-color: #f88033;
+    border-color: #f88033;
+}
+
+.btn-inline--orange:hover {
+    color: #f88033;
 }
 
 .btn-go-top {
@@ -1003,6 +1060,8 @@ p {
 .input-container input[type="radio"], .input-container-2 input[type="radio"] {
     width: 17px;
     height: 17px;
+    margin-top: -5px;
+    vertical-align: middle;
 }
 
 @media (min-width: 768px) {
@@ -1015,6 +1074,31 @@ p {
     .input-container-2 {
         width: 60%;
     }
+}
+
+.input-container-3 {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+}
+
+.input-container-3 > div {
+    flex-basis: 100%;
+    margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+    .input-container-3 > div {
+        flex-basis: 50%;
+    }
+}
+
+.input-container-3 input[type="radio"] {
+    margin-top: -2px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 17px;
+    height: 17px;
 }
 
 /*
@@ -1089,6 +1173,22 @@ p {
 @media (min-width: 1200px) {
     .mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item {
         margin-bottom: 50px;
+    }
+}
+
+.mb-60-30-20, .profile {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .mb-60-30-20, .profile {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mb-60-30-20, .profile {
+        margin-bottom: 60px;
     }
 }
 
@@ -1237,7 +1337,7 @@ p {
 }
 
 .bolder {
-    font-weight: 800;
+    font-weight: 700;
 }
 
 /**
@@ -1391,19 +1491,6 @@ p {
 .nav--header {
     display: flex;
     justify-content: space-between;
-    font-weight: 700;
-}
-
-@media (min-width: 768px) {
-    .nav--header {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 992px) {
-    .nav--header {
-        font-size: 20px;
-    }
 }
 
 .nav__item:hover .nav__item__container {
@@ -2318,15 +2405,17 @@ p {
 }
 
 .top-videos {
-    padding: 20px 0;
+    margin: 20px 0;
     flex-basis: 100%;
     display: block;
     border-bottom: solid #dfdfdf 1px;
+    border-right: 0;
+    padding-right: 0;
 }
 
 @media (min-width: 768px) {
     .top-videos {
-        padding: 30px 0;
+        margin: 30px 0;
         flex-basis: 100%;
         display: flex;
         flex-direction: row;
@@ -2336,17 +2425,18 @@ p {
 
 @media (min-width: 1200px) {
     .top-videos {
-        padding: 40px 0;
-        flex-basis: 41%;
+        margin: 40px 0;
+        flex-basis: 37%;
         display: block;
         border-bottom: 0;
+        border-right: solid #dfdfdf 1px;
+        padding-right: 50px;
     }
 }
 
 .top-videos__part1 {
     flex-basis: 100%;
-    padding: 0 0 30px;
-    border-right: 0;
+    padding-bottom: 30px;
 }
 
 @media (min-width: 768px) {
@@ -2358,9 +2448,7 @@ p {
 @media (min-width: 1200px) {
     .top-videos__part1 {
         flex-basis: 100%;
-        padding-right: 50px;
-        border-right: solid #dfdfdf 1px;
-        padding-bottom: 30px;
+        max-width: 450px;
     }
 }
 
@@ -2384,7 +2472,6 @@ p {
     flex-basis: 100%;
     margin-top: 0;
     padding: 0;
-    border-right: 0;
 }
 
 @media (min-width: 768px) {
@@ -2398,8 +2485,7 @@ p {
     .top-videos__part2 {
         flex-basis: 100%;
         margin-top: 0;
-        padding-right: 50px;
-        border-right: solid #dfdfdf 1px;
+        max-width: 450px;
     }
 }
 
@@ -2445,13 +2531,26 @@ p {
     }
 }
 
-.industry-hr {
-    flex-basis: 55%;
+.industry-poll {
+    margin: 25px 0;
+    flex-basis: 57%;
+}
+
+@media (min-width: 1200px) {
+    .industry-poll {
+        margin: 40px 0;
+    }
 }
 
 .industry-news {
-    padding: 40px 0;
+    padding-bottom: 25px;
     border-bottom: solid #dfdfdf 1px;
+}
+
+@media (min-width: 1200px) {
+    .industry-news {
+        padding-bottom: 40px;
+    }
 }
 
 .industry-news__item {
@@ -2471,8 +2570,12 @@ p {
     }
 }
 
+.poll {
+    margin-top: 25px;
+}
+
 .hr-jobs {
-    padding: 40px 0;
+    margin-top: 25px;
 }
 
 .hr-jobs__item {
