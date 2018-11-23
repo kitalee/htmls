@@ -1095,6 +1095,16 @@ p {
     }
 }
 
+.mb-40-35-30 {
+    margin-bottom: 30px;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 35px;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 40px;
+    }
+}
+
 .mb-25-20-15 {
     margin-bottom: 15px;
     @media (min-width: $screen-sm-min) {
