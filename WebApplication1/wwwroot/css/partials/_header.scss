@@ -22,20 +22,6 @@
     padding-bottom: 20px;
 }
 
-.logo__desktop {
-    display: none;
-    @media (min-width: $screen-lg-min) {
-        display: block;
-    }
-}
-
-.logo__mobile {
-    display: none;
-    @media (max-width: $screen-md-max) {
-        display: block;
-    }
-}
-
 .logo__btn {
     display: flex;
     justify-content: space-between;

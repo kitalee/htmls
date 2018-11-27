@@ -207,14 +207,14 @@ p {
     color: #000000;
 }
 
-.passage, .passage-18-16-16, .breadcrumb-item a, .overlay__tab, .passage-18-16-14, .passage-16-16-14, .passage-20-18-16, .passage-18-16C-14, .wrapper--detail__writer label + label::before, .wrapper--detail__writer div + div::before, .passage-18-18-16 {
+.passage, .passage-18, .passage-18-16-16, .breadcrumb-item a, .overlay__tab, .passage-18-16-14, .passage-16-16-14, .passage-20-18-16, .passage-18-16C-14, .wrapper--detail__writer label + label::before, .wrapper--detail__writer div + div::before, .passage-18-18-16 {
     font-family: Roboto, Arial, sans-serif;
     color: #888888;
     font-weight: 400;
     line-height: 140%;
 }
 
-.passage:hover, .passage-18-16-16:hover, .breadcrumb-item a:hover, .overlay__tab:hover, .passage-18-16-14:hover, .passage-16-16-14:hover, .passage-20-18-16:hover, .passage-18-16C-14:hover, .wrapper--detail__writer label + label:hover::before, .wrapper--detail__writer div + div:hover::before, .passage-18-18-16:hover {
+.passage:hover, .passage-18:hover, .passage-18-16-16:hover, .breadcrumb-item a:hover, .overlay__tab:hover, .passage-18-16-14:hover, .passage-16-16-14:hover, .passage-20-18-16:hover, .passage-18-16C-14:hover, .wrapper--detail__writer label + label:hover::before, .wrapper--detail__writer div + div:hover::before, .passage-18-18-16:hover {
     color: #888888;
 }
 
@@ -578,6 +578,10 @@ p {
 
 .font2-22-20-18-B {
     font-weight: 700;
+}
+
+.passage-18 {
+    font-size: 18px;
 }
 
 .passage-18-16-16, .breadcrumb-item a, .overlay__tab {
@@ -1282,6 +1286,38 @@ p {
     }
 }
 
+.pt-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+    padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+    .pt-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+        padding-top: 35px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pt-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+        padding-top: 45px;
+    }
+}
+
+.pb-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+    padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .pb-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+        padding-bottom: 35px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pb-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+        padding-bottom: 45px;
+    }
+}
+
 .hide-from-xs {
     display: none;
 }
@@ -1376,26 +1412,6 @@ p {
 
 .logo {
     padding-bottom: 20px;
-}
-
-.logo__desktop {
-    display: none;
-}
-
-@media (min-width: 1200px) {
-    .logo__desktop {
-        display: block;
-    }
-}
-
-.logo__mobile {
-    display: none;
-}
-
-@media (max-width: 1199px) {
-    .logo__mobile {
-        display: block;
-    }
 }
 
 .logo__btn {
@@ -2194,6 +2210,11 @@ p {
     padding-bottom: 5px;
 }
 
+.article-list__head__passage label + label::before {
+    content: "/";
+    margin: 0 .5em;
+}
+
 .article-list__head__passage span {
     color: #4fafd0;
 }
@@ -2227,6 +2248,10 @@ p {
 
 .article-list:after, .author-list:after {
     clear: both;
+}
+
+.article-list--underline .list-underline + .list-underline {
+    border-top: solid #dfdfdf 1px;
 }
 
 .article-list-left, .author-list-left {
@@ -2309,7 +2334,7 @@ p {
         display: block;
         flex-basis: 200px;
         width: 200px;
-        height: 122px;
+        height: 120px;
     }
 }
 
@@ -2325,6 +2350,15 @@ p {
 
 .article-list__item__passage span {
     color: #4fafd0;
+}
+
+.article-list__item__passage label {
+    margin: 0;
+}
+
+.article-list__item__passage label + label::before {
+    content: "/";
+    margin: 0 .5em;
 }
 
 .article-list__item-btn, .author-list__item-btn {
@@ -3090,22 +3124,6 @@ p {
      jobs list
 ==========================================================================
 */
-.job-list-item {
-    padding: 30px 0;
-}
-
-@media (min-width: 768px) {
-    .job-list-item {
-        padding: 35px 0;
-    }
-}
-
-@media (min-width: 1200px) {
-    .job-list-item {
-        padding: 45px 0;
-    }
-}
-
 /*
 ==========================================================================
      people
@@ -3315,4 +3333,73 @@ p {
         width: 157px;
         height: 200px;
     }
+}
+
+/*
+==========================================================================
+     industry news
+==========================================================================
+*/
+.industry-news-list__item {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .industry-news-list__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+.industry-news-list__item__img {
+    width: 160px;
+    height: 96px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.industry-news-list__item__img img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .industry-news-list__item__img {
+        display: block;
+        flex-basis: 160px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .industry-news-list__item__img {
+        display: block;
+        flex-basis: 200px;
+        width: 200px;
+        height: 120px;
+    }
+}
+
+.industry-news-list__item__passage {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .industry-news-list__item__passage {
+        max-width: 75%;
+    }
+}
+
+.industry-news-list__item__passage span {
+    color: #4fafd0;
+}
+
+.industry-news-list__item__passage label {
+    margin: 0;
+}
+
+.industry-news-list__item__passage label + label::before {
+    content: "/";
+    margin: 0 .5em;
 }
