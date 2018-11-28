@@ -83,6 +83,25 @@ p {
         justify-content: space-between;
     }
 }
+
+/*
+==========================================================================
+    Flex
+==========================================================================
+*/
+.flex-wrap-left {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.flex-wrap-between {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
 /*
 ==========================================================================
     Advertisements
@@ -929,18 +948,6 @@ p {
     @media (min-width: $screen-lg-min) {
         padding: 50px 0;
         margin-bottom: 25px;
-    }
-}
-
-.border-container-thin {
-    @extend .border-container;
-    @extend .ptb-45-35-30;
-    position: relative;
-    border-top: solid 1px $dark-grey;
-    border-bottom: solid 1px $dark-grey;
-
-    p:last-child {
-        margin-bottom: 0;
     }
 }
 

@@ -104,6 +104,25 @@ p {
 
 /*
 ==========================================================================
+    Flex
+==========================================================================
+*/
+.flex-wrap-left {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.flex-wrap-between, .ranking-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/*
+==========================================================================
     Advertisements
 ==========================================================================
 */
@@ -1037,16 +1056,6 @@ p {
     }
 }
 
-.border-container-thin {
-    position: relative;
-    border-top: solid 1px #323232;
-    border-bottom: solid 1px #323232;
-}
-
-.border-container-thin p:last-child {
-    margin-bottom: 0;
-}
-
 .border-container__header {
     display: table;
     width: 100%;
@@ -1217,18 +1226,18 @@ p {
     }
 }
 
-.mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item {
+.mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item, .ranking-list__item {
     margin-bottom: 35px;
 }
 
 @media (min-width: 768px) {
-    .mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item {
+    .mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item, .ranking-list__item {
         margin-bottom: 40px;
     }
 }
 
 @media (min-width: 1200px) {
-    .mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item {
+    .mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item, .ranking-list__item {
         margin-bottom: 50px;
     }
 }
@@ -1339,34 +1348,34 @@ p {
     }
 }
 
-.pt-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
+.pt-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item, .border-container-thin {
     padding-top: 30px;
 }
 
 @media (min-width: 768px) {
-    .pt-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
+    .pt-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item, .border-container-thin {
         padding-top: 35px;
     }
 }
 
 @media (min-width: 1200px) {
-    .pt-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
+    .pt-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item, .border-container-thin {
         padding-top: 45px;
     }
 }
 
-.pb-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
+.pb-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item, .border-container-thin {
     padding-bottom: 30px;
 }
 
 @media (min-width: 768px) {
-    .pb-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
+    .pb-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item, .border-container-thin {
         padding-bottom: 35px;
     }
 }
 
 @media (min-width: 1200px) {
-    .pb-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
+    .pb-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item, .border-container-thin {
         padding-bottom: 45px;
     }
 }
@@ -3498,6 +3507,16 @@ p {
     clear: both;
 }
 
+.border-container-thin {
+    position: relative;
+    border-top: solid 1px #323232;
+    border-bottom: solid 1px #323232;
+}
+
+.border-container-thin p:last-child {
+    margin-bottom: 0;
+}
+
 .border-container-circle {
     position: absolute;
     width: 100%;
@@ -3558,4 +3577,43 @@ p {
 
 .border-container-thin__passage p {
     margin-bottom: 15px;
+}
+
+/*
+==========================================================================
+     rankings list
+==========================================================================
+*/
+.ranking-list__item {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .ranking-list__item {
+        flex-basis: 48%;
+        margin-right: 2%;
+    }
+}
+
+.ranking-list__item p {
+    margin-bottom: 0.5em;
+}
+
+.ranking-list__item__img {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.ranking-list__item__img img {
+    width: 140px;
+    height: 140px;
+}
+
+@media (min-width: 768px) {
+    .ranking-list__item__img img {
+        width: 160px;
+        height: 160px;
+    }
 }
