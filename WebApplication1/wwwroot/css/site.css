@@ -196,14 +196,14 @@ p {
     color: #000000;
 }
 
-.font2, .font2-18-B, .font2-14-B, .font2-15, .font2-18-18-16, .font2-18-18-16-B, .font2-18-16-16, .font2-22-20C-18-B, .font2-24-22-20-B, .font2-22-20C-18, .related-story, .font2-20-20-18-L, .font2-22-20-18, .font2-22-20-18-L, .font2-22-20-18-B {
+.font2, .font2-18-B, .font2-18-L, .font2-14-B, .font2-15, .font2-18-18-16, .font2-18-18-16-B, .font2-18-18-16-L, .font2-18-16-16, .font2-26-26-22-B, .font2-22-20C-18-B, .font2-24-22-20-B, .font2-22-20C-18, .related-story, .font2-20-20-18-L, .font2-22-20-18, .font2-22-20-18-L, .font2-22-20-18-B {
     font-family: Roboto, Arial, sans-serif;
     color: #000000;
     font-weight: 400;
     line-height: 140%;
 }
 
-.font2:hover, .font2-18-B:hover, .font2-14-B:hover, .font2-15:hover, .font2-18-18-16:hover, .font2-18-18-16-B:hover, .font2-18-16-16:hover, .font2-22-20C-18-B:hover, .font2-24-22-20-B:hover, .font2-22-20C-18:hover, .related-story:hover, .font2-20-20-18-L:hover, .font2-22-20-18:hover, .font2-22-20-18-L:hover, .font2-22-20-18-B:hover {
+.font2:hover, .font2-18-B:hover, .font2-18-L:hover, .font2-14-B:hover, .font2-15:hover, .font2-18-18-16:hover, .font2-18-18-16-B:hover, .font2-18-18-16-L:hover, .font2-18-16-16:hover, .font2-26-26-22-B:hover, .font2-22-20C-18-B:hover, .font2-24-22-20-B:hover, .font2-22-20C-18:hover, .related-story:hover, .font2-20-20-18-L:hover, .font2-22-20-18:hover, .font2-22-20-18-L:hover, .font2-22-20-18-B:hover {
     color: #000000;
 }
 
@@ -221,6 +221,11 @@ p {
 .font2-18-B {
     font-size: 18px;
     font-weight: 700;
+}
+
+.font2-18-L {
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .font2-14-B {
@@ -252,6 +257,23 @@ p {
 
 @media (min-width: 1200px) {
     .font2-18-18-16, .font2-18-18-16-B {
+        font-size: 18px;
+    }
+}
+
+.font2-18-18-16-L {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    .font2-18-18-16-L {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .font2-18-18-16-L {
         font-size: 18px;
     }
 }
@@ -429,6 +451,17 @@ p {
 
 @media (min-width: 768px) {
     .font1-26-26-22-B {
+        font-size: 26px;
+    }
+}
+
+.font2-26-26-22-B {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .font2-26-26-22-B {
         font-size: 26px;
     }
 }
@@ -977,7 +1010,7 @@ p {
     Containers
 ==========================================================================
 */
-.border-container {
+.border-container, .border-container-thin {
     width: 100%;
     padding: 20px 0;
     border-top: solid 2px #323232;
@@ -985,23 +1018,33 @@ p {
     margin-bottom: 15px;
 }
 
-.border-container a {
+.border-container a, .border-container-thin a {
     color: #3aa8cc;
     text-decoration: underline;
 }
 
 @media (min-width: 768px) {
-    .border-container {
+    .border-container, .border-container-thin {
         padding: 30px 0;
         margin-bottom: 20px;
     }
 }
 
 @media (min-width: 1200px) {
-    .border-container {
+    .border-container, .border-container-thin {
         padding: 50px 0;
         margin-bottom: 25px;
     }
+}
+
+.border-container-thin {
+    position: relative;
+    border-top: solid 1px #323232;
+    border-bottom: solid 1px #323232;
+}
+
+.border-container-thin p:last-child {
+    margin-bottom: 0;
 }
 
 .border-container__header {
@@ -1164,6 +1207,16 @@ p {
     border-bottom: 1px solid #eaeaea;
 }
 
+.mb-72-55-55 {
+    margin-bottom: 55px;
+}
+
+@media (min-width: 1200px) {
+    .mb-72-55-55 {
+        margin-bottom: 72px;
+    }
+}
+
 .mb-50-40-35, .overlay__header, .wrapper-fluid--overlay-tabs, .overlay__result-item, .emag-list__item {
     margin-bottom: 35px;
 }
@@ -1286,34 +1339,34 @@ p {
     }
 }
 
-.pt-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+.pt-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
     padding-top: 30px;
 }
 
 @media (min-width: 768px) {
-    .pt-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+    .pt-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
         padding-top: 35px;
     }
 }
 
 @media (min-width: 1200px) {
-    .pt-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+    .pt-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
         padding-top: 45px;
     }
 }
 
-.pb-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+.pb-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
     padding-bottom: 30px;
 }
 
 @media (min-width: 768px) {
-    .pb-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+    .pb-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
         padding-bottom: 35px;
     }
 }
 
 @media (min-width: 1200px) {
-    .pb-45-35-30, .ptb-45-35-30, .job-list-item, .industry-news-list__item {
+    .pb-45-35-30, .ptb-45-35-30, .border-container-thin, .job-list-item, .industry-news-list__item {
         padding-bottom: 45px;
     }
 }
@@ -2212,7 +2265,7 @@ p {
 
 .article-list__head__passage label + label::before {
     content: "/";
-    margin: 0 .5em;
+    margin: 0 0.5em;
 }
 
 .article-list__head__passage span {
@@ -2358,7 +2411,7 @@ p {
 
 .article-list__item__passage label + label::before {
     content: "/";
-    margin: 0 .5em;
+    margin: 0 0.5em;
 }
 
 .article-list__item-btn, .author-list__item-btn {
@@ -2718,7 +2771,7 @@ p {
 
 .wrapper--detail__writer label + label::before {
     content: "/";
-    margin: 0 .5em;
+    margin: 0 0.5em;
 }
 
 .wrapper--detail__writer div + div::before {
@@ -2734,11 +2787,11 @@ p {
     }
     .wrapper--detail__writer div + div::before {
         content: "/";
-        margin: 0 .5em;
+        margin: 0 0.5em;
     }
 }
 
-.addthis_inline_share_toolbox {
+.wrapper--detail__writer > .addthis_inline_share_toolbox {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -3337,7 +3390,7 @@ p {
 
 /*
 ==========================================================================
-     industry news
+     industry newslist
 ==========================================================================
 */
 .industry-news-list__item {
@@ -3401,5 +3454,108 @@ p {
 
 .industry-news-list__item__passage label + label::before {
     content: "/";
-    margin: 0 .5em;
+    margin: 0 0.5em;
+}
+
+/*
+==========================================================================
+     industry industry_newsdetails
+==========================================================================
+*/
+.float-right-img {
+    float: none;
+    margin: 0 auto 30px;
+    width: 180px;
+    height: 108px;
+    text-align: center;
+}
+
+.float-right-img img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .float-right-img {
+        margin: 0;
+        float: right;
+    }
+}
+
+@media (min-width: 1200px) {
+    .float-right-img {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+.float-right-img:before, .float-right-img:after {
+    content: " ";
+    display: table;
+}
+
+.float-right-img:after {
+    clear: both;
+}
+
+.border-container-circle {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: -28px;
+}
+
+.border-container-circle span {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    height: 50px;
+    width: 50px;
+    background-color: #00548a;
+    border-radius: 50%;
+}
+
+.border-container-circle i {
+    line-height: 50px;
+}
+
+.border-container-thin__header {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .border-container-thin__header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        text-align: left;
+    }
+}
+
+.border-container-thin__img {
+    width: 180px;
+    height: 108px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+@media (min-width: 768px) {
+    .border-container-thin__img {
+        flex-basis: 200px;
+        width: 200px;
+        height: 120px;
+        margin: 0;
+        margin-right: 2em;
+    }
+}
+
+.border-container-thin__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.border-container-thin__passage p {
+    margin-bottom: 15px;
 }

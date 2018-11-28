@@ -203,6 +203,12 @@ p {
     font-weight: $bold;
 }
 
+.font2-18-L {
+    @extend .font2;
+    font-size: 18px;
+    font-weight: $light;
+}
+
 .font2-14-B {
     @extend .font2;
     font-size: 14px;
@@ -229,6 +235,18 @@ p {
 .font2-18-18-16 {
     @extend .font2;
     font-size: 16px;
+    @media (min-width: $screen-sm-min) {
+        font-size: 18px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 18px;
+    }
+}
+
+.font2-18-18-16-L {
+    @extend .font2;
+    font-size: 16px;
+    font-weight: $light;
     @media (min-width: $screen-sm-min) {
         font-size: 18px;
     }
@@ -381,6 +399,15 @@ p {
 
 .font1-26-26-22-B {
     @extend .font1;
+    font-size: 22px;
+    font-weight: $bold;
+    @media (min-width: $screen-sm-min) {
+        font-size: 26px;
+    }
+}
+
+.font2-26-26-22-B {
+    @extend .font2;
     font-size: 22px;
     font-weight: $bold;
     @media (min-width: $screen-sm-min) {
@@ -905,6 +932,18 @@ p {
     }
 }
 
+.border-container-thin {
+    @extend .border-container;
+    @extend .ptb-45-35-30;
+    position: relative;
+    border-top: solid 1px $dark-grey;
+    border-bottom: solid 1px $dark-grey;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
 .border-container__header {
     display: table;
     width: 100%;
@@ -1060,6 +1099,13 @@ p {
     border-bottom: 1px solid $bar-color-3;
 }
 // margin bottom
+.mb-72-55-55 {
+    margin-bottom: 55px;
+
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 72px;
+    }
+}
 
 .mb-50-40-35 {
     margin-bottom: 35px;
