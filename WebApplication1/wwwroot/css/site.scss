@@ -398,14 +398,17 @@
 .article-list-left {
     max-width: 100%;
     width: 100%;
-    float: left;
-    @media (min-width: $screen-lg-min) {
-        max-width: 930px;
-    }
+    float: none;
     @media (max-width: $screen-sm - 1) {
         .article-list__item + .article-list__item {
             border-top: solid $bar-color 1px;
         }
+    }
+    @media (min-width: $screen-lg-min) {
+        max-width: 930px;
+    }
+    @media (min-width: 1325px) {
+        float: left;
     }
 
     &.underline {
@@ -429,6 +432,49 @@
         width: 330px;
         float: right;
     }*/
+}
+
+.article-list-right-no-hide {
+    display: block;
+    width: 100%;
+    float: none;
+
+    img.side-banner {
+        display: none;
+    }
+
+    @media (min-width: 1325px) {
+        text-align: center;
+        width: 330px;
+        float: right;
+
+        img.side-banner {
+            display: block;
+        }
+    }
+}
+
+.most-read-featured {
+    @extend .flex-wrap-left;
+    width: 100%;
+
+    & > .most-read-article {
+        margin-right: 0;
+        flex-basis: 100%;
+    }
+
+    @media (min-width: $screen-sm) {
+
+        & > .most-read-article {
+            margin-right: 2em;
+            flex-basis: 45%;
+        }
+    }
+
+    @media (min-width: 1325px) {
+        display: block;
+        width: 100%;
+    }
 }
 
 .article-list__item {
@@ -972,6 +1018,7 @@
 .most-read-article {
     @extend .mb-45-30-25;
     flex-basis: 330px;
+    text-align: left;
 }
 
 .most-read-article__item {
@@ -980,6 +1027,11 @@
 
     span {
         color: #4fafd0;
+    }
+
+    label + label::before {
+        content: "/";
+        margin: 0 0.5em;
     }
 }
 /*
@@ -1061,20 +1113,8 @@
 }
 
 .author-header {
+    @extend .border-container;
     display: table;
-    width: 100%;
-    padding: 20px 0;
-    border-top: solid 2px $dark-grey;
-    border-bottom: solid 2px $dark-grey;
-    margin-bottom: 15px;
-    @media (min-width: $screen-sm-min) {
-        padding: 30px 0;
-        margin-bottom: 20px;
-    }
-    @media (min-width: $screen-lg-min) {
-        padding: 50px 0;
-        margin-bottom: 25px;
-    }
 }
 
 .author-header__img {
@@ -1380,10 +1420,10 @@
 }
 /*
 ==========================================================================
-     industry industry_newsdetails
+     industry newsdetails
 ==========================================================================
 */
-.float-right-img {
+.industry-news-right-img {
     float: none;
     margin: 0 auto 30px;
     width: 180px;
@@ -1511,6 +1551,119 @@
         @media (min-width: $screen-sm-min) {
             width: 160px;
             height: 160px;
+        }
+    }
+}
+
+/*
+==========================================================================
+     rankings detail
+==========================================================================
+*/
+
+.ranking-detail {
+    @extend .border-container;
+    p {
+        @extend .mb-40-35-30;
+        line-height: $line-height-3;
+    }
+
+    .font2-24-22-20-B {
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+    }
+}
+.ranking-detail-left-img {
+    float: none;
+    margin: 0 auto 30px;
+    text-align: center;
+
+    img {
+        width: 140px;
+        height: 140px;
+
+        @media (min-width: $screen-lg-min) {
+            width: 160px;
+            height: 160px;
+        }
+    }
+    @media (min-width: $screen-sm-min) {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+        float: left;
+        text-align: left;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: 200px;
+        height: 200px;
+    }
+    @include clearfix;
+}
+
+.ranking-detail__footer {
+    @extend .flex-wrap-left;
+}
+
+.ranking-detail__footer__img {
+    flex-basis: 100%;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
+
+    @media (min-width: $screen-sm-min) {
+        flex-basis: 100px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.ranking-detail__footer__passage {
+    p {
+        margin: 0;
+    }
+}
+
+.ranking-detail-figures {
+    @extend .flex-wrap-left;
+
+}
+
+.ranking-detail-figures__item {
+    @extend .mb-50-40-35;
+    flex-basis: 100%;
+    text-align: center;
+
+    @media (min-width: $screen-sm-min) {
+        flex-basis: 48%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    @media (min-width: $screen-lg-min) {
+        flex-basis: 30%;
+        margin-left: 1.6%;
+        margin-right: 1.6%;
+    }
+
+    p {
+        margin-bottom: 0.5em;
+    }
+}
+
+.ranking-detail-figures__item__img {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+
+    img {
+        width: 160px;
+        height: 96px;
+
+        @media (min-width: $screen-lg-min) {
+            width: 200px;
+            height: 120px;
         }
     }
 }
