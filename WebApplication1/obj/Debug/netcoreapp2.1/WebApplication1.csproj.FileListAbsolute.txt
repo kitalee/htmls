@@ -37,7 +37,6 @@ E:\repo\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.
 E:\repo\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.pdb
 E:\repo\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.Views.dll
 E:\repo\WebApplication1\WebApplication1\bin\Debug\netcoreapp2.1\WebApplication1.Views.pdb
-E:\repo\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.csprojAssemblyReference.cache
 E:\repo\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.csproj.CoreCompileInputs.cache
 E:\repo\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.RazorAssemblyInfo.cache
 E:\repo\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.RazorAssemblyInfo.cs
@@ -62,3 +61,5 @@ E:\repo\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.
 E:\repo\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.dll
 E:\repo\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.pdb
 E:\repo\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.csproj.CopyComplete
+E:\repo\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\Razor\Views\Home\Amp.g.cshtml.cs
+E:\repo\WebApplication1\WebApplication1\obj\Debug\netcoreapp2.1\WebApplication1.csprojAssemblyReference.cache

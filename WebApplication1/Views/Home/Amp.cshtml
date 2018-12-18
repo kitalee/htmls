@@ -1,0 +1,1498 @@
+﻿@{ Layout = null; }
+<!doctype html>
+<html amp lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html">
+
+    @*add link to non-amp page*@
+    @*<link rel="amphtml" href="https://www.example.com/url/to/amp/document.html">*@
+
+    @*add link to AMP page*@
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <script type="application/ld+json">
+        {
+        "@@context": "http://schema.org",
+        "@@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+        "logo.jpg"
+        ]
+        }
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1,end) 0s 1 normal both
+        }
+
+        @@-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @@-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @@-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @@-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @@keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style amp-custom>
+
+               @@font-face {
+                   font-family: 'Nanum Gothic';
+                   font-style: normal;
+                   font-weight: 400;
+                   src: url(/css/webfonts/NanumGothic-Regular.eot);
+                   src: local("Nanum Gothic Regular"), local("NanumGothic-Regular"), url(/css/webfonts/NanumGothic-Regular.eot?#iefix) format("embedded-opentype"), url(/css/webfonts/NanumGothic-Regular.woff2) format("woff2"), url(/css/webfonts/NanumGothic-Regular.woff) format("woff"), url(/css/webfonts/NanumGothic-Regular.ttf) format("truetype");
+               }
+
+               @@font-face {
+                   font-family: 'Nanum Gothic';
+                   font-style: normal;
+                   font-weight: 700;
+                   src: url(/css/webfonts/NanumGothic-Bold.eot);
+                   src: local("Nanum Gothic Bold"), local("NanumGothic-Bold"), url(/css/webfonts/NanumGothic-Bold.eot?#iefix) format("embedded-opentype"), url(/css/webfonts/NanumGothic-Bold.woff2) format("woff2"), url(/css/webfonts/NanumGothic-Bold.woff) format("woff"), url(/css/webfonts/NanumGothic-Bold.ttf) format("truetype");
+               }
+
+               @@font-face {
+                   font-family: 'Nanum Square';
+                   font-style: normal;
+                   font-weight: 700;
+                   src: url(/css/webfonts/NanumSquareB.eot);
+                   src: local("Nanum Square Bold"), local("NanumSquareB"),url(/css/webfonts/NanumSquareB.eot?#iefix) format("embedded-opentype"),url(/css/webfonts/NanumSquareB.woff2) format("woff2"),url(/css/webfonts/NanumSquareB.woff) format("woff"),url(/css/webfonts/NanumSquareB.ttf) format("truetype");
+               }
+
+               @@font-face {
+                   font-family: 'Nanum Square';
+                   font-style: normal;
+                   font-weight: 800;
+                   src: url(/css/webfonts/NanumSquareEB.eot);
+                   src: local("Nanum Square ExtraBold"), local("NanumSquareEB"), url(/css/webfonts/NanumSquareEB.eot?#iefix) format("embedded-opentype"), url(/css/webfonts/NanumSquareEB.woff2) format("woff2"), url(/css/webfonts/NanumSquareEB.woff) format("woff"), url(/css/webfonts/NanumSquareEB.ttf) format("truetype");
+               }
+
+               * {
+                   -webkit-box-sizing: border-box;
+                   -moz-box-sizing: border-box;
+                   box-sizing: border-box;
+               }
+
+                   *:before, *:after {
+                       -webkit-box-sizing: border-box;
+                       -moz-box-sizing: border-box;
+                       box-sizing: border-box;
+                   }
+
+               a {
+                   color: #0090d6;
+                   text-decoration: none;
+               }
+
+                   a:hover, a:focus {
+                       color: #23527c;
+                       text-decoration: underline;
+                   }
+
+                   a:focus {
+                       outline: 5px auto -webkit-focus-ring-color;
+                       outline-offset: -2px;
+                   }
+
+               .inner-wrapper .contents-header .location-container .breadcrumbs-container .breadcrumbs ul:before, .inner-wrapper .contents-header .location-container .breadcrumbs-container .breadcrumbs ul:after, .inner-wrapper .contents-header .location-container .lead-link-container .breadcrumbs ul:before, .inner-wrapper .contents-header .location-container .lead-link-container .breadcrumbs ul:after {
+                   content: " ";
+                   display: table;
+               }
+
+               html {
+                   -webkit-tap-highlight-color: transparent;
+               }
+
+               body {
+                   font-family: "Nanum Gothic", Roboto, Arial, sans-serif;
+                   font-weight: 400;
+                   font-size: 16px;
+                   letter-spacing: -0.1px;
+                   color: #000000;
+                   line-height: 1.42857;
+                   background-color: #fff;
+               }
+
+               .container {
+                   margin-right: auto;
+                   margin-left: auto;
+                   padding-left: 15px;
+                   padding-right: 15px;
+               }
+
+                   .container:before, .container:after {
+                       content: " ";
+                       display: table;
+                   }
+
+                   .container:after {
+                       clear: both;
+                   }
+
+               .container-fluid {
+                   margin-right: auto;
+                   margin-left: auto;
+                   padding-left: 15px;
+                   padding-right: 15px;
+               }
+
+                   .container-fluid:before, .container-fluid:after {
+                       content: " ";
+                       display: table;
+                   }
+
+                   .container-fluid:after {
+                       clear: both;
+                   }
+
+               .navbar {
+                   position: relative;
+                   min-height: 50px;
+                   border: 1px solid transparent;
+               }
+
+               .global-header {
+                   padding: 30px 0 0;
+                   margin-bottom: 0;
+               }
+
+                   .global-header .branding-container {
+                       margin-bottom: 30px;
+                   }
+
+                       .global-header .branding-container .branding {
+                           margin-left: -15px;
+                           margin-right: -15px;
+                       }
+
+                           .global-header .branding-container .branding .logo {
+                               float: left;
+                               width: 66.66667%;
+                               position: relative;
+                               min-height: 1px;
+                               padding-left: 15px;
+                               padding-right: 15px;
+                               height: 45px;
+                               margin: 0;
+                           }
+
+                           .global-header .branding-container .branding .global-tools {
+                               float: left;
+                               width: 33.33333%;
+                               position: relative;
+                               min-height: 1px;
+                               padding-left: 0;
+                               padding-right: 15px;
+                           }
+
+               .navbar-toggle {
+                   padding: 4px 0 5px;
+                   margin: 13px 0 0;
+                   position: relative;
+                   float: right;
+                   background-color: transparent;
+                   background-image: none;
+                   border: 1px solid transparent;
+                   border-radius: 4px;
+               }
+
+                   .navbar-toggle .icon-bar {
+                       display: block;
+                       background-color: #000000;
+                       width: 36px;
+                       height: 3px;
+                       border-radius: 1px;
+                   }
+
+                       .navbar-toggle .icon-bar:not(:last-child) {
+                           margin: 0 0 6px;
+                       }
+
+               .inner-wrapper .contents-header {
+                   background-color: #013d63;
+                   color: #ffffff;
+               }
+
+                   .inner-wrapper .contents-header .location-container .breadcrumbs-container, .inner-wrapper .contents-header .location-container .lead-link-container {
+                       margin-left: -15px;
+                       margin-right: -15px;
+                   }
+
+                       .inner-wrapper .contents-header .location-container .breadcrumbs-container .breadcrumbs {
+                           position: relative;
+                           float: left;
+                           width: 100%;
+                           min-height: 1px;
+                           padding-left: 15px;
+                           padding-right: 15px;
+                       }
+
+                           .inner-wrapper .contents-header .location-container .breadcrumbs-container .breadcrumbs ul {
+                               list-style: none;
+                               padding: 0;
+                               margin: 0;
+                               float: left;
+                               border-right: 1px solid #014977;
+                           }
+
+                               .inner-wrapper .contents-header .location-container .breadcrumbs-container .breadcrumbs ul li {
+                                   float: left;
+                                   padding: 14px 20px;
+                                   border-left: 1px solid #014977;
+                                   color: #ffffff;
+                               }
+
+                                   .inner-wrapper .contents-header .location-container .breadcrumbs-container .breadcrumbs ul li a {
+                                       color: #b4f2ff;
+                                   }
+
+               .inner-wrapper .contents-container .contents .col-block {
+                   padding: 30px 0;
+               }
+
+               .row {
+                   margin-left: -15px;
+                   margin-right: -15px;
+               }
+
+                   .row:after {
+                       clear: both;
+                   }
+
+               .col-md-4, .col-md-8, .col-xs-12 {
+                   position: relative;
+                   min-height: 1px;
+                   padding-left: 15px;
+                   padding-right: 15px;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .main-content {
+                   font-size: 18px;
+               }
+
+                   .inner-wrapper .contents-container .contents .col-block .main-content .page-heading {
+                       text-align: left;
+                   }
+
+               .inner-wrapper .contents-container .contents .page-heading {
+                   font-family: "Nanum Square", Roboto, Arial, sans-serif;
+                   font-weight: 800;
+                   font-size: 34px;
+                   margin: 0 0 10px;
+                   letter-spacing: -1px;
+               }
+
+               h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+                   line-height: 1.1;
+                   color: inherit;
+               }
+
+               .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-header .article-toolbar {
+                   margin: 0 -15px 15px;
+               }
+
+               .row:before, .row:after {
+                   content: " ";
+                   display: table;
+               }
+
+               .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-header .article-toolbar .signature {
+                   color: #999999;
+               }
+
+               .col-xs-12 {
+                   width: 100%;
+                   float: left;
+               }
+
+               .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-header .article-toolbar .signature .date {
+                   margin-top: 0;
+                   font-size: 16px;
+                   margin-left: 10px;
+                   padding-left: 10px;
+                   border-left: 1px solid #e0e0e0;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .date {
+                   display: inline-block;
+                   font-weight: 700;
+                   text-transform: uppercase;
+                   color: #b8b8b8;
+               }
+
+               .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-header .article-toolbar .social-share {
+                   margin-top: 10px;
+               }
+
+               .inner-wrapper .social-share > span {
+                   font-size: 16px;
+                   line-height: 22px;
+                   color: #8a8a8a;
+                   margin: 8px 10px 0 0;
+                   float: left;
+               }
+
+               .inner-wrapper .social-share .social-links-sm {
+                   float: left;
+               }
+
+               .inner-wrapper .social-links {
+                   list-style: none;
+                   padding: 0;
+                   margin: 0;
+               }
+
+               .inner-wrapper .social-share:after {
+                   clear: both;
+               }
+
+               .inner-wrapper .social-share:before, .inner-wrapper .social-share:after {
+                   content: " ";
+                   display: table;
+               }
+
+               .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-body .article-content {
+                   font-size: 18px;
+                   overflow: hidden;
+               }
+
+                   .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-body .article-content ul, .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-body .article-content p {
+                       color: #000000;
+                       font-size: 18px;
+                       margin-bottom: 30px;
+                   }
+
+                   .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-body .article-content .related-stories {
+                       margin: 10px 0 30px;
+                   }
+
+                       .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-body .article-content .related-stories .title {
+                           font-size: 18px;
+                           font-weight: 700;
+                           font-style: italic;
+                           margin: 0 0 8px;
+                       }
+
+                       .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-body .article-content .related-stories .basic-list {
+                           list-style: none;
+                           padding: 0;
+                           margin: 0;
+                       }
+
+                           .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-body .article-content .related-stories .basic-list li:not(:first-child) {
+                               margin-top: 6px;
+                           }
+
+                           .inner-wrapper .contents-container.news-details .contents .col-block .main-content .article .article-body .article-content .related-stories .basic-list li a {
+                               font-size: 18px;
+                               line-height: 1.18;
+                               font-weight: 700;
+                               font-style: italic;
+                               color: #0090d6;
+                           }
+
+
+               .inner-wrapper .contents-container .contents .col-block .article .article-body .article-content p {
+                   margin: 10px 0 0;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block [class*="col-"]:not(:first-child) {
+                   margin-top: 20px;
+               }
+
+               .banner-section {
+                   text-align: center;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .aside > section:not(:first-child), .inner-wrapper .contents-container .contents .col-block .aside > div:not(:first-child) {
+                   margin-top: 30px;
+               }
+
+               .inner-wrapper .contents-container.news-details .contents .col-block .sticky-wrapper .asidesticky .besthomeloans {
+                   margin-top: 30px;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .aside .section-heading {
+                   font-size: 18px;
+               }
+
+               .inner-wrapper .contents-container .contents .section-heading {
+                   font-family: "Nanum Square", Roboto, Arial, sans-serif;
+                   font-weight: 800;
+                   margin: 0 0 10px;
+                   letter-spacing: -0.5px;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .rate-comparison {
+                   background-color: #ffffff;
+                   border: 1px solid #dbdbdb;
+                   padding: 20px;
+               }
+
+                   .inner-wrapper .contents-container .contents .col-block .rate-comparison:before, .inner-wrapper .contents-container .contents .col-block .rate-comparison:after {
+                       content: " ";
+                       display: table;
+                   }
+
+                   .inner-wrapper .contents-container .contents .col-block .rate-comparison .table {
+                       margin-bottom: 0;
+                   }
+
+               .table {
+                   width: 100%;
+                   max-width: 100%;
+               }
+
+               table {
+                   border-collapse: collapse;
+                   border-spacing: 0;
+               }
+
+               .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+                   line-height: 1.42857;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .rate-comparison .table tbody tr:first-child td {
+                   border-top: none;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .rate-comparison .table tbody tr td {
+                   padding: 5px;
+                   border-top: 1px dashed #dbdbdb;
+                   vertical-align: middle;
+               }
+
+                   .inner-wrapper .contents-container .contents .col-block .rate-comparison .table tbody tr td .company-logo {
+                       width: 110px;
+                       padding-bottom: 45px;
+                   }
+
+               .inner-wrapper .contents-container .contents .col-block .company-logo {
+                   position: relative;
+                   overflow: hidden;
+                   background-color: #ffffff;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .rate-comparison .percentages {
+                   display: block;
+                   text-align: center;
+                   font-weight: 700;
+                   font-size: 16px;
+               }
+
+                   .inner-wrapper .contents-container .contents .col-block .rate-comparison .percentages span {
+                       font-size: 20px;
+                   }
+
+               .inner-wrapper .contents-container .contents .col-block .rate-comparison .txt {
+                   font-size: 12px;
+                   color: #999999;
+                   display: block;
+                   text-align: center;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .rate-comparison .date {
+                   font-size: 11px;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .date {
+                   display: inline-block;
+                   margin-top: 10px;
+                   font-weight: 700;
+                   text-transform: uppercase;
+                   color: #b8b8b8;
+               }
+
+               .pull-right {
+                   float: right;
+               }
+
+               figure {
+                   margin: 0;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .company-logo amp-img {
+                   position: absolute;
+                   top: 0;
+                   bottom: 0;
+                   left: 0;
+                   right: 0;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .rate-comparison:after {
+                   clear: both;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block.bg-theme-secondary {
+                   background-color: #eff4f7;
+               }
+
+               .inner-wrapper .contents-container .contents .section-heading {
+                   font-family: "Nanum Square", Roboto, Arial, sans-serif;
+                   font-weight: 800;
+                   font-size: 22px;
+                   margin: 0 0 10px;
+                   letter-spacing: -0.5px;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .article .article-body .article-image {
+                   position: relative;
+                   width: 100%;
+                   padding-bottom: 60%;
+                   overflow: hidden;
+                   background: #dedede url(/images2/no-image.gif) no-repeat 50% 50%;
+               }
+
+                   .inner-wrapper .contents-container .contents .col-block .article .article-body .article-image .classification {
+                       background-color: #013d63;
+                       color: #ffffff;
+                       position: absolute;
+                       top: 0;
+                       left: 0;
+                       z-index: 10;
+                       font-size: 13px;
+                       font-weight: 700;
+                       text-transform: uppercase;
+                       padding: 1px 5px;
+                   }
+
+                   .inner-wrapper .contents-container .contents .col-block .article .article-body .article-image img {
+                       position: absolute;
+                       top: 0;
+                       bottom: 0;
+                       left: 0;
+                       right: 0;
+                   }
+
+               .inner-wrapper .contents-container.news-details .contents .col-block .more-content .article .article-body .article-content {
+                   min-height: auto;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .more-content .article .article-body .article-content {
+                   background-color: #ffffff;
+                   padding: 15px;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .article .article-body .article-content .article-heading {
+                   font-size: 20px;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .article .article-body .article-content .article-heading {
+                   font-family: "Nanum Square", Roboto, Arial, sans-serif;
+                   font-weight: 700;
+                   color: #013d63;
+                   margin: 0;
+               }
+
+                   .inner-wrapper .contents-container .contents .col-block .article .article-body .article-content .article-heading a {
+                       color: #013d63;
+                   }
+
+               .inner-wrapper .contents-container .contents .col-block .more-content .btn-box {
+                   text-align: left;
+               }
+
+               .btn-box {
+                   margin-top: 10px;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .readmore {
+                   text-decoration: underline;
+                   display: inline-block;
+                   margin-top: 10px;
+               }
+
+               .global-footer {
+                   border-top: 1px solid #c7c7c7;
+               }
+
+               .global-footer {
+                   padding: 30px 0;
+               }
+
+                   .global-footer .footer-container {
+                       margin-left: -15px;
+                       margin-right: -15px;
+                   }
+
+                       .global-footer .footer-container:before, .global-footer .footer-container:after {
+                           content: " ";
+                           display: table;
+                       }
+
+                       .global-footer .footer-container .copyright-container {
+                           float: left;
+                           width: 100%;
+                           position: relative;
+                           min-height: 1px;
+                           padding-left: 15px;
+                           padding-right: 15px;
+                       }
+
+                           .global-footer .footer-container .copyright-container .copyright {
+                               background: url(/images2/logo-keymedia.png) no-repeat top left;
+                               background-size: contain;
+                               padding-left: 50px;
+                               padding-top: 14px;
+                               height: 42px;
+                               color: #dbdbdb;
+                               margin: 0;
+                               font-size: 14px;
+                           }
+
+                       .global-footer .footer-container .branding-grey {
+                           background: url(/images2/logo_grey.png) no-repeat 15px 0px;
+                           background-size: 150px 40px;
+                       }
+
+                       .global-footer .footer-container .branding-grey {
+                           margin-top: 30px;
+                       }
+
+                       .global-footer .footer-container .branding-grey {
+                           float: left;
+                           width: 100%;
+                           position: relative;
+                           min-height: 1px;
+                           padding-left: 15px;
+                           padding-right: 15px;
+                       }
+
+                           .global-footer .footer-container .branding-grey amp-img {
+                               float: right;
+                               height: 75px;
+                           }
+
+               .sidebar {
+                   background-color: #eff4f7;
+                   margin-top: 0;
+                   padding: 10px;
+               }
+
+                   .sidebar h4 a {
+                       display: inline-block;
+                       padding: 8px 15px 0;
+                       font-size: 20px;
+                       text-decoration: none;
+                   }
+
+                   .sidebar h4 a {
+                       font-family: "Nanum Square", Roboto, Arial, sans-serif;
+                       font-weight: 800;
+                       color: #000000;
+                       line-height: 1.42857;
+                       letter-spacing: -0.5px;
+                   }
+
+                       .sidebar h4 a:hover, sidebar h4 a:focus {
+                           color: #013d63;
+                       }
+
+                   .sidebar section:not(:first-child) {
+                       border-top: 1px solid #e1ebf0;
+                       margin-top: 5px;
+                       padding-top: 5px;
+                       float: none;
+                   }
+
+                   .sidebar section:before, .sidebar section:after {
+                       content: " ";
+                       display: table;
+                   }
+
+                   .sidebar section h4 {
+                       background: none;
+                       border: none;
+                       padding: 0;
+                   }
+
+                       .sidebar section h4 span {
+                           -webkit-border-radius: 4px;
+                           -moz-border-radius: 4px;
+                           border-radius: 4px;
+                           display: inline-block;
+                           float: right;
+                           text-align: right;
+                           padding: 0 15px;
+                           margin: 6px 0;
+                           font-size: 32px;
+                           line-height: 1;
+                           color: #013d63;
+                           cursor: pointer;
+                       }
+
+                           .sidebar section h4 span:hover, .sidebar section h4 span:focus {
+                               background-color: #013d63;
+                               color: #eff4f7;
+                               -webkit-border-radius: 4px;
+                               -moz-border-radius: 4px;
+                               border-radius: 4px;
+                           }
+
+                   .sidebar section ul {
+                       font-size: 17px;
+                   }
+
+                   .sidebar section ul {
+                       list-style: none;
+                       padding-left: 15px;
+                       padding-right: 15px;
+                       margin: 0;
+                       font-family: "Nanum Square", Roboto, Arial, sans-serif;
+                       font-weight: 700;
+                       color: #000000;
+                   }
+
+                       .sidebar section ul a {
+                           padding: 5px 10px;
+                       }
+
+                       .sidebar section ul a {
+                           display: block;
+                           color: #000000;
+                       }
+
+                           .sidebar section ul a:hover, .sidebar section ul a:focus {
+                               text-decoration: none;
+                               background-color: #013d63;
+                               color: #ffffff;
+                           }
+
+               .lead-form {
+                   border: 1px solid #014977;
+               }
+
+               .lead-form {
+                   -webkit-border-radius: 6px;
+                   -moz-border-radius: 6px;
+                   border-radius: 6px;
+                   padding: 30px 20px;
+                   background-color: #eff4f7;
+               }
+
+               .inner-wrapper .contents-container .contents .col-block .aside .lead-form .section-heading {
+                   font-size: 28px;
+                   font-weight: bold;
+                   margin: 0 auto 15px;
+                   text-align: left;
+               }
+
+               .lead-form .tab-content {
+                   margin-top: 20px;
+               }
+
+                   .lead-form .tab-content p {
+                       margin: 0 0 20px;
+                       overflow: hidden;
+                   }
+
+               .form-group {
+                   font-family: "Nanum Square",Roboto,Arial,sans-serif;
+                   font-weight: 400;
+               }
+
+               .form-group {
+                   margin-bottom: 15px;
+               }
+
+               label {
+                   margin-bottom: 10px;
+                   font-size: 20px;
+                   font-weight: 700;
+                   line-height: 26px;
+               }
+
+               label {
+                   display: inline-block;
+                   max-width: 100%;
+               }
+
+               .lead-form .tab-content .form-group .form-control {
+                   font-size: 18px;
+               }
+
+               .form-group .form-control {
+                   height: 50px;
+                   font-size: 22px;
+               }
+
+               .form-control {
+                   width: 100%;
+                   border-color: #a8a8a8;
+                   background-color: #fcfcfc;
+                   color: #000;
+                   -webkit-border-radius: 0;
+                   -moz-border-radius: 0;
+                   border-radius: 0;
+                   -webkit-box-shadow: inset 0 0 0 transparent;
+                   box-shadow: inset 0 0 0 transparent;
+                   display: block;
+                   border: 1px solid #a8a8a8;
+                   padding: 6px 12px;
+               }
+
+               .form-validation.form-validation-inline {
+                   background-color: transparent;
+                   padding: 0 5px;
+                   font-size: 14px;
+               }
+
+               .field-validation-error {
+                   display: block;
+               }
+
+               .form-validation {
+                   -webkit-border-radius: 4px;
+                   -moz-border-radius: 4px;
+                   border-radius: 4px;
+                   font-family: "Nanum Gothic",Roboto,Arial,sans-serif;
+                   font-weight: 400;
+                   margin-top: 10px;
+                   color: #a94442;
+                   position: relative;
+               }
+
+               .input-group {
+                   position: relative;
+                   display: table;
+                   border-collapse: separate;
+               }
+
+                   .input-group-addon, .input-group-btn, .input-group .form-control {
+                       display: table-cell;
+                   }
+
+               .input-group-addon, .input-group-btn {
+                   width: 1%;
+                   white-space: nowrap;
+                   vertical-align: middle;
+               }
+
+               .input-group-addon {
+                   padding: 6px 12px;
+                   font-size: 14px;
+                   font-weight: normal;
+                   line-height: 1;
+                   color: #555;
+                   text-align: center;
+                   background-color: #eee;
+                   border: 1px solid #ccc;
+                   border-radius: 4px;
+               }
+
+               .input-group-addon {
+                   font-size: 22px;
+                   background-color: #fcfcfc;
+                   border-color: #a8a8a8;
+                   -webkit-border-radius: 0;
+                   -moz-border-radius: 0;
+                   border-radius: 0;
+                   color: #000;
+                   height: 50px;
+               }
+
+               .input-group .form-control {
+                   position: relative;
+                   z-index: 2;
+                   float: left;
+                   width: 100%;
+                   margin-bottom: 0;
+               }
+
+               .input-group .form-control {
+                   display: table-cell;
+               }
+
+               .input-group .form-control {
+                   border-left: none;
+                   border-right: none;
+               }
+
+                   .input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle), .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+                       border-bottom-right-radius: 0;
+                       border-top-right-radius: 0;
+                   }
+
+               .input-group-addon:first-child {
+                   border-right: 0;
+               }
+
+               .input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+                   border-bottom-left-radius: 0;
+                   border-top-left-radius: 0;
+               }
+
+               .input-group .form-control:last-child {
+                   border-right: 1px solid #a8a8a8;
+               }
+
+               .btn {
+                   display: inline-block;
+                   margin-bottom: 0;
+                   font-weight: normal;
+                   text-align: center;
+                   vertical-align: middle;
+                   touch-action: manipulation;
+                   cursor: pointer;
+                   background-image: none;
+                   border: 1px solid transparent;
+                   white-space: nowrap;
+                   padding: 6px 12px;
+                   font-size: 14px;
+                   line-height: 1.42857;
+                   border-radius: 4px;
+                   -webkit-user-select: none;
+                   -moz-user-select: none;
+                   -ms-user-select: none;
+                   user-select: none;
+               }
+
+               .btn {
+                   border-width: 2px;
+                   white-space: normal;
+               }
+
+               .btn-emphasis {
+                   color: #fff;
+                   background-color: #fb9a00;
+                   border-color: #fb9a00;
+               }
+
+               .btn-sm, .btn-group-sm > .btn {
+                   font-family: "Nanum Square",Roboto,Arial,sans-serif;
+                   font-weight: 800;
+                   padding: 6px 30px;
+                   font-size: 22px;
+                   line-height: 1.5;
+                   border-radius: 6px;
+               }
+
+               .lead-form .tab-content .form-group-btn .btn-sm, .lead-form .tab-content .form-group-btn .btn-group-sm > .btn {
+                   padding: 6px 28px;
+                   font-size: 20px;
+               }
+
+               .form-group:last-child {
+                   margin-bottom: 0;
+               }
+
+               .lead-form .tab-content .form-group-btn {
+                   text-align: center;
+               }
+
+               form.amp-form-submit-success .tab-content {
+                   display: none;
+               }
+
+               form.amp-form-submitting button[type=submit] {
+                   display: none;
+               }
+
+               .autosuggest-container {
+                   position: relative;
+                   z-index: 1;
+               }
+
+               /*
+        * Position the autosuggest box as an
+        * overlay over the form fields.
+        */
+               .autosuggest-box {
+                   position: absolute;
+                   width: 100%;
+                   /* make the overlay opaque */
+                   background-color: #fafafa;
+               }
+
+               /*
+        * Prevents a solid outline from appearing
+        * around an item when the autosuggest box
+        * is opened with an item already selected
+        */
+               .select-option.no-outline[selected] {
+                   outline: initial;
+               }
+
+               .hidden {
+                   display: none;
+               }
+
+               .autosuggest-box {
+                   box-shadow: 0px 2px 6px rgba(0,0,0,.3);
+               }
+
+               .select-option {
+                   box-sizing: border-box;
+                   height: 30px;
+                   line-height: 30px;
+                   padding-left: 10px;
+                   font-size: 17px;
+               }
+
+                   .select-option:hover {
+                       text-decoration: underline;
+                   }
+
+                   .select-option.empty {
+                       text-align: center;
+                   }
+
+        /* Leadform Tab buttons */
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+        .nav {
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        .lead-form .tab-list:before, .lead-form .tab-list:after {
+            content: " ";
+            display: table;
+        }
+
+        .lead-form .tab-list:after {
+            clear: both;
+        }
+
+        .lead-form .tab-list .nav-tabs {
+            border: none;
+            float: right;
+        }
+
+            .lead-form .tab-list .nav-tabs > li {
+                display: inline-block;
+            }
+        
+
+        /*.lead-form .tab-list .nav-tabs > li > a {
+            border-radius: 4px;
+            padding: 3px 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #74a3bf;
+        }*/
+
+            /*.lead-form .tab-list .nav-tabs > li.active > a {
+                background-color: #74a3bf;
+                color: #ffffff;
+                border-color: #74a3bf;
+            }*/
+
+        .nav > li > a {
+            position: relative;
+            display: block;
+            text-decoration: none;
+        }
+        .nav:before, .nav:after {
+            content: " ";
+            display: table;
+        }
+
+        amp-selector [option][selected] {
+            outline: none;
+        }
+
+        .lead-form-tab {
+            display: none;
+            outline: none;
+        }
+
+        .lead-form-tab[selected] {
+            display: block;
+            outline: none;
+        }
+
+
+        .tab-list .nav-tabs > li > a {
+            border-radius: 4px;
+            padding: 3px 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #74a3bf;
+        }
+
+
+        .tab-list .nav-tabs > li > a[selected] {
+            background-color: #74a3bf;
+            color: #ffffff;
+            border-color: #74a3bf;
+        }
+
+
+
+        .page.active {
+            transform: translateX(0%);
+            pointer-events: auto;
+        }
+
+        .page:not(.active) {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .page.next {
+            transform: translateX(100%);
+        }
+
+        .page.previous {
+            transform: translateX(-100%);
+        }
+
+        .red-test {
+            background-color:red;
+        }
+
+    </style>
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+</head>
+<body>
+    <h1>Welcome to the mobile web</h1>
+
+    <div class="stepper sliding">
+
+        <section class="page active"
+                 [class]="slidingStepperPage > 0 ? 'page previous' : 'page active'">
+            <h3>Sign in</h3>
+            <div class="ampstart-input inline-block relative m0 p0 mb3 mt3">
+                <input type="email"
+                       value=""
+                       name="email"
+                       autocomplete="email"
+                       id="id1"
+                       class="block border-none p0 m0"
+                       placeholder="Enter your Email"
+                       on="input-debounced: AMP.setState({ email: event.value })">
+                <label for="ip1"
+                       class="absolute top-0 right-0 bottom-0 left-0"
+                       aria-hidden="true">
+                    Enter your Email
+                </label>
+            </div>
+            <button on="tap:AMP.pushState({ slidingStepperPage: slidingStepperPage + 1 })"
+                    class="align-self-end ampstart-btn ampstart-btn-secondary caps"
+                    disabled
+                    [disabled]="!email">
+                next
+            </button>
+        </section>
+
+        <section class="page next"
+                 [class]="slidingStepperPage < 1 ? 'page next' :
+                           (slidingStepperPage > 1 ? 'page previous' : 'page active')">
+                    <h3>Welcome</h3>
+                    <button class="back"
+                      [text]="email"
+                      on="tap:AMP.pushState({ slidingStepperPage: slidingStepperPage - 1 })"
+                      disabled
+                      [disabled]="slidingStepperPage != 1"></button>
+                    <div class="ampstart-input inline-block relative m0 p0 mb3 mt1">
+                      <input type="text"
+                        value=""
+                        name="password"
+                        id="id2"
+                        class="block border-none p0 m0"
+                        placeholder="Enter your Password"
+                        disabled
+                        [disabled]="slidingStepperPage != 1"
+                        on="input-debounced: AMP.setState({ password: event.value })">
+                      <label for="ip2"
+                        class="absolute top-0 right-0 bottom-0 left-0"
+                        aria-hidden="true">
+                        Enter your Password
+                      </label>
+                    </div>
+                    <button on="tap:AMP.pushState({ slidingStepperPage: slidingStepperPage + 1 })"
+                      class="align-self-end ampstart-btn ampstart-btn-secondary caps"
+                      disabled
+                      [disabled]="slidingStepperPage != 1 || !password">next</button>
+                  </section>
+        <section class="page next"
+                 [class]="slidingStepperPage < 2 ? 'page next' :
+           (slidingStepperPage > 2 ? 'page previous' : 'page active')">
+    <h3>Success</h3>
+    <p>You did it!</p>
+  </section>
+    </div>
+
+    <div class="fixedsticky" on="tap:AMP.setState({showDropdown:false})" role="button" tabindex="0" aria-label="Tap to close the autosuggest box">
+        <section class="lead-form">
+            <h4 class="section-heading">Find the right home loan</h4>
+
+            <form class="form" method="post" action-xhr="http://localhost:63806/Home/Submit/" verify-xhr="http://localhost:63806/Home/Verify/" target="_top" custom-validation-reporting="show-all-on-submit" on="submit: autosuggest-list.hide;submit-success: autosuggest-list.hide;
+      submit-error: autosuggest-list.hide">
+                @*<input type="hidden" id="CompanyId" name="CompanyId" value="@Model.LeadFormContent.issue">*@
+
+
+                <div class="tab-list">
+                    <amp-selector id="steps" [selected]="selectedBtn">
+                        <ul class="nav nav-tabs">
+                            <li on="tap:AMP.setState({selectedTab: 'tab1'})" role="button" tabindex="1"><a href="#step1" option="step1" selected>Step 1</a></li>
+                            <li on="tap:AMP.setState({selectedTab: 'tab2'})" role="button" tabindex="2"><a href="#step2" option="step2">Step 2</a></li>
+                            <li on="tap:AMP.setState({selectedTab: 'tab3'})" role="button" tabindex="3"><a href="#step3" option="step3">Step 3</a></li>
+                        </ul>
+                    </amp-selector>
+                </div>
+
+
+
+                <amp-selector on="select:AMP.setState({selectedTab: event.targetOption})"
+                              [selected]="selectedTab"
+                              role="tablist"
+                              layout="container"
+                              class="ampTabContainer" id="tabs">
+
+                    @*step 1*@
+                    <div role="tab"
+                         class="lead-form-tab"
+                         selected
+                         option="tab1" id="tabStep1" tabindex="1">
+
+                        <div class="form-group">
+                            <label>What’s the purpose of your home loan?</label>
+                            <select name="LoanPurpose" id="LoanPurpose" class="form-control" required>
+                                <option selected="selected" value="">Select</option>
+                                <option value="0">Buying my first home</option>
+                                <option value="1">Buying an investment property</option>
+                                <option value="2">Buying my next home</option>
+                                <option value="3">Refinancing my existing loan</option>
+                                <option value="4">Refinancing an investment property</option>
+                                <option value="5">Other</option>
+                            </select>
+                            <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="LoanPurpose"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>How much do you want to borrow?</label>
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input type="number" id="LoanAmount" name="LoanAmount" class="form-control" required>
+                            </div>
+                            <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="LoanAmount"></div>
+                        </div>
+                        @*<div class="form-group form-group-btn">
+                            <button type="button" class="btn btn-sm btn-emphasis" data-step="1" on="
+    tap: abcd.selectUp(delta=1)
+    , AMP.setState({ selectedBtn: 'step2' });">
+                                <span class="sizeup">Next</span>
+                            </button>
+                        </div>*@
+                    </div>
+                    @*step 2*@
+                    <div role="tab"
+                         class="lead-form-tab"
+                         option="tab2" id="tabStep2" tabindex="1">
+                        <div class="form-group">
+                            <label>First name</label>
+                            <input type="text" id="FirstName" name="FirstName" class="form-control" required pattern="(\s*\w\s*){2,}" maxlength="30">
+                            <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="FirstName"></div>
+                            <div class="form-validation form-validation-inline" visible-when-invalid="patternMismatch" validation-for="FirstName">* Required minimum two letters</div>
+                        </div>
+                        <div class="form-group">
+                            <label>Last name</label>
+                            <input type="text" id="LastName" name="LastName" class="form-control" required pattern="(\s*\w\s*){2,}" maxlength="50">
+                            <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="LastName"></div>
+                            <div class="form-validation form-validation-inline" visible-when-invalid="patternMismatch" validation-for="LastName">* Required minimum two letters</div>
+                        </div>
+                        <amp-state id="autosuggest">
+                            <script type="application/json">
+                                {
+                                "endpoint": "/amp/suburbs/?q=",
+                                "emptyAndInitialTemplateJson": [{
+                                "query": "",
+                                "results": []
+                                }]
+                                }
+                            </script>
+                        </amp-state>
+                        <div class="form-group">
+                            <label>Where do you live?</label>
+                            <input type="text" id="Location" name="Location" class="form-control" placeholder="Suburb or Postcode" required on="
+                                                                    input-debounced:
+                                                                      AMP.setState({
+                                                                        query: event.value,
+                                                                        showDropdown: event.value,
+                                                                      }),
+                                                                      autosuggest-list.show;
+                                                                    tap:
+                                                                      AMP.setState({
+                                                                        query: query == null ? '' : query,
+                                                                        showDropdown: 'true'
+                                                                      }),
+                                                                      autosuggest-list.show"
+                                   [value]="query || ''"
+                                   value="" autocomplete="off">
+                            <div class="suggest">
+                                <div class="autosuggest-container hidden"
+                                     [class]="(showDropdown && query) ?
+                                                                'autosuggest-container' :
+                                                                'autosuggest-container hidden'">
+                                    <amp-list class="autosuggest-box"
+                                              layout="fixed-height"
+                                              height="120"
+                                              src="/amp/suburbs/"
+                                              [src]="query ? autosuggest.endpoint + query : autosuggest.emptyAndInitialTemplateJson"
+                                              id="autosuggest-list">
+                                        <template type="amp-mustache">
+                                            <amp-selector id="autosuggest-selector"
+                                                          keyboard-select-mode="focus"
+                                                          layout="container"
+                                                          on="
+                                                                        select:
+                                                                        AMP.setState({
+                                                                            query: event.targetOption,
+                                                                            showDropdown: false
+                                                                        }),
+                                                                        autosuggest-list.hide">
+                                                {{#results}}
+                                                <div class="select-option no-outline"
+                                                     role="option"
+                                                     tabindex="0"
+                                                     on="tap:autosuggest-list.hide"
+                                                     option="{{.}}">{{.}}</div>
+                                                {{/results}}
+                                            </amp-selector>
+                                        </template>
+                                    </amp-list>
+                                </div>
+                            </div>
+                            <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="Location"></div>
+                            <div class="form-validation form-validation-inline" visible-when-invalid="customError" validation-for="Location">* Suburb not found</div>
+                        </div>
+                        @*<div class="form-group form-group-btn">
+                            <button type="button" class="btn btn-sm btn-emphasis" data-step="2"><span class="sizeup">Next</span></button>
+                        </div>*@
+                    </div>
+                    @*step 3*@
+                    <div role="tab"
+                         class="lead-form-tab"
+                         option="tab3" id="tabStep3" tabindex="1">
+                        <div class="form-group">
+                            <label>Phone number</label>
+                            <input type="tel" id="PhoneNumber" name="PhoneNumber" class="form-control" required pattern="\s*0(\s*\d\s*){9}" maxlength="50">
+                            <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="PhoneNumber"></div>
+                            <div class="form-validation form-validation-inline" visible-when-invalid="patternMismatch" validation-for="PhoneNumber">* Please enter the correct phone number. (eg. 0212341234)</div>
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail address</label>
+                            <input type="email" id="EmailAddress" name="EmailAddress" class="form-control" required maxlength="80">
+                            <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="EmailAddress"></div>
+                            <div class="form-validation form-validation-inline" visible-when-invalid="typeMismatch" validation-for="EmailAddress"></div>
+                        </div>
+                        <div class="form-group form-group-btn">
+                            <button type="submit" class="btn btn-sm btn-emphasis">Send</button>
+                        </div>
+                    </div>
+
+                </amp-selector>
+
+                <div class="form-group form-group-btn">
+                    <button class="btn btn-sm btn-emphasis" data-step="1" on="tap: tabs.selectDown(delta=1), steps.selectDown(delta=1)" [hidden]=true>
+                        <span class="sizeup">Next</span>
+                    </button>
+                </div>
+                
+
+                <div submit-success>
+                    <template type="amp-mustache">
+                        <p id="leadform-thankyou" class="text-success">Thank you, you’re on your way.<br>One of our mortgage experts will contact you soon.</p>
+                    </template>
+                </div>
+
+                @*<div submit-error>
+            <template type="amp-mustache">
+                {{#verifyErrors}}
+                <p>{{message}}</p>
+                {{/verifyErrors}}
+                {{^verifyErrors}}
+                <p>Something went wrong. Try again later?</p>
+                {{/verifyErrors}}
+            </template>
+        </div>*@
+            </form>
+        </section>
+
+
+    </div>
+
+
+</body>
+</html>

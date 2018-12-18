@@ -1,0 +1,77 @@
+﻿<html>
+<head>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js">
+    </script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.pubads().set("adsense_background_color", "FFFFFF");
+        });
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+
+            googletag.defineSlot("/1234/travel/asia", [728, 90], "div-gpt-ad-123456789-0")
+                .addService(googletag.pubads())
+                .setTargeting("interests", ["sports", "music", "movies"]);
+
+            googletag.defineSlot("/1234/travel/asia", [[468, 60], [728, 90], [300, 250]], "div-gpt-ad-123456789-1")
+                .addService(googletag.pubads())
+                .setTargeting("gender", "male")
+                .setTargeting("age", "20-30");
+
+            googletag.pubads().setTargeting("topic", "basketball");
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+</head>
+<body>
+    <div id="div-gpt-ad-123456789-0" style="width: 728px; height: 90px">
+        div-gpt-ad-123456789-0
+        <script>
+            googletag.cmd.push(function () {
+                googletag.display("div-gpt-ad-123456789-0");
+            });
+        </script>
+    </div>
+    <div id="div-gpt-ad-123456789-1">
+        div-gpt-ad-123456789-1
+        <script>
+            googletag.cmd.push(function () {
+                googletag.display("div-gpt-ad-123456789-1");
+            });
+        </script>
+    </div>
+</body>
+</html>
+
+<!--Lines 3-8 is boiler-plate that asynchronously loads the GPT library used by Ad Manager, using SSL/HTTPS. This is where the command queue is built, which handles the list of functions (generally, ad calls) to be handled asynchronously. You don't need to edit this section of code.
+
+(Optional) Lines 9-13 set page-level attributes for ad slots that serve AdSense. Changing these attributes overrides any styles set in Ad Manager or AdSense. This function is not commonly used, since you can set this in Ad Manager. The developer documentation for the .set() function describes how to set AdSense parameters in GPT.
+
+Lines 10, 15, 32, 39: Function calls are added to a command queue to be processed asynchronously when the page loads.
+
+Line 16: "/1234/travel/asia" specifies the network code (1234) and targeted ad unit (travel/asia). Find your network code in Ad Manager under Admin and then Global settings and then Network code.
+
+[728, 90] sets the ad slot creative size. Indicate multiple sizes using the syntax: [[width1, height1], [width2, height2], [width3, height3]]. Associate all sizes here with the targeted ad unit, allowing you to narrow the list down based on the specific slot. When using multiple size ad slots, declare the slot sizes in the same order that they appear in Ad Manager. Learn more about slot definition and sequentiality.
+
+Lines 16, 19, 30, 33, 37, and 40: "div-gpt-ad-123456789-0" is how we match the ad slots defined in the head to the ad slots on the page (the div tags in the body where the creatives serve). They can be named anything as long as they match, but our tag generator uses the naming convention of "div-gpt-ad-[random number]-0", "div-gpt-ad-[random number]-1" and so on. Use the same <div>
+    ID consistently for a given position on a page, as it is used for optimization in a wide range of areas.
+
+    While random numbers are used here, this is not how GPT uniquely identifies an ad request. That is done behind the scenes with the GPT library. Additionally, these names may be the same from page to page as long as there aren't multiple instances of the same div name on the same page.
+
+    Learn more about the Ad Manager inventory structure, ad unit hierarchy, and how ad units inherit targeting in the inventory overview.
+
+    Lines 18, 21, 22, and 23: Set slot-level key-value targeting with the .setTargeting() function. You can associate multiple values with one key, as in the first example: ("key", ["value1", "value2", "value3"]). To target multiple keys, call the function multiple times, as in the second case: (gender=male and age=20-30).
+
+    The developer documentation for the .setTargeting() function describes how to set key-value parameters in GPT. Learn more about setting targeting and sizes with GPT
+
+    Line 23: googletag.pubads().setTargeting("topic","basketball"); sets page-level key-value targeting. When configuring targeting with page-level key-values, all ad slots inherit this targeting. Like slot-level key-values, you can associate multiple values with one key: ("key", ["value1", "value2", "value3"]).
+
+    Line 24: googletag.pubads().enableSingleRequest(); enables Single Request Architecture (SRA). Include this line to call all ad slots on the page in one call (allows for guaranteed roadblocks, and may have performance benefits for your page).
+
+    Line 30: (Optional) style="width: 728px; height: 90px" is the size that the element takes before the creative is rendered. If using multi-size tags, we recommend either omitting this (in that case, the size of the element takes the size of the selected creative when rendered) or making both dimensions large enough to contain the largest eligible creative. For single size ad tags, use this parameter to expand the container element until the creative loads so that other page elements don't shift when the creative renders.-->

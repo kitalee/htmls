@@ -39,5 +39,57 @@ namespace WebApplication1.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        //[ChildActionOnly]
+        //public ActionResult ChildActionTest(List<String> list) {
+        //    return View(list);
+        //}
+
+        public IActionResult Amp()
+        {
+            return View();
+        }
+
+        public IActionResult Submit()
+        {
+            Response.Headers.Add("Access-Control-Allow-Origin", Request.Headers["Origin"]);
+            Response.Headers.Add("AMP-Access-Control-Allow-Source-Origin", Request.Query["__amp_source_origin"]);
+            Response.Headers.Add("Access-Control-Expose-Headers", "AMP-Access-Control-Allow-Source-Origin");
+            Response.Headers.Add("Access-Control-Allow-Credentials", "true");
+
+            return Json(new
+            {
+                CompanyId = Request.Form["CompanyId"],
+                LoanPurpose = Request.Form["LoanPurpose"],
+                LoanAmount = Request.Form["LoanAmount"],
+                FirstName = Request.Form["FirstName"],
+                LastName = Request.Form["LastName"],
+                Location = Request.Form["Location"],
+                PhoneNumber = Request.Form["PhoneNumber"],
+                EmailAddress = Request.Form["EmailAddress"]
+            });
+            //return View();
+        }
+
+        public IActionResult Verify()
+        {
+            Response.Headers.Add("Access-Control-Allow-Origin", Request.Headers["Origin"]);
+            Response.Headers.Add("AMP-Access-Control-Allow-Source-Origin", Request.Query["__amp_source_origin"]);
+            Response.Headers.Add("Access-Control-Expose-Headers", "AMP-Access-Control-Allow-Source-Origin");
+            Response.Headers.Add("Access-Control-Allow-Credentials", "true");
+
+            return Json(new
+            {
+                CompanyId = Request.Form["CompanyId"],
+                LoanPurpose = Request.Form["LoanPurpose"],
+                LoanAmount = Request.Form["LoanAmount"],
+                FirstName = Request.Form["FirstName"],
+                LastName = Request.Form["LastName"],
+                Location = Request.Form["Location"],
+                PhoneNumber = Request.Form["PhoneNumber"],
+                EmailAddress = Request.Form["EmailAddress"]
+            });
+            //return View();
+        }
     }
 }
