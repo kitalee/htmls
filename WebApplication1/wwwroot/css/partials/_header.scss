@@ -1,14 +1,14 @@
 // main: ../site.scss
 // @import "_variables.scss";
 // @import "_mixins.scss";
-
 /**
  * These rules extend `.wrapper {}` in _common.scss.
  */
+
 .wrapper--header {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: row; // flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 20px;
@@ -16,8 +16,8 @@
         align-items: center;
     }
 }
-// logo
 
+// logo
 .logo {
     padding-bottom: 20px;
     img {
@@ -39,11 +39,9 @@
     vertical-align: top;
     text-align: center;
     background-color: $grey;
-
     &.active {
         background-color: $red;
     }
-
     a {
         line-height: $line-height-1;
         font-family: $font-2;
@@ -52,14 +50,13 @@
         text-align: center;
         vertical-align: top;
         color: white;
-
         &:hover {
             text-decoration: none;
         }
     }
 }
-// menu items
 
+// menu items
 .menu-item {
     display: none;
     @media (min-width: $screen-sm-min) {
@@ -103,7 +100,6 @@
 .menu-item__xs-search {
     display: none;
     font-size: 22px;
-
     button {
         border-bottom: none;
         border-top: none;
@@ -119,6 +115,7 @@
 .menu-item__nav {
     padding-top: 20px;
 }
+
 /**
  * These rules extend `.nav {}` in _nav.scss in bootstrap.
  */
@@ -146,12 +143,10 @@
     text-decoration: none;
     padding: 20px 10px;
     display: inline-block;
-
     &:hover {
         color: $red;
         text-decoration: none;
     }
-
     &.active {
         color: $red;
     }
@@ -170,8 +165,7 @@
     padding: 30px;
     background-color: $white;
     z-index: 999;
-    box-shadow: 0 3px 3px rgba(0,0,0,.35);
-
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .35);
     ul {
         list-style: none;
         display: flex;
@@ -179,12 +173,10 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
     li {
         flex-basis: 33%;
         line-height: 200%;
     }
-
     a:hover {
         text-decoration: none;
         color: $red;

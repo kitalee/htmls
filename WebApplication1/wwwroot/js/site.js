@@ -23,13 +23,13 @@
 
             if (stopPointOff <= windowTop) {
                 // stop at bottom
-                $sticky.css({ position: bannerPosition, top: stopPoint, left: 'auto', right: 0  });
+                $sticky.css({ position: bannerPosition, top: stopPoint, left: 'auto', right: 0 });
             } else if (stickyTopOff < windowTop + stickOffset) {
                 // sticking
                 $sticky.css({ position: 'fixed', top: stickOffset, left: stickyLeftPos, right: 'auto' });
             } else {
                 // stop at top
-                $sticky.css({ position: bannerPosition, top: 0, left: 'auto', right: 0  });
+                $sticky.css({ position: bannerPosition, top: 0, left: 'auto', right: 0 });
             }
         });
     }
@@ -59,13 +59,15 @@
     });
 
     $('.js-btn-menu').click(function () {
-        $('body').css('overflow', 'hidden');
-        $('.js-menu-overay').css('display', 'block');
+        $('.page').addClass('sitemap')
+        // $('body').css('overflow', 'hidden');
+        // $('.js-menu-overay').css('display', 'block');
     });
 
     $('#btnCloseMenu').click(function () {
-        $('body').css('overflow', 'auto');
-        $('.js-menu-overay').css('display', 'none');
+        $('.page').removeClass('sitemap')
+        // $('body').css('overflow', 'auto');
+        // $('.js-menu-overay').css('display', 'none');
     });
 
     $('.js-btn-masthead-nav').click(function (e) {
@@ -99,20 +101,20 @@
 });
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('js-validate-inputs');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('js-validate-inputs');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
 })();

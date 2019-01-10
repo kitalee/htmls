@@ -1,57 +1,52 @@
 // main: ../site.scss
-
 /* basic line-height */
+
 $default-line-height: 140% !default;
 $line-height-1: 120% !default;
 $line-height-2: 130% !default;
 $line-height-3: 150% !default;
-
 // font-family
-$font-1: 'Titillium Web', Arial, sans-serif !default;
-$font-2: Roboto, Arial, sans-serif !default;
-
+$font-1: 'Titillium Web',
+Arial,
+sans-serif !default;
+$font-2: Roboto,
+Arial,
+sans-serif !default;
 // font-weight
 $light: 300 !default;
 $regular: 400 !default;
 $bold: 700 !default;
-
 // screen sizes
 // Extra small screen / phone
 $screen-xs: 320px !default;
 $screen-xs-min: $screen-xs !default;
 $screen-phone: $screen-xs-min !default;
-
 // Small screen / tablet
 $screen-sm: 768px !default;
 $screen-sm-min: $screen-sm !default;
 $screen-tablet: $screen-sm-min !default;
-
 // Medium screen / desktop
 $screen-md: 992px !default;
 $screen-md-min: $screen-md !default;
 $screen-desktop: $screen-md-min !default;
-
 // Large screen / wide desktop
 $screen-lg: 1200px !default;
 $screen-lg-min: $screen-lg !default;
 $screen-lg-desktop: $screen-lg-min !default;
-
 // X-Large screen / wide desktop
 $screen-xlg: 1450px !default;
 $screen-xlg-min: $screen-xlg !default;
 $screen-xlg-desktop: $screen-xlg-min !default;
-
 // So media queries don't overlap when required, provide a maximum
 $screen-xs-max: ($screen-sm-min - 1) !default;
 $screen-sm-max: ($screen-md-min - 1) !default;
 $screen-md-max: ($screen-lg-min - 1) !default;
 $screen-lg-max: 1410px !default;
-
 $screen-max: 1810px !default;
-
 // colors
 $light-grey: #bcbcbc !default;
 $grey: #6d6e71 !default;
+$steel-blue: #6c747c !default;
 $dove-gray: #666666 !default;
 $dark-grey: #323232 !default;
 $black: #000000 !default;
@@ -59,17 +54,18 @@ $red: red !default;
 $white: white !default;
 $light-brown: #8f7669 !default;
 $orange: #f88033 !default;
-
+$cyan: #3aa8cc !default;
+// passage-colors
 $passage-color: #888888 !default;
 $passage-color-2: #b2b2b2 !default;
+// bar-colors
 $bar-color: #dfdfdf !default;
 $bar-color-2: #b3b3b3 !default;
 $bar-color-3: #eaeaea !default;
+// extra-colors
 $bg-color: #f0f0f0 !default;
 $rss-color: #f59b5a !default;
 $link-color: #3aa8cc !default;
-
-
 $color-facebook: #3b5998 !default;
 $color-twitter: #1da1f2 !default;
 $color-google: #d34836 !default;

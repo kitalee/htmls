@@ -6,6 +6,7 @@
     Default
 ==========================================================================
 */
+
 body,
 div,
 p,
@@ -19,11 +20,13 @@ table {
 p {
     margin-bottom: 15px;
 }
+
 /*
 ==========================================================================
     Wrapper
 ==========================================================================
 */
+
 .wrapper-fluid {
     width: 100%;
     min-width: $screen-xs-min;
@@ -89,6 +92,7 @@ p {
     Flex
 ==========================================================================
 */
+
 .flex-wrap-left {
     display: flex;
     flex-flow: row wrap;
@@ -109,13 +113,14 @@ p {
     justify-content: space-around;
     width: 100%;
 }
+
 /*
 ==========================================================================
     Advertisements
 ==========================================================================
 */
-// mobile ad 1
 
+// mobile ad 1
 .xs-ad {
     display: none;
     background-color: $bg-color;
@@ -124,11 +129,9 @@ p {
         display: block;
         text-align: center;
         padding: 0 15px 30px;
-
         p {
             margin: 0;
         }
-
         p::before {
             content: "ADVERTISEMENT";
             display: block;
@@ -139,8 +142,8 @@ p {
         }
     }
 }
-// ipad + mobile ad
 
+// ipad + mobile ad
 .sm-ad {
     display: none;
     @media (max-width: $screen-md-max) {
@@ -154,8 +157,8 @@ p {
         padding: 20px 10px;
     }
 }
-// pc ad 1
 
+// pc ad 1
 .lg-ad {
     display: none;
     background-color: $bg-color;
@@ -164,16 +167,13 @@ p {
         display: block;
         text-align: center;
         padding: 0 30px 30px;
-
         img {
             max-width: 970px;
             width: 100%;
         }
-
         p {
             margin: 0;
         }
-
         p::before {
             content: "ADVERTISEMENT";
             display: block;
@@ -184,17 +184,18 @@ p {
         }
     }
 }
+
 /*
 ==========================================================================
     Font styles for label, section, title, passage
 ==========================================================================
 */
+
 .font1 {
     font-family: $font-1;
     color: $black;
     font-weight: $regular;
     line-height: $default-line-height;
-
     &:hover {
         color: $black;
     }
@@ -205,7 +206,6 @@ p {
     color: $black;
     font-weight: $regular;
     line-height: $default-line-height;
-
     &:hover {
         color: $black;
     }
@@ -216,13 +216,12 @@ p {
     color: $passage-color;
     font-weight: $regular;
     line-height: $default-line-height;
-
     &:hover {
         color: $passage-color;
     }
 }
-// static size font (B = Bold)
 
+// static size font (B = Bold)
 .font2-18-B {
     @extend .font2;
     font-size: 18px;
@@ -246,6 +245,11 @@ p {
     font-size: 15px;
 }
 
+.font2-16 {
+    @extend .font2;
+    font-size: 16px;
+}
+
 .font1-18 {
     @extend .font1;
     font-size: 18px;
@@ -255,9 +259,9 @@ p {
     @extend .font1;
     font-size: 20px;
 }
+
 // variable size font
 // font-size (lg->sm->xs) : 18->18->16
-
 .font2-18-18-16 {
     @extend .font2;
     font-size: 16px;
@@ -279,14 +283,17 @@ p {
     @media (min-width: $screen-lg-min) {
         font-size: 18px;
     }
+    & strong {
+        font-weight: $bold;
+    }
 }
 
 .font2-18-18-16-B {
     @extend .font2-18-18-16;
     font-weight: $bold;
 }
-// font-size (lg->sm->xs) : 18->16->16
 
+// font-size (lg->sm->xs) : 18->16->16
 .font2-18-16-16 {
     @extend .font2;
     font-size: 16px;
@@ -294,8 +301,8 @@ p {
         font-size: 18px;
     }
 }
-// font-size (lg->sm->xs) : 28->24->22
 
+// font-size (lg->sm->xs) : 28->24->22
 .font1-28-24-22-B {
     @extend .font1;
     font-size: 22px;
@@ -307,8 +314,8 @@ p {
         font-size: 28px;
     }
 }
-// font-size (lg->sm->xs) : 28->24->22
 
+// font-size (lg->sm->xs) : 28->24->22
 .font1-28-24C-22-B {
     @extend .font1-28-24-22-B;
     @media (min-width: $screen-sm-min) {
@@ -318,8 +325,8 @@ p {
         font-size: 28px;
     }
 }
-// font-size (lg->sm->xs) : 28->26->22
 
+// font-size (lg->sm->xs) : 28->26->22
 .font1-28-26-22-B {
     @extend .font1;
     font-size: 22px;
@@ -331,8 +338,8 @@ p {
         font-size: 28px;
     }
 }
-// font-size (lg->sm->xs) : 28->26->26
 
+// font-size (lg->sm->xs) : 28->26->26
 .font1-28-26-26-B {
     @extend .font1;
     font-size: 26px;
@@ -341,22 +348,34 @@ p {
         font-size: 28px;
     }
 }
-// font-size (lg->sm->xs) : 62->44->30
 
+// font-size (lg->sm->xs) : 62->44->30
 .font1-62-44C-30-B {
     @extend .font1;
     font-size: 30px;
     font-weight: $bold;
     @media (min-width: $screen-sm-min) {
-        //font-size: 44px;
+        //font-size: 44px;W
         font-size: calc(10px + 4vw);
     }
     @media (min-width: $screen-lg-min) {
         font-size: 62px;
     }
 }
-// font-size (lg->sm->xs) : 26->24->24
 
+// font-size (lg->sm->xs) : 50->38->26
+.font1-50-38-26 {
+    @extend .font1;
+    font-size: 26px;
+    @media (min-width: $screen-sm-min) {
+        font-size: 38px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 50px;
+    }
+}
+
+// font-size (lg->sm->xs) : 26->24->24
 .font1-26-24-24-B {
     @extend .font1;
     font-size: 24px;
@@ -365,8 +384,8 @@ p {
         font-size: 26px;
     }
 }
-// font-size (lg->sm->xs) : 26->24->22
 
+// font-size (lg->sm->xs) : 26->24->22
 .font1-26-24-22-B {
     @extend .font1;
     font-size: 22px;
@@ -378,8 +397,8 @@ p {
         font-size: 26px;
     }
 }
-// font-size (lg->sm->xs) : 26->24->20
 
+// font-size (lg->sm->xs) : 26->24->20
 .font1-26-24-20-B {
     @extend .font1;
     font-size: 20px;
@@ -391,8 +410,8 @@ p {
         font-size: 26px;
     }
 }
-// font-size (lg->sm->xs) : 26->22->22
 
+// font-size (lg->sm->xs) : 26->22->22
 .font1-26-22-22-B {
     @extend .font1;
     font-size: 22px;
@@ -401,8 +420,8 @@ p {
         font-size: 26px;
     }
 }
-// font-size (lg->sm->xs) : 22->18->18
 
+// font-size (lg->sm->xs) : 22->18->18
 .font1-22-18-18-B {
     @extend .font1;
     font-size: 18px;
@@ -411,8 +430,8 @@ p {
         font-size: 22px;
     }
 }
-// font-size (lg->sm->xs) : 22->20->20
 
+// font-size (lg->sm->xs) : 22->20->20
 .font1-22-20-20-B {
     @extend .font1;
     font-size: 20px;
@@ -421,8 +440,18 @@ p {
         font-size: 22px;
     }
 }
-// font-size (lg->sm->xs) : 26->26->22
 
+// font-size (lg->sm->xs) : 22->22->20
+.font1-22-22-20-B {
+    @extend .font1;
+    font-size: 20px;
+    font-weight: $bold;
+    @media (min-width: $screen-lg-min) {
+        font-size: 22px;
+    }
+}
+
+// font-size (lg->sm->xs) : 26->26->22
 .font1-26-26-22-B {
     @extend .font1;
     font-size: 22px;
@@ -440,8 +469,8 @@ p {
         font-size: 26px;
     }
 }
-// font-size (lg->sm->xs) : 40->36->26
 
+// font-size (lg->sm->xs) : 40->36->26
 .font1-40-36-26-B {
     @extend .font1;
     font-size: 26px;
@@ -453,8 +482,8 @@ p {
         font-size: 40px;
     }
 }
-// font-size (lg->sm->xs) : 20->17->17
 
+// font-size (lg->sm->xs) : 20->17->17
 .font1-20-17-17-B {
     @extend .font1;
     font-size: 17px;
@@ -463,8 +492,27 @@ p {
         font-size: 20px;
     }
 }
-// font-size (lg->sm->xs) : 22->20->18
 
+// font-size (lg->sm->xs) : 18->16->16
+.font2-18-16-16-L {
+    @extend .font2;
+    font-size: 18px;
+    font-weight: $light;
+    @media (min-width: $screen-sm-min) {
+        font-size: 16px;
+    }
+    @media (min-width: $screen-lg-min) {
+        font-size: 16px;
+    }
+    & a {
+        color: #3aa8cc;
+        &:hover {
+            color: #3aa8cc;
+        }
+    }
+}
+
+// font-size (lg->sm->xs) : 22->20->18
 .font2-22-20C-18-B {
     @extend .font2;
     font-size: 18px;
@@ -476,8 +524,8 @@ p {
         font-size: 22px;
     }
 }
-// font-size (lg->sm->xs) : 62->44->30
 
+// font-size (lg->sm->xs) : 62->44->30
 .font1-62-44C-30-B {
     @extend .font1;
     font-size: 30px;
@@ -490,8 +538,8 @@ p {
         font-size: 62px;
     }
 }
-// font-size (lg->sm->xs) : 24->22->20
 
+// font-size (lg->sm->xs) : 24->22->20
 .font1-24-22-20-B {
     @extend .font1;
     font-size: 20px;
@@ -503,8 +551,8 @@ p {
         font-size: 24px;
     }
 }
-// font-size (lg->sm->xs) : 24->22->20
 
+// font-size (lg->sm->xs) : 24->22->20
 .font2-24-22-20-B {
     @extend .font2;
     font-size: 20px;
@@ -516,8 +564,8 @@ p {
         font-size: 24px;
     }
 }
-// font-size (lg->sm->xs) : 22->20->18
 
+// font-size (lg->sm->xs) : 22->20->18
 .font2-22-20C-18 {
     @extend .font2;
     font-size: 18px;
@@ -540,7 +588,16 @@ p {
         font-size: 22px;
     }
 }
+
 // font-size (lg->sm->xs) : 22->20->18
+.font2-20-20-18 {
+    @extend .font2;
+    font-size: 18px;
+    @media (min-width: $screen-sm-min) {
+        font-size: 20px;
+    }
+}
+
 .font2-20-20-18-B {
     @extend .font2;
     font-weight: $bold;
@@ -558,8 +615,8 @@ p {
         font-size: 20px;
     }
 }
-// font-size (lg->sm->xs) : 22->20->18
 
+// font-size (lg->sm->xs) : 22->20->18
 .font2-22-20-18 {
     @extend .font2;
     font-size: 18px;
@@ -580,14 +637,14 @@ p {
     @extend .font2-22-20-18;
     font-weight: $bold;
 }
-// font-size (lg->sm->xs) : 18->18->18
 
+// font-size (lg->sm->xs) : 18->18->18
 .passage-18 {
     @extend .passage;
     font-size: 18px;
 }
-// font-size (lg->sm->xs) : 18->16->16
 
+// font-size (lg->sm->xs) : 18->16->16
 .passage-18-16-16 {
     @extend .passage;
     font-size: 16px;
@@ -595,21 +652,20 @@ p {
         font-size: 18px;
     }
 }
-// font-size (lg->sm->xs) : 18->16->14
 
+// font-size (lg->sm->xs) : 18->16->14
 .passage-18-16-14 {
     @extend .passage;
     font-size: 14px;
     @media (min-width: $screen-sm-min) {
-        font-size: 16px;
-        //font-size: calc(1vw + 5.5px);
+        font-size: 16px; //font-size: calc(1vw + 5.5px);
     }
     @media (min-width: $screen-lg-min) {
         font-size: 18px;
     }
 }
-// font-size (lg->sm->xs) : 16->16->14
 
+// font-size (lg->sm->xs) : 16->16->14
 .passage-16-16-14 {
     @extend .passage;
     font-size: 14px;
@@ -617,8 +673,8 @@ p {
         font-size: 16px;
     }
 }
-// font-size (lg->sm->xs) : 20->18->16
 
+// font-size (lg->sm->xs) : 20->18->16
 .passage-20-18-16 {
     @extend .passage;
     font-size: 16px;
@@ -629,8 +685,8 @@ p {
         font-size: 20px;
     }
 }
-// font-size (lg->sm->xs) : 18->16->14
 
+// font-size (lg->sm->xs) : 18->16->14
 .passage-18-16C-14 {
     @extend .passage;
     font-size: 14px;
@@ -641,8 +697,8 @@ p {
         font-size: 18px;
     }
 }
-// font-size (lg->sm->xs) : 18->18->16
 
+// font-size (lg->sm->xs) : 18->18->16
 .passage-18-18-16 {
     @extend .passage;
     font-size: 16px;
@@ -650,11 +706,24 @@ p {
         font-size: 18px;
     }
 }
+
+a.font2-16 {
+    color: #007bff;
+    &:hover {
+        color: #007bff;
+    }
+}
+
+.text-sample {
+    white-space: pre-line;
+}
+
 /*
 ==========================================================================
     Buttons
 ==========================================================================
 */
+
 .btn-outline {
     padding: 10px 30px;
     height: 40px;
@@ -667,7 +736,6 @@ p {
     background-image: none;
     border-color: $black;
     color: $black;
-
     &:hover {
         color: $white;
         background-color: $black;
@@ -682,7 +750,6 @@ p {
 .btn-outline--red {
     color: $red;
     border-color: $red;
-
     &:hover {
         background-color: $red;
         border-color: $red;
@@ -692,7 +759,6 @@ p {
 .btn-outline--orange {
     color: $orange;
     border-color: $orange;
-
     &:hover {
         background-color: $orange;
         border-color: $orange;
@@ -702,7 +768,6 @@ p {
 .btn-outline--grey {
     color: $grey;
     border-color: $grey;
-
     &:hover {
         background-color: $grey;
         border-color: $grey;
@@ -720,7 +785,6 @@ p {
     color: $white;
     background-color: $black;
     border-color: $black;
-
     &:hover {
         color: $black;
         background-color: transparent;
@@ -735,7 +799,6 @@ p {
 .btn-inline--red {
     background-color: $red;
     border-color: $red;
-
     &:hover {
         color: $red;
     }
@@ -744,9 +807,56 @@ p {
 .btn-inline--orange {
     background-color: $orange;
     border-color: $orange;
-
     &:hover {
         color: $orange;
+    }
+}
+
+.btn-inline--steel-blue {
+    background-color: $steel-blue;
+    border-color: $steel-blue;
+    &:hover {
+        color: $steel-blue;
+    }
+}
+
+.btn-inline--dowload {
+    margin: 0 auto;
+    display: block;
+    padding: 10px 50px;
+    height: initial;
+    font-size: 22px;
+    line-height: 150%;
+    @media (max-width: $screen-xs-max) {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    & i {
+        margin-right: 16px;
+    }
+}
+
+.btn-inline--submit {
+    width: 100%;
+    max-width: 290px;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-inline--login {
+    border-width: 1px;
+    border-radius: 3px;
+    background-color: $white;
+    border-color: $cyan;
+    color: $cyan;
+    padding: 8px;
+    font-weight: $regular;
+    position: absolute;
+    top: 1;
+    right: 0;
+    &:hover {
+        background-color: $cyan;
+        color: $white;
     }
 }
 
@@ -765,16 +875,17 @@ p {
     padding: 5px 12px;
     border-radius: 50%;
     cursor: pointer;
-
     &:hover {
         opacity: 1;
     }
 }
+
 /*
 ==========================================================================
     Breadcrumb
 ==========================================================================
 */
+
 .wrapper--breadcrumb {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -796,27 +907,27 @@ p {
 
 .breadcrumb-item {
     font-family: $font-2;
-
     a {
         @extend .passage-18-16-16;
         color: #3aa8cc;
         text-decoration: none;
-
         &:hover {
             color: #3aa8cc;
         }
     }
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     content: "·";
     color: #b7b7b7;
 }
+
 /*
 ==========================================================================
      Overlay (Search & sitemap)
 ==========================================================================
 */
+
 .overlay {
     display: none;
     position: fixed;
@@ -842,7 +953,7 @@ p {
 
 .overlay__header__btn {
     a {
-        color: $grey;
+        color: $grey !important;
     }
 }
 
@@ -873,22 +984,18 @@ p {
 
 .overlay__menus__item {
     padding: 30px 0;
-
     p {
         text-align: center;
     }
-
     ul {
         list-style: none;
         padding: 0;
         margin: 0;
         text-align: center;
     }
-
     a {
         line-height: 200%;
     }
-
     a:hover {
         text-decoration: none;
         color: $red;
@@ -900,7 +1007,6 @@ p {
     font-size: 26px;
     font-weight: $bold;
     line-height: $default-line-height;
-
     &:hover {
         color: $grey;
     }
@@ -908,9 +1014,104 @@ p {
         font-size: 30px;
     }
 }
+
+.sitemap {
+    background-color: #fafafa;
+    &>* {
+        display: none !important;
+    }
+    & &-hide {
+        display: none !important;
+    }
+    & &-show {
+        display: block !important;
+    }
+    .wrapper--header,
+    .sitemap-spring,
+    .sitemap-close {
+        display: flex !important;
+    }
+    .nav--header {
+        justify-content: space-between;
+        @media (max-width: $screen-sm-max) {
+            display: block;
+        }
+    }
+    .menu-item {
+        padding: 50px;
+        display: flex;
+        flex: 1;
+    }
+    .nav__item__link {
+        pointer-events: none;
+        color: $grey !important;
+        font-size: 26px;
+        font-weight: $bold;
+        line-height: $default-line-height;
+        padding: 0;
+        margin-bottom: 15px;
+        @media (min-width: $screen-lg-min) {
+            font-size: 30px;
+        }
+    }
+    .nav__item {
+        padding-top: 20px;
+        text-align: center;
+    }
+    .nav__item__container {
+        width: initial;
+        display: block;
+        position: initial;
+        border-width: 0;
+        box-shadow: none;
+        background-color: initial;
+        padding: 0;
+        >ul.wrapper {
+            min-width: initial;
+            height: initial;
+            padding-left: 0;
+            padding-right: 0;
+            flex-direction: column;
+            a {
+                color: $grey;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.spring {
+    flex-basis: 100%;
+    display: flex;
+}
+
+.sitemap-spring,
+.sitemap-close {
+    display: none;
+}
+
+.sitemap-spring {
+    margin-bottom: 40px;
+}
+
+.sitemap-close {
+    align-self: center;
+    padding-bottom: 20px;
+    a {
+        cursor: pointer;
+    }
+}
+
+.sitemap-open {
+    a {
+        cursor: pointer;
+    }
+}
+
 /**
  * These rules extend `.wrapper-fluid {}` in _common.scss.
  */
+
 .wrapper-fluid--overlay-tabs {
     @extend .underline-2;
     @extend .mb-50-40-35;
@@ -921,11 +1122,9 @@ p {
     display: inline-block;
     padding: 10px 30px;
     color: $black;
-
     &.active {
         border-bottom: solid 3px $red;
     }
-
     &:hover {
         color: $black;
         text-decoration: none;
@@ -935,8 +1134,8 @@ p {
 .overlay__result-item {
     @extend .mb-50-40-35;
 }
-// pagination override
 
+// pagination override
 .page-item {
     &.active .page-link {
         background-color: $red;
@@ -946,24 +1145,24 @@ p {
 
 .page-link {
     color: $black;
-
     &:hover {
         color: $red;
         background-color: $white;
     }
 }
+
 /*
 ==========================================================================
     Containers
 ==========================================================================
 */
+
 .border-container {
     width: 100%;
     padding: 20px 0;
     border-top: solid 2px $dark-grey;
     border-bottom: solid 2px $dark-grey;
     margin-bottom: 15px;
-
     a {
         color: $link-color;
         text-decoration: underline;
@@ -981,13 +1180,11 @@ p {
 .border-container__header {
     display: table;
     width: 100%;
-
     div:nth-child(1) {
         display: table-cell;
         width: 90%;
         vertical-align: middle;
     }
-
     div:nth-child(2) {
         display: table-cell;
         text-align: right;
@@ -1008,8 +1205,7 @@ p {
     @media (min-width: $screen-lg-min) {
         padding: 40px 50px;
     }
-
-    & > .container-label {
+    &>.container-label {
         position: absolute;
         background-color: $red;
         color: $white;
@@ -1024,11 +1220,9 @@ p {
 
 .input-container {
     width: 100%;
-
-    & > div {
+    &>div {
         @extend .mb-25-20-15;
     }
-
     & input[type="radio"] {
         width: 17px;
         height: 17px;
@@ -1051,15 +1245,13 @@ p {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-
-    & > div {
+    &>div {
         flex-basis: 100%;
         margin-bottom: 1em;
         @media (min-width: $screen-sm-min) {
             flex-basis: 50%;
         }
     }
-
     & input[type="radio"] {
         margin-top: -2px;
         display: table-cell;
@@ -1067,12 +1259,12 @@ p {
         width: 17px;
         height: 17px;
     }
-
     & label {
         //padding: 5px;
         //margin: 10px;
     }
 }
+
 /*
 ==========================================================================
     Validation
@@ -1095,11 +1287,13 @@ p {
     padding: 0;
     margin: 0;
 }
+
 /*
 ==========================================================================
     Single property
 ==========================================================================
 */
+
 .no-border {
     border: 0;
 }
@@ -1114,13 +1308,12 @@ p {
 
 .no-deco {
     text-decoration: none;
-
     &:hover {
         text-decoration: none;
     }
 }
-// underline
 
+// underline
 .underline-1 {
     border-bottom: solid $bar-color 1px;
 }
@@ -1132,10 +1325,23 @@ p {
 .underline-3 {
     border-bottom: 1px solid $bar-color-3;
 }
+
+// margin right
+.mr-30 {
+    margin-right: 30px;
+}
+
 // margin bottom
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
 .mb-72-55-55 {
     margin-bottom: 55px;
-
     @media (min-width: $screen-lg-min) {
         margin-bottom: 72px;
     }
@@ -1211,6 +1417,16 @@ p {
     }
 }
 
+.mb-90-40-33 {
+    margin-bottom: 33px;
+    @media (min-width: $screen-sm-min) {
+        margin-bottom: 40px;
+    }
+    @media (min-width: $screen-lg-min) {
+        margin-bottom: 90px;
+    }
+}
+
 .mb-0-0-20 {
     margin-bottom: 20px;
     @media (min-width: $screen-sm-min) {
@@ -1254,7 +1470,6 @@ p {
 }
 
 // display none by screen size
-
 .hide-from-xs {
     display: none;
     @media (min-width: $screen-sm-min) {
@@ -1275,11 +1490,10 @@ p {
         display: block;
     }
 }
-// font color, weight, etc
 
+// font color, weight, etc
 .light-grey {
     color: $light-grey;
-
     &:hover {
         color: $light-grey;
     }
@@ -1287,7 +1501,6 @@ p {
 
 .grey {
     color: $grey;
-
     &:hover {
         color: $grey;
     }
@@ -1295,7 +1508,6 @@ p {
 
 .dark-grey {
     color: $dark-grey;
-
     &:hover {
         color: $dark-grey;
     }
@@ -1303,7 +1515,6 @@ p {
 
 .light-brown {
     color: $light-brown;
-
     &:hover {
         color: $light-brown;
     }
@@ -1319,4 +1530,23 @@ p {
 
 .bolder {
     font-weight: $bold;
+}
+
+.clear {
+    clear: both;
+}
+
+.modal.show {
+    display: block !important;
+}
+
+.inline-block-without-xs {
+    display: block;
+    @media (min-width: $screen-sm-min) {
+        display: inline-block;
+    }
+}
+
+.hide {
+    display: none !important;
 }

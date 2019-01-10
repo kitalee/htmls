@@ -1099,21 +1099,7 @@
                        text-align: center;
                    }
 
-        /* Leadform Tab buttons */
-        ul {
-            display: block;
-            list-style-type: disc;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            padding-inline-start: 40px;
-        }
-        .nav {
-            margin-bottom: 0;
-            padding-left: 0;
-            list-style: none;
-        }
+        /* Leadform Tab */
         .lead-form .tab-list:before, .lead-form .tab-list:after {
             content: " ";
             display: table;
@@ -1128,25 +1114,10 @@
             float: right;
         }
 
-            .lead-form .tab-list .nav-tabs > li {
-                display: inline-block;
-            }
+        .lead-form .tab-list .nav-tabs > li {
+            display: inline-block;
+        }
         
-
-        /*.lead-form .tab-list .nav-tabs > li > a {
-            border-radius: 4px;
-            padding: 3px 10px;
-            font-size: 14px;
-            text-transform: uppercase;
-            color: #74a3bf;
-        }*/
-
-            /*.lead-form .tab-list .nav-tabs > li.active > a {
-                background-color: #74a3bf;
-                color: #ffffff;
-                border-color: #74a3bf;
-            }*/
-
         .nav > li > a {
             position: relative;
             display: block;
@@ -1171,45 +1142,36 @@
             outline: none;
         }
 
-
-        .tab-list .nav-tabs > li > a {
+        .tab-list .nav-tabs > li > .tab-btn-allow {
+            border: 0;
             border-radius: 4px;
             padding: 3px 10px;
             font-size: 14px;
             text-transform: uppercase;
             color: #74a3bf;
+            background-color: Transparent;
+            line-height: 19px;
         }
 
+        .tab-list .nav-tabs > li > .tab-btn-not-allow {
+            border: 0;
+            border-radius: 4px;
+            padding: 3px 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #74a3bf;
+            background-color: Transparent;
+            line-height: 19px;
+            cursor: not-allowed;
+        }
 
-        .tab-list .nav-tabs > li > a[selected] {
+        .tab-list .nav-tabs > li > .tab-btn-allow[selected] {
             background-color: #74a3bf;
             color: #ffffff;
             border-color: #74a3bf;
         }
 
 
-
-        .page.active {
-            transform: translateX(0%);
-            pointer-events: auto;
-        }
-
-        .page:not(.active) {
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        .page.next {
-            transform: translateX(100%);
-        }
-
-        .page.previous {
-            transform: translateX(-100%);
-        }
-
-        .red-test {
-            background-color:red;
-        }
 
     </style>
 
@@ -1228,95 +1190,35 @@
 <body>
     <h1>Welcome to the mobile web</h1>
 
-    <div class="stepper sliding">
-
-        <section class="page active"
-                 [class]="slidingStepperPage > 0 ? 'page previous' : 'page active'">
-            <h3>Sign in</h3>
-            <div class="ampstart-input inline-block relative m0 p0 mb3 mt3">
-                <input type="email"
-                       value=""
-                       name="email"
-                       autocomplete="email"
-                       id="id1"
-                       class="block border-none p0 m0"
-                       placeholder="Enter your Email"
-                       on="input-debounced: AMP.setState({ email: event.value })">
-                <label for="ip1"
-                       class="absolute top-0 right-0 bottom-0 left-0"
-                       aria-hidden="true">
-                    Enter your Email
-                </label>
-            </div>
-            <button on="tap:AMP.pushState({ slidingStepperPage: slidingStepperPage + 1 })"
-                    class="align-self-end ampstart-btn ampstart-btn-secondary caps"
-                    disabled
-                    [disabled]="!email">
-                next
-            </button>
-        </section>
-
-        <section class="page next"
-                 [class]="slidingStepperPage < 1 ? 'page next' :
-                           (slidingStepperPage > 1 ? 'page previous' : 'page active')">
-                    <h3>Welcome</h3>
-                    <button class="back"
-                      [text]="email"
-                      on="tap:AMP.pushState({ slidingStepperPage: slidingStepperPage - 1 })"
-                      disabled
-                      [disabled]="slidingStepperPage != 1"></button>
-                    <div class="ampstart-input inline-block relative m0 p0 mb3 mt1">
-                      <input type="text"
-                        value=""
-                        name="password"
-                        id="id2"
-                        class="block border-none p0 m0"
-                        placeholder="Enter your Password"
-                        disabled
-                        [disabled]="slidingStepperPage != 1"
-                        on="input-debounced: AMP.setState({ password: event.value })">
-                      <label for="ip2"
-                        class="absolute top-0 right-0 bottom-0 left-0"
-                        aria-hidden="true">
-                        Enter your Password
-                      </label>
-                    </div>
-                    <button on="tap:AMP.pushState({ slidingStepperPage: slidingStepperPage + 1 })"
-                      class="align-self-end ampstart-btn ampstart-btn-secondary caps"
-                      disabled
-                      [disabled]="slidingStepperPage != 1 || !password">next</button>
-                  </section>
-        <section class="page next"
-                 [class]="slidingStepperPage < 2 ? 'page next' :
-           (slidingStepperPage > 2 ? 'page previous' : 'page active')">
-    <h3>Success</h3>
-    <p>You did it!</p>
-  </section>
-    </div>
 
     <div class="fixedsticky" on="tap:AMP.setState({showDropdown:false})" role="button" tabindex="0" aria-label="Tap to close the autosuggest box">
         <section class="lead-form">
             <h4 class="section-heading">Find the right home loan</h4>
 
-            <form class="form" method="post" action-xhr="http://localhost:63806/Home/Submit/" verify-xhr="http://localhost:63806/Home/Verify/" target="_top" custom-validation-reporting="show-all-on-submit" on="submit: autosuggest-list.hide;submit-success: autosuggest-list.hide;
-      submit-error: autosuggest-list.hide">
+            <form class="form" method="post" action-xhr="http://localhost:63806/Home/Submit/" verify-xhr="http://localhost:63806/Home/Verify/" target="_top" 
+                  custom-validation-reporting="show-first-on-submit"
+                  on="submit: autosuggest-list.hide;
+                        submit-success: autosuggest-list.hide;
+                        submit-error: autosuggest-list.hide">
+
                 @*<input type="hidden" id="CompanyId" name="CompanyId" value="@Model.LeadFormContent.issue">*@
 
 
                 <div class="tab-list">
                     <amp-selector id="steps" [selected]="selectedBtn">
                         <ul class="nav nav-tabs">
-                            <li on="tap:AMP.setState({selectedTab: 'tab1'})" role="button" tabindex="1"><a href="#step1" option="step1" selected>Step 1</a></li>
-                            <li on="tap:AMP.setState({selectedTab: 'tab2'})" role="button" tabindex="2"><a href="#step2" option="step2">Step 2</a></li>
-                            <li on="tap:AMP.setState({selectedTab: 'tab3'})" role="button" tabindex="3"><a href="#step3" option="step3">Step 3</a></li>
+                            <li><button id="btnStep1" class="tab-btn-allow" option=1 on="tap:AMP.setState({selectedTab: 1, selectedBtn: 1})" role="button" tabindex="1" selected>Step 1</button></li>
+                            <li><button id="btnStep2" class="tab-btn-not-allow" option=2 on="tap:AMP.setState({selectedTab: 2, selectedBtn: 2})" role="button" tabindex="2" disabled 
+                                        [class]="LoanPurpose && LoanAmount ? 'tab-btn-allow' : 'tab-btn-not-allow'"
+                                        [disabled]="!LoanPurpose || !LoanAmount">Step 2</button></li>
+                            <li><button id="btnStep3" class="tab-btn-not-allow" option=3 on="tap:AMP.setState({selectedTab: 3, selectedBtn: 3})" role="button" tabindex="3" disabled
+                                        [class]="FirstName && LastName && Location ? 'tab-btn-allow' : 'tab-btn-not-allow'"
+                                        [disabled]="!FirstName || !LastName || !Location">Step 3</button></li>
                         </ul>
                     </amp-selector>
                 </div>
 
-
-
-                <amp-selector on="select:AMP.setState({selectedTab: event.targetOption})"
-                              [selected]="selectedTab"
+                <amp-selector [selected]="selectedTab"
                               role="tablist"
                               layout="container"
                               class="ampTabContainer" id="tabs">
@@ -1325,11 +1227,11 @@
                     <div role="tab"
                          class="lead-form-tab"
                          selected
-                         option="tab1" id="tabStep1" tabindex="1">
+                         option=1 id="tabStep1" tabindex="1">
 
                         <div class="form-group">
                             <label>What’s the purpose of your home loan?</label>
-                            <select name="LoanPurpose" id="LoanPurpose" class="form-control" required>
+                            <select name="LoanPurpose" id="LoanPurpose" class="form-control" required on="input-debounced: AMP.setState({ LoanPurpose: event.value })">
                                 <option selected="selected" value="">Select</option>
                                 <option value="0">Buying my first home</option>
                                 <option value="1">Buying an investment property</option>
@@ -1344,31 +1246,29 @@
                             <label>How much do you want to borrow?</label>
                             <div class="input-group">
                                 <span class="input-group-addon">$</span>
-                                <input type="number" id="LoanAmount" name="LoanAmount" class="form-control" required>
+                                <input type="number" id="LoanAmount" name="LoanAmount" class="form-control" required on="input-debounced: AMP.setState({ LoanAmount: event.value })">
                             </div>
                             <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="LoanAmount"></div>
                         </div>
-                        @*<div class="form-group form-group-btn">
-                            <button type="button" class="btn btn-sm btn-emphasis" data-step="1" on="
-    tap: abcd.selectUp(delta=1)
-    , AMP.setState({ selectedBtn: 'step2' });">
+                        <div class="form-group form-group-btn">
+                            <button class="btn btn-sm btn-emphasis" on="tap: AMP.setState({ selectedTab: (LoanPurpose && LoanAmount ? 2 : 1), selectedBtn: (LoanPurpose && LoanAmount ? 2 : 1) })">
                                 <span class="sizeup">Next</span>
                             </button>
-                        </div>*@
+                        </div>
                     </div>
                     @*step 2*@
                     <div role="tab"
                          class="lead-form-tab"
-                         option="tab2" id="tabStep2" tabindex="1">
+                         option=2 id="tabStep2" tabindex="2">
                         <div class="form-group">
                             <label>First name</label>
-                            <input type="text" id="FirstName" name="FirstName" class="form-control" required pattern="(\s*\w\s*){2,}" maxlength="30">
+                            <input type="text" id="FirstName" name="FirstName" class="form-control" required pattern="(\s*\w\s*){2,}" maxlength="30" on="input-debounced: AMP.setState({ FirstName: event.value })">
                             <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="FirstName"></div>
                             <div class="form-validation form-validation-inline" visible-when-invalid="patternMismatch" validation-for="FirstName">* Required minimum two letters</div>
                         </div>
                         <div class="form-group">
                             <label>Last name</label>
-                            <input type="text" id="LastName" name="LastName" class="form-control" required pattern="(\s*\w\s*){2,}" maxlength="50">
+                            <input type="text" id="LastName" name="LastName" class="form-control" required pattern="(\s*\w\s*){2,}" maxlength="50" on="input-debounced: AMP.setState({ LastName: event.value })">
                             <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="LastName"></div>
                             <div class="form-validation form-validation-inline" visible-when-invalid="patternMismatch" validation-for="LastName">* Required minimum two letters</div>
                         </div>
@@ -1390,6 +1290,7 @@
                                                                       AMP.setState({
                                                                         query: event.value,
                                                                         showDropdown: event.value,
+                                                                        Location: event.value
                                                                       }),
                                                                       autosuggest-list.show;
                                                                     tap:
@@ -1437,14 +1338,16 @@
                             <div class="form-validation form-validation-inline" visible-when-invalid="valueMissing" validation-for="Location"></div>
                             <div class="form-validation form-validation-inline" visible-when-invalid="customError" validation-for="Location">* Suburb not found</div>
                         </div>
-                        @*<div class="form-group form-group-btn">
-                            <button type="button" class="btn btn-sm btn-emphasis" data-step="2"><span class="sizeup">Next</span></button>
-                        </div>*@
+                        <div class="form-group form-group-btn">
+                            <button class="btn btn-sm btn-emphasis" on="tap: AMP.setState({ selectedTab: (FirstName && LastName && Location ? 3 : 2), selectedBtn: (FirstName && LastName && Location ? 3 : 2) });">
+                                <span class="sizeup">Next</span>
+                            </button>
+                        </div>
                     </div>
                     @*step 3*@
                     <div role="tab"
                          class="lead-form-tab"
-                         option="tab3" id="tabStep3" tabindex="1">
+                         option=3 id="tabStep3" tabindex="3">
                         <div class="form-group">
                             <label>Phone number</label>
                             <input type="tel" id="PhoneNumber" name="PhoneNumber" class="form-control" required pattern="\s*0(\s*\d\s*){9}" maxlength="50">
@@ -1463,13 +1366,6 @@
                     </div>
 
                 </amp-selector>
-
-                <div class="form-group form-group-btn">
-                    <button class="btn btn-sm btn-emphasis" data-step="1" on="tap: tabs.selectDown(delta=1), steps.selectDown(delta=1)" [hidden]=true>
-                        <span class="sizeup">Next</span>
-                    </button>
-                </div>
-                
 
                 <div submit-success>
                     <template type="amp-mustache">

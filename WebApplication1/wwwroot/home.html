@@ -1,20 +1,22 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Titillium+Web:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="css/site.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link href="css/site.css" rel="stylesheet" />
     <title>Human Capital Magazine</title>
 </head>
 
 <body class="page">
-    <header class="wrapper wrapper--header">
-        <div class="menu-item__xs-search">
+
+    <header class="wrapper wrapper--header sitemap-show">
+        <div class="menu-item__xs-search sitemap-hide">
             <button class="js-btn-search"><i class="fa fa-search"></i></button>
         </div>
         <div class="logo">
@@ -29,111 +31,114 @@
                 <div class="logo__btn__item"><a href="#">Asia</a></div>
             </div>
         </div>
-        <div class="menu-item__xs-menu">
+        <div class="overlay__header__btn sitemap-close">
+            <a id="btnCloseMenu"><span><i class="far fa-window-close fa-3x"></i></span></a>
+        </div>
+        <div class="menu-item__xs-menu sitemap-hide">
             <button class="js-btn-menu"><i class="fas fa-bars"></i></button>
         </div>
-        <nav class="menu-item">
-            <div class="menu-item__search">
+        <div class="spring sitemap-spring"></div>
+        <nav class="menu-item sitemap-show">
+            <div class="menu-item__search sitemap-hide">
                 <input class="menu-item__search__input js-btn-search" type="text" placeholder="Search HRD">
                 <button class="menu-item__search__btn js-btn-search"><i class="fa fa-search"></i></button>
             </div>
-            <div class="menu-item__nav">
-                <ul class="nav nav--header">
-                    <li class="nav__item">
-                        <a class="nav__item__link active" data-menu="1" href="#">NEWS</a>
-                        <div class="nav__item__container">
-                            <ul class="wrapper">
-                                <li><a class="font1-18" href="#">Menu-1</a></li>
-                                <li><a class="font1-18" href="#">Industry news</a></li>
-                                <li><a class="font1-18" href="#">Opinion and Best Practice</a></li>
-                                <li><a class="font1-18" href="#">News</a></li>
-                                <li><a class="font1-18" href="#">Special Reports</a></li>
-                                <li><a class="font1-18" href="#">Profiles</a></li>
-                                <li><a class="font1-18" href="#">International News</a></li>
-                                <li><a class="font1-18" href="#">Rankings</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__item__link" data-menu="2" href="#">FEATURES</a>
-                        <div class="nav__item__container">
-                            <ul class="wrapper">
-                                <li><a class="font1-18" href="#">Menu-2</a></li>
-                                <li><a class="font1-18" href="#">Industry news</a></li>
-                                <li><a class="font1-18" href="#">Opinion and Best Practice</a></li>
-                                <li><a class="font1-18" href="#">News</a></li>
-                                <li><a class="font1-18" href="#">Special Reports</a></li>
-                                <li><a class="font1-18" href="#">Profiles</a></li>
-                                <li><a class="font1-18" href="#">International News</a></li>
-                                <li><a class="font1-18" href="#">Rankings</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__item__link" data-menu="4" href="#">EVENTS</a>
-                        <div class="nav__item__container">
-                            <ul class="wrapper">
-                                <li><a class="font1-18" href="#">Menu-3</a></li>
-                                <li><a class="font1-18" href="#">Industry news</a></li>
-                                <li><a class="font1-18" href="#">Opinion and Best Practice</a></li>
-                                <li><a class="font1-18" href="#">News</a></li>
-                                <li><a class="font1-18" href="#">Special Reports</a></li>
-                                <li><a class="font1-18" href="#">Profiles</a></li>
-                                <li><a class="font1-18" href="#">International News</a></li>
-                                <li><a class="font1-18" href="#">Rankings</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__item__link" data-menu="3" href="#">JOBS</a>
-                        <div class="nav__item__container">
-                            <ul class="wrapper">
-                                <li><a class="font1-18" href="#">Menu-4</a></li>
-                                <li><a class="font1-18" href="#">Industry news</a></li>
-                                <li><a class="font1-18" href="#">Opinion and Best Practice</a></li>
-                                <li><a class="font1-18" href="#">News</a></li>
-                                <li><a class="font1-18" href="#">Special Reports</a></li>
-                                <li><a class="font1-18" href="#">Profiles</a></li>
-                                <li><a class="font1-18" href="#">International News</a></li>
-                                <li><a class="font1-18" href="#">Rankings</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__item__link" data-menu="3" href="#">RESOURCES</a>
-                        <div class="nav__item__container">
-                            <ul class="wrapper">
-                                <li><a class="font1-18" href="#">Menu-5</a></li>
-                                <li><a class="font1-18" href="#">Industry news</a></li>
-                                <li><a class="font1-18" href="#">Opinion and Best Practice</a></li>
-                                <li><a class="font1-18" href="#">News</a></li>
-                                <li><a class="font1-18" href="#">Special Reports</a></li>
-                                <li><a class="font1-18" href="#">Profiles</a></li>
-                                <li><a class="font1-18" href="#">International News</a></li>
-                                <li><a class="font1-18" href="#">Rankings</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__item__link" data-menu="5" href="#">SUBSCRIBE</a>
-                        <div class="nav__item__container">
-                            <ul class="wrapper">
-                                <li><a class="font1-18" href="#">Menu-6</a></li>
-                                <li><a class="font1-18" href="#">Industry news</a></li>
-                                <li><a class="font1-18" href="#">Opinion and Best Practice</a></li>
-                                <li><a class="font1-18" href="#">News</a></li>
-                                <li><a class="font1-18" href="#">Special Reports</a></li>
-                                <li><a class="font1-18" href="#">Profiles</a></li>
-                                <li><a class="font1-18" href="#">International News</a></li>
-                                <li><a class="font1-18" href="#">Rankings</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav__item__link nav__item__link--icon js-btn-menu" href="#"><i class="fas fa-bars"></i></a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="nav nav--header">
+                <li class="nav__item">
+                    <a class="nav__item__link active" data-menu="1" href="#">NEWS</a>
+                    <div class="nav__item__container">
+                        <ul class="wrapper">
+                            <li><a class="font1-18" href="#">News</a></li>
+                            <li><a class="font1-18" href="#">Industry news</a></li>
+                            <li><a class="font1-18" href="#">Opinion and Best Practice</a></li>
+                            <li><a class="font1-18" href="#">International News</a></li>
+                            <li><a class="font1-18" href="#">Special Reports</a></li>
+                            <li><a class="font1-18" href="#">Profiles</a></li>
+                            <li><a class="font1-18" href="#">Rankings</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__item__link" data-menu="2" href="#">FEATURES</a>
+                    <div class="nav__item__container">
+                        <ul class="wrapper">
+                            <li><a class="font1-18" href="#">Benefits</a></li>
+                            <li><a class="font1-18" href="#">Corporate Wellness</a></li>
+                            <li><a class="font1-18" href="#">Diversity & Inclusion</a></li>
+                            <li><a class="font1-18" href="#">Employee Engagement</a></li>
+                            <li><a class="font1-18" href="#">Employment Law</a></li>
+                            <li><a class="font1-18" href="#">Employment Litigation & Advice</a></li>
+                            <li><a class="font1-18" href="#">Financial Wellness</a></li>
+                            <li><a class="font1-18" href="#">HR Technology</a></li>
+                            <li><a class="font1-18" href="#">Industrial Relations</a></li>
+                            <li><a class="font1-18" href="#">Leadership</a></li>
+                            <li><a class="font1-18" href="#">Learning & Development</a></li>
+                            <li><a class="font1-18" href="#">Mental Health</a></li>
+                            <li><a class="font1-18" href="#">MICE</a></li>
+                            <li><a class="font1-18" href="#">Payroll</a></li>
+                            <li><a class="font1-18" href="#">Workplace Health and Safety</a></li>
+                            <li><a class="font1-18" href="#">Recruitment</a></li>
+                            <li><a class="font1-18" href="#">Reward & Recognition</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__item__link" data-menu="4" href="#">EVENTS</a>
+                    <div class="nav__item__container">
+                        <ul class="wrapper">
+                            <li><a class="font1-18" href="#">National HR Summit</a></li>
+                            <li><a class="font1-18" href="#">HR Summit Perth</a></li>
+                            <li><a class="font1-18" href="#">HR Summit Melbourne</a></li>
+                            <li><a class="font1-18" href="#">HR Summit Brisbane</a></li>
+                            <li><a class="font1-18" href="#">Australian HR Awards</a></li>
+                            <li><a class="font1-18" href="#">HR Tech Summit</a></li>
+                            <li><a class="font1-18" href="#">L & D Sydney</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav__item sitemap-hide">
+                    <a class="nav__item__link" data-menu="3" href="#">JOBS</a>
+                    <div class="nav__item__container">
+                        <ul class="wrapper">
+                            <li><a class="font1-18" href="#">Menu-4</a></li>
+                            <li><a class="font1-18" href="#">Industry news</a></li>
+                            <li><a class="font1-18" href="#">Opinion and Best Practice</a></li>
+                            <li><a class="font1-18" href="#">News</a></li>
+                            <li><a class="font1-18" href="#">Special Reports</a></li>
+                            <li><a class="font1-18" href="#">Profiles</a></li>
+                            <li><a class="font1-18" href="#">International News</a></li>
+                            <li><a class="font1-18" href="#">Rankings</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__item__link" data-menu="3" href="#">RESOURCES</a>
+                    <div class="nav__item__container">
+                        <ul class="wrapper">
+                            <li><a class="font1-18" href="#">Jobs</a></li>
+                            <li><a class="font1-18" href="#">White Papers</a></li>
+                            <li><a class="font1-18" href="#">E-mag</a></li>
+                            <li><a class="font1-18" href="#">Poll</a></li>
+                            <li><a class="font1-18" href="#">Video</a></li>
+                            <li><a class="font1-18" href="#">e-learning</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__item__link" data-menu="5" href="#">SUBSCRIBE</a>
+                    <div class="nav__item__container">
+                        <ul class="wrapper">
+                            <li><a class="font1-18" href="#">Free E-newsletter</a></li>
+                            <li><a class="font1-18" href="#">Author</a></li>
+                            <li><a class="font1-18" href="#">HRD Magazine</a></li>
+                            <li><a class="font1-18" href="#">Back Issues</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item sitemap-hide sitemap-open">
+                    <a class="nav__item__link nav__item__link--icon js-btn-menu"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
         </nav>
     </header>
 
@@ -149,19 +154,23 @@
 
         <nav class="navbar xs-dropdown">
             <a class="navbar-brand xs-dropdown__title js-xs-dropdown__title" href="#">Top News</a>
-            <button class="navbar-toggler xs-dropdown__btn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler xs-dropdown__btn" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-angle-down"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link xs-dropdown__link active js-btn-masthead-nav" data-target="divTopNews" href="#">Top news</a>
+                        <a class="nav-link xs-dropdown__link active js-btn-masthead-nav" data-target="divTopNews" href="#">Top
+                            news</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link xs-dropdown__link js-btn-masthead-nav" data-target="divTopFeatures" href="#">Top features</a>
+                        <a class="nav-link xs-dropdown__link js-btn-masthead-nav" data-target="divTopFeatures" href="#">Top
+                            features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link xs-dropdown__link js-btn-masthead-nav" data-target="divTopProfiles" href="#">Top profiles</a>
+                        <a class="nav-link xs-dropdown__link js-btn-masthead-nav" data-target="divTopProfiles" href="#">Top
+                            profiles</a>
                     </li>
 
                 </ul>
@@ -190,17 +199,20 @@
             <div id="divTopNews" class="masthead__article active js-masthead-article">
                 <div class="masthead__article__img masthead__article__img--1" style="background-image: url('images/main_img1.jpg')">
                     <div>
-                        <a class="masthead-title masthead-title--1" href="#">'Employees don't want feedback, they want attention'</a>
+                        <a class="masthead-title masthead-title--1" href="#">'Employees don't want feedback, they want
+                            attention'</a>
                     </div>
                 </div>
                 <div class="masthead__article__img masthead__article__img--2" style="background-image: url('images/main_img2.jpg')">
                     <div>
-                        <a class="masthead-title masthead-title--2" href="#">How leadership hacks can fast-track your performance</a>
+                        <a class="masthead-title masthead-title--2" href="#">How leadership hacks can fast-track your
+                            performance</a>
                     </div>
                 </div>
                 <div class="masthead__article__img masthead__article__img--2" style="background-image: url('images/main_img3.jpg')">
                     <div>
-                        <a class="masthead-title masthead-title--2" href="#">Netflix’s Queer Eye star sues employer over trans medical bills</a>
+                        <a class="masthead-title masthead-title--2" href="#">Netflix’s Queer Eye star sues employer
+                            over trans medical bills</a>
                     </div>
                 </div>
             </div>
@@ -208,17 +220,20 @@
             <div id="divTopFeatures" class="masthead__article js-masthead-article">
                 <div class="masthead__article__img masthead__article__img--1" style="background-image: url('images/main_img2.jpg')">
                     <div>
-                        <a class="masthead-title masthead-title--1" href="#">How leadership hacks can fast-track your performance</a>
+                        <a class="masthead-title masthead-title--1" href="#">How leadership hacks can fast-track your
+                            performance</a>
                     </div>
                 </div>
                 <div class="masthead__article__img masthead__article__img--2" style="background-image: url('images/main_img3.jpg')">
                     <div>
-                        <a class="masthead-title masthead-title--2" href="#">'Employees don't want feedback, they want attention'</a>
+                        <a class="masthead-title masthead-title--2" href="#">'Employees don't want feedback, they want
+                            attention'</a>
                     </div>
                 </div>
                 <div class="masthead__article__img masthead__article__img--2" style="background-image: url('images/main_img1.jpg')">
                     <div>
-                        <a class="masthead-title masthead-title--2" href="#">Netflix’s Queer Eye star sues employer over trans medical bills</a>
+                        <a class="masthead-title masthead-title--2" href="#">Netflix’s Queer Eye star sues employer
+                            over trans medical bills</a>
                     </div>
                 </div>
             </div>
@@ -226,17 +241,20 @@
             <div id="divTopProfiles" class="masthead__article js-masthead-article">
                 <div class="masthead__article__img masthead__article__img--1" style="background-image: url('images/main_img3.jpg')">
                     <div>
-                        <a class="masthead-title masthead-title--1" href="#">Netflix’s Queer Eye star sues employer over trans medical bills</a>
+                        <a class="masthead-title masthead-title--1" href="#">Netflix’s Queer Eye star sues employer
+                            over trans medical bills</a>
                     </div>
                 </div>
                 <div class="masthead__article__img masthead__article__img--2" style="background-image: url('images/main_img1.jpg')">
                     <div>
-                        <a class="masthead-title masthead-title--2" href="#">How leadership hacks can fast-track your performance</a>
+                        <a class="masthead-title masthead-title--2" href="#">How leadership hacks can fast-track your
+                            performance</a>
                     </div>
                 </div>
                 <div class="masthead__article__img masthead__article__img--2" style="background-image: url('images/main_img2.jpg')">
                     <div>
-                        <a class="masthead-title masthead-title--2" href="#">'Employees don't want feedback, they want attention'</a>
+                        <a class="masthead-title masthead-title--2" href="#">'Employees don't want feedback, they want
+                            attention'</a>
                     </div>
                 </div>
             </div>
@@ -263,7 +281,8 @@
                     </div>
                     <div class="profile__list__item__passage">
                         <p><a class="font1-26-24-24-B" href="#">Why Bosch HR head is a 'glocal' agent of change</a></p>
-                        <span class="passage-18-16-16">Rosa Lee has crossed continents to carry on her commitment to culture and people transformation. She shares</span>
+                        <span class="passage-18-16-16">Rosa Lee has crossed continents to carry on her commitment to
+                            culture and people transformation. She shares</span>
                     </div>
                 </div>
                 <div class="profile__list__item">
@@ -272,7 +291,8 @@
                     </div>
                     <div class="profile__list__item__passage">
                         <p><a class="font1-26-24-24-B" href="#">VIVE LA DIFFÉRENCE</a></p>
-                        <span class="passage-18-16-16">It’s rare for a multinational company with a rich cultural heritage to embrace local norms, but that’s just what </span>
+                        <span class="passage-18-16-16">It’s rare for a multinational company with a rich cultural
+                            heritage to embrace local norms, but that’s just what </span>
                     </div>
 
                 </div>
@@ -282,7 +302,8 @@
                     </div>
                     <div class="profile__list__item__passage">
                         <p><a class="font1-26-24-24-B" href="#">Are you asking the right questions? </a></p>
-                        <span class="passage-18-16-16">Workforce analytics is coming along in leaps and bounds, but if you’re struggling to embrace it you might be </span>
+                        <span class="passage-18-16-16">Workforce analytics is coming along in leaps and bounds, but if
+                            you’re struggling to embrace it you might be </span>
                     </div>
                 </div>
                 <div class="profile__list__item">
@@ -290,8 +311,10 @@
                         <a href="#"><img src="images/test.jpg" /></a>
                     </div>
                     <div class="profile__list__item__passage">
-                        <p><a class="font1-26-24-24-B" href="#">The surprising link between HR and this proud profession</a></p>
-                        <span class="passage-18-16-16">A justice of the peace ordered a $110,000 fine on an Ontario nuclear power generator for failing to acquaint its workers </span>
+                        <p><a class="font1-26-24-24-B" href="#">The surprising link between HR and this proud
+                                profession</a></p>
+                        <span class="passage-18-16-16">A justice of the peace ordered a $110,000 fine on an Ontario
+                            nuclear power generator for failing to acquaint its workers </span>
                     </div>
                 </div>
             </div>
@@ -308,12 +331,15 @@
                 <div class="article-list__item">
                     <div class="article-list__item__img"><a href="#"><img src="images/test.jpg" /></a></div>
                     <div class="article-list__item__passage">
-                        <p><a class="font1-26-24-20-B" href="#">Pepsi 'moving in the right direction' as CEO Indra Nooyi steps down</a></p>
+                        <p><a class="font1-26-24-20-B" href="#">Pepsi 'moving in the right direction' as CEO Indra
+                                Nooyi steps down</a></p>
                         <p class="passage-18-16-14">
                             <label>By <span>HRD</span></label>
                             <label>JUNE 10, 2015</label>
                         </p>
-                        <p class="passage-18-16-14 hide-from-md">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                        <p class="passage-18-16-14 hide-from-md">One creative job seeker definitely caught the
+                            attention of bosses after she roped her acquiescent husband in to help deliver an
+                            Alice-in-Wonderland-inspired application.</p>
                     </div>
                 </div>
 
@@ -325,7 +351,9 @@
                             <label>By <span>HRD</span></label>
                             <label>JUNE 10, 2015</label>
                         </p>
-                        <p class="passage-18-16-14 hide-from-md">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                        <p class="passage-18-16-14 hide-from-md">One creative job seeker definitely caught the
+                            attention of bosses after she roped her acquiescent husband in to help deliver an
+                            Alice-in-Wonderland-inspired application.</p>
                     </div>
                 </div>
 
@@ -337,31 +365,39 @@
                             <label>By <span>HRD</span></label>
                             <label>JUNE 10, 2015</label>
                         </p>
-                        <p class="passage-18-16-14 hide-from-md">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                        <p class="passage-18-16-14 hide-from-md">One creative job seeker definitely caught the
+                            attention of bosses after she roped her acquiescent husband in to help deliver an
+                            Alice-in-Wonderland-inspired application.</p>
                     </div>
                 </div>
 
                 <div class="article-list__item">
                     <div class="article-list__item__img"><a href="#"><img src="images/ln4.jpg" /></a></div>
                     <div class="article-list__item__passage">
-                        <p><a class="font1-26-24-20-B" href="#">We set a goal to have the world’s healthiest workforce by 2020'</a></p>
+                        <p><a class="font1-26-24-20-B" href="#">We set a goal to have the world’s healthiest workforce
+                                by 2020'</a></p>
                         <p class="passage-18-16-14">
                             <label>By <span>HRD</span></label>
                             <label>JUNE 10, 2015</label>
                         </p>
-                        <p class="passage-18-16-14 hide-from-md">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                        <p class="passage-18-16-14 hide-from-md">One creative job seeker definitely caught the
+                            attention of bosses after she roped her acquiescent husband in to help deliver an
+                            Alice-in-Wonderland-inspired application.</p>
                     </div>
                 </div>
 
                 <div class="article-list__item">
                     <div class="article-list__item__img"><a href="#"><img src="images/ln5.jpg" /></a></div>
                     <div class="article-list__item__passage">
-                        <p><a class="font1-26-24-20-B" href="#">British Airways worker alleges sexism over 'man bun' sacking</a></p>
+                        <p><a class="font1-26-24-20-B" href="#">British Airways worker alleges sexism over 'man bun'
+                                sacking</a></p>
                         <p class="passage-18-16-14">
                             <label>By <span>HRD</span></label>
                             <label>JUNE 10, 2015</label>
                         </p>
-                        <p class="passage-18-16-14 hide-from-md">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                        <p class="passage-18-16-14 hide-from-md">One creative job seeker definitely caught the
+                            attention of bosses after she roped her acquiescent husband in to help deliver an
+                            Alice-in-Wonderland-inspired application.</p>
                     </div>
                 </div>
 
@@ -388,7 +424,8 @@
             </div>
             <div class="magazine-right">
                 <p class="font1-28-24-22-B">MAGAZINE CHANGE</p>
-                <p class="passage-18-16-14">Six of Canada’s top HR leaders discuss how they're navigting AI, diversity and more</p>
+                <p class="passage-18-16-14">Six of Canada’s top HR leaders discuss how they're navigting AI, diversity
+                    and more</p>
                 <button type="button" class="btn btn-inline btn-inline--orange pl-5 pr-5">VIEW</button>
             </div>
         </div>
@@ -403,7 +440,8 @@
                     <a href="#"><img src="images/top1.jpg" /></a>
                 </div>
 
-                <p class="mt-0 mb-0 pt-3"><a href="#" class="font1-26-22-22-B">A modern approach to performance management</a></p>
+                <p class="mt-0 mb-0 pt-3"><a href="#" class="font1-26-22-22-B">A modern approach to performance
+                        management</a></p>
             </div>
             <div class="top-videos__part2">
                 <div class="top-videos__part2__item">
@@ -436,7 +474,8 @@
                     </div>
                     <div>
                         <p class="font2-18-B light-brown mt-1 mb-1">Rise People</p>
-                        <p><a href="#" class="font1-22-20-20-B">Sun Life Financial's Former Director of Business Development joins Rise People as Senior VP</a></p>
+                        <p><a href="#" class="font1-22-20-20-B">Sun Life Financial's Former Director of Business
+                                Development joins Rise People as Senior VP</a></p>
                     </div>
                 </div>
 
@@ -468,13 +507,20 @@
                 <form class="input-container-3 js-validate-inputs" novalidate>
                     <!-- (div.form-check.font2-18-16-16>input[type="radio" id="rdo$" name="poll" required].form-check-input.mr-2+label[for="rdo$"].form-check-label{Answer$})*6 -->
 
-                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo1" name="poll" required class="form-check-input mr-2"><label for="rdo1" class="form-check-label">Answer1</label></div>
-                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo2" name="poll" required class="form-check-input mr-2"><label for="rdo2" class="form-check-label">Answer2</label></div>
-                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo3" name="poll" required class="form-check-input mr-2"><label for="rdo3" class="form-check-label">Answer3</label></div>
-                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo4" name="poll" required class="form-check-input mr-2"><label for="rdo4" class="form-check-label">Answer4</label></div>
-                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo5" name="poll" required class="form-check-input mr-2"><label for="rdo5" class="form-check-label">Answer5</label></div>
-                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo6" name="poll" required class="form-check-input mr-2"><label for="rdo6" class="form-check-label">Answer6</label>
-                    <p class="invalid-tooltip" style="display:absolute;left:0">Please choose one of the items.</p></div>
+                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo1" name="poll" required class="form-check-input mr-2"><label
+                            for="rdo1" class="form-check-label">Answer1</label></div>
+                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo2" name="poll" required class="form-check-input mr-2"><label
+                            for="rdo2" class="form-check-label">Answer2</label></div>
+                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo3" name="poll" required class="form-check-input mr-2"><label
+                            for="rdo3" class="form-check-label">Answer3</label></div>
+                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo4" name="poll" required class="form-check-input mr-2"><label
+                            for="rdo4" class="form-check-label">Answer4</label></div>
+                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo5" name="poll" required class="form-check-input mr-2"><label
+                            for="rdo5" class="form-check-label">Answer5</label></div>
+                    <div class="form-check font2-18-16-16"><input type="radio" id="rdo6" name="poll" required class="form-check-input mr-2"><label
+                            for="rdo6" class="form-check-label">Answer6</label>
+                        <p class="invalid-tooltip" style="display:absolute;left:0">Please choose one of the items.</p>
+                    </div>
 
                     <button type="submit" class="btn btn-inline btn-inline--orange pl-5 pr-5">VOTE</button>
 
@@ -495,7 +541,8 @@
                     </div>
                     <div class="footer-top__part1__passage">
                         <p><a class="font1-26-26-22-B" href="#">HRD issue 15.09</a></p>
-                        <span class="passage-16-16-14">The future of the HR profession is in good hands – find out who is shaping the future of the industry in HRD’s annual list of upcoming superstars</span>
+                        <span class="passage-16-16-14">The future of the HR profession is in good hands – find out who
+                            is shaping the future of the industry in HRD’s annual list of upcoming superstars</span>
                     </div>
                     <div class="footer-top__part1__btn">
                         <button class="btn btn-outline btn-outline--orange mr-2">SUBSCRIBE</button>
@@ -589,15 +636,19 @@
         </div>
         <div class="wrapper">
             <div class="overlay__result-item">
-                <p><a class="font1-26-24-24-B" href="#">Pepsi 'moving in the right direction' as CEO Indra Nooyi steps down</a></p>
-                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                <p><a class="font1-26-24-24-B" href="#">Pepsi 'moving in the right direction' as CEO Indra Nooyi steps
+                        down</a></p>
+                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses
+                    after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired
+                    application.</p>
                 <p><a class="font2-15 light-grey" href="#">https://www.hcamag.com/hr-news/pepsi-moving-in-the-right-direction-as-ceo-indra-nooyi-steps-down-253573.aspx</a></p>
             </div>
 
             <div class="overlay__result-item">
                 <p><a class="font1-26-24-24-B" href="#">Working under the stars – a dream job for some </a></p>
                 <p class="passage-18-16-16 mb-1">
-                    “Not everyone wants to work in the city,” said Ross Sticklen, which is just as well because his job is to recruit staff for cattle stations in some of the most remote areas to be found throughout the
+                    “Not everyone wants to work in the city,” said Ross Sticklen, which is just as well because his job
+                    is to recruit staff for cattle stations in some of the most remote areas to be found throughout the
                     outback in Northern Queensland.
                 </p>
                 <p><a class="font2-15 light-grey" href="#">https://www.hcamag.com/hr-news/working-under-the-stars--a-dream-job-for-some-253542.aspx</a></p>
@@ -606,34 +657,45 @@
             <div class="overlay__result-item">
                 <p><a class="font1-26-24-24-B" href="#">Social media policy: What HR needs to know</a></p>
                 <p class="passage-18-16-16 mb-1">
-                    A complaint is made. It's hardly a starting or novel observation that social media platforms like Twitter and Facebook are not always exemplars of courteous, respectful discussion and debate. Exchanges
+                    A complaint is made. It's hardly a starting or novel observation that social media platforms like
+                    Twitter and Facebook are not always exemplars of courteous, respectful discussion and debate.
+                    Exchanges
                     can often descend into insults and crude ad hominem attacks.
                 </p>
                 <p><a class="font2-15 light-grey" href="#">https://www.hcamag.com/hr-news/social-media-policy-what-hr-needs-to-know-253531.aspx</a></p>
             </div>
 
             <div class="overlay__result-item">
-                <p><a class="font1-26-24-24-B" href="#">'We set a goal to have the world’s healthiest workforce by 2020'</a></p>
-                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                <p><a class="font1-26-24-24-B" href="#">'We set a goal to have the world’s healthiest workforce by
+                        2020'</a></p>
+                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses
+                    after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired
+                    application.</p>
                 <p><a class="font2-15 light-grey" href="#">https://www.hcamag.com/hr-news/pepsi-moving-in-the-right-direction-as-ceo-indra-nooyi-steps-down-253573.aspx</a></p>
             </div>
 
             <div class="overlay__result-item">
                 <p><a class="font1-26-24-24-B" href="#">British Airways worker alleges sexism over 'man bun' sacking</a></p>
-                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses
+                    after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired
+                    application.</p>
                 <p><a class="font2-15 light-grey" href="#">https://www.hcamag.com/hr-news/pepsi-moving-in-the-right-direction-as-ceo-indra-nooyi-steps-down-253573.aspx</a></p>
             </div>
 
             <div class="overlay__result-item">
-                <p><a class="font1-26-24-24-B" href="#">Pepsi 'moving in the right direction' as CEO Indra Nooyi steps down</a></p>
-                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                <p><a class="font1-26-24-24-B" href="#">Pepsi 'moving in the right direction' as CEO Indra Nooyi steps
+                        down</a></p>
+                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses
+                    after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired
+                    application.</p>
                 <p><a class="font2-15 light-grey" href="#">https://www.hcamag.com/hr-news/pepsi-moving-in-the-right-direction-as-ceo-indra-nooyi-steps-down-253573.aspx</a></p>
             </div>
 
             <div class="overlay__result-item">
                 <p><a class="font1-26-24-24-B" href="#">Working under the stars – a dream job for some </a></p>
                 <p class="passage-18-16-16 mb-1">
-                    “Not everyone wants to work in the city,” said Ross Sticklen, which is just as well because his job is to recruit staff for cattle stations in some of the most remote areas to be found throughout the
+                    “Not everyone wants to work in the city,” said Ross Sticklen, which is just as well because his job
+                    is to recruit staff for cattle stations in some of the most remote areas to be found throughout the
                     outback in Northern Queensland.
                 </p>
                 <p><a class="font2-15 light-grey" href="#">https://www.hcamag.com/hr-news/working-under-the-stars--a-dream-job-for-some-253542.aspx</a></p>
@@ -642,21 +704,28 @@
             <div class="overlay__result-item">
                 <p><a class="font1-26-24-24-B" href="#">Social media policy: What HR needs to know</a></p>
                 <p class="passage-18-16-16 mb-1">
-                    A complaint is made. It's hardly a starting or novel observation that social media platforms like Twitter and Facebook are not always exemplars of courteous, respectful discussion and debate. Exchanges
+                    A complaint is made. It's hardly a starting or novel observation that social media platforms like
+                    Twitter and Facebook are not always exemplars of courteous, respectful discussion and debate.
+                    Exchanges
                     can often descend into insults and crude ad hominem attacks.
                 </p>
                 <p><a class="font2-15 light-grey" href="#">https://www.hcamag.com/hr-news/social-media-policy-what-hr-needs-to-know-253531.aspx</a></p>
             </div>
 
             <div class="overlay__result-item">
-                <p><a class="font1-26-24-24-B" href="#">'We set a goal to have the world’s healthiest workforce by 2020'</a></p>
-                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                <p><a class="font1-26-24-24-B" href="#">'We set a goal to have the world’s healthiest workforce by
+                        2020'</a></p>
+                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses
+                    after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired
+                    application.</p>
                 <p><a class="font2-15 light-grey" href="#">https://www.hcamag.com/hr-news/pepsi-moving-in-the-right-direction-as-ceo-indra-nooyi-steps-down-253573.aspx</a></p>
             </div>
 
             <div class="overlay__result-item">
                 <p><a class="font1-26-24-24-B" href="#">British Airways worker alleges sexism over 'man bun' sacking</a></p>
-                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired application.</p>
+                <p class="passage-18-16-16 mb-1">One creative job seeker definitely caught the attention of bosses
+                    after she roped her acquiescent husband in to help deliver an Alice-in-Wonderland-inspired
+                    application.</p>
                 <p><a class="font2-15 light-grey" href="#">https://www.hcamag.com/hr-news/pepsi-moving-in-the-right-direction-as-ceo-indra-nooyi-steps-down-253573.aspx</a></p>
             </div>
         </div>
@@ -674,105 +743,11 @@
         </div>
     </section>
 
-    <!--Menu Layout-->
-    <section class="overlay js-menu-overay">
-        <div class="wrapper">
-            <div class="overlay__header">
-                <div class="logo pb-0">
-                    <a href="/">
-                        <img srcset="images/logo.png 1x, images/logo_retina.png 2x" src="images/logo.png" />
-                    </a>
-                    <div class="logo__btn">
-                        <div class="logo__btn__item active"><a href="#">AU</a></div>
-                        <div class="logo__btn__item"><a href="#">NZ</a></div>
-                        <div class="logo__btn__item"><a href="#">CA</a></div>
-                        <div class="logo__btn__item"><a href="#">US</a></div>
-                        <div class="logo__btn__item"><a href="#">Asia</a></div>
-                    </div>
-                </div>
-                <div class="overlay__header__btn">
-                    <a id="btnCloseMenu" href="#"><span><i class="far fa-window-close fa-3x"></i></span></a>
-                </div>
-            </div>
-            <div class="overlay__menus">
-                <div class="overlay__menus__item">
-                    <p class="overlay-menu-title">NEWS</p>
-                    <ul>
-                        <li><a class="font1-20 grey" href="#">News</a></li>
-                        <li><a class="font1-20 grey" href="#">Industry news</a></li>
-                        <li><a class="font1-20 grey" href="#">Opinion and Best Practice</a></li>
-                        <li><a class="font1-20 grey" href="#">International News</a></li>
-                        <li><a class="font1-20 grey" href="#">Special Reports</a></li>
-                        <li><a class="font1-20 grey" href="#">Profiles</a></li>
-                        <li><a class="font1-20 grey" href="#">Rankings</a></li>
-                    </ul>
-                </div>
-
-                <div class="overlay__menus__item">
-                    <p class="overlay-menu-title">FEATURES</p>
-                    <ul>
-                        <li><a class="font1-20 grey" href="#">Benefits</a></li>
-                        <li><a class="font1-20 grey" href="#">Corporate Wellness</a></li>
-                        <li><a class="font1-20 grey" href="#">Diversity & Inclusion</a></li>
-                        <li><a class="font1-20 grey" href="#">Employee Engagement</a></li>
-                        <li><a class="font1-20 grey" href="#">Employment Law</a></li>
-                        <li><a class="font1-20 grey" href="#">Employment Litigation & Advice</a></li>
-                        <li><a class="font1-20 grey" href="#">Financial Wellness</a></li>
-                        <li><a class="font1-20 grey" href="#">HR Technology</a></li>
-                        <li><a class="font1-20 grey" href="#">Industrial Relations</a></li>
-                        <li><a class="font1-20 grey" href="#">Leadership</a></li>
-                        <li><a class="font1-20 grey" href="#">Learning & Development</a></li>
-                        <li><a class="font1-20 grey" href="#">Mental Health</a></li>
-                        <li><a class="font1-20 grey" href="#">MICE</a></li>
-                        <li><a class="font1-20 grey" href="#">Payroll</a></li>
-                        <li><a class="font1-20 grey" href="#">Workplace Health and Safety</a></li>
-                        <li><a class="font1-20 grey" href="#">Recruitment</a></li>
-                        <li><a class="font1-20 grey" href="#">Reward & Recognition</a></li>
-                    </ul>
-                </div>
-
-                <div class="overlay__menus__item">
-                    <p class="overlay-menu-title">RESOURCES</p>
-                    <ul>
-                        <li><a class="font1-20 grey" href="#">Jobs</a></li>
-                        <li><a class="font1-20 grey" href="#">White Papers</a></li>
-                        <li><a class="font1-20 grey" href="#">E-mag</a></li>
-                        <li><a class="font1-20 grey" href="#">Poll</a></li>
-                        <li><a class="font1-20 grey" href="#">Video</a></li>
-                        <li><a class="font1-20 grey" href="#">e-learning</a></li>
-                    </ul>
-                </div>
-
-                <div class="overlay__menus__item">
-                    <p class="overlay-menu-title">EVENTS</p>
-                    <ul>
-                        <li><a class="font1-20 grey" href="#">National HR Summit</a></li>
-                        <li><a class="font1-20 grey" href="#">HR Summit Perth</a></li>
-                        <li><a class="font1-20 grey" href="#">HR Summit Melbourne</a></li>
-                        <li><a class="font1-20 grey" href="#">HR Summit Brisbane</a></li>
-                        <li><a class="font1-20 grey" href="#">Australian HR Awards</a></li>
-                        <li><a class="font1-20 grey" href="#">HR Tech Summit</a></li>
-                        <li><a class="font1-20 grey" href="#">L & D Sydney</a></li>
-                    </ul>
-                </div>
-
-                <div class="overlay__menus__item">
-                    <p class="overlay-menu-title">SUBSCRIBE</p>
-                    <ul>
-                        <li><a class="font1-20 grey" href="#">Free E-newsletter</a></li>
-                        <li><a class="font1-20 grey" href="#">Author</a></li>
-                        <li><a class="font1-20 grey" href="#">HRD Magazine</a></li>
-                        <li><a class="font1-20 grey" href="#">Back Issues</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <script src="js/site.min.js"></script>
 </body>
 
